@@ -55,21 +55,21 @@ if (isset($_GET['dout']) && is_numeric($_GET['dout'])) {
         </div>
     </section>
     <section id="about_us">
-
-        <div class="col-5 nursing-img">
-            <img src="imgs/Nursing home-rafiki.png" alt="nursing_img" title="nursing_img" />
-        </div>
-        <div class="col-7 pp">
-            <h2 id="about">About Us</h2>
-            <p>
-                We offer convenient periodic check-ups, sparing seniors the hassle of frequent hospital visits. Our
-                mission is
-                to provide top-notch medical care in the comfort of their homes, ensuring their well-being with
-                expertise and
-                care.
-            </p>
-            <div class="btn-footer">
-                <a href="About.php" class="brand-btn" id="about_btn">Read More...</a>
+        <div class="about-container">
+            <div class="about-image">
+                <img src="imgs/Nursing home-rafiki.png" alt="Nursing Home Care" title="Nursing Home Care" />
+                <div class="img-decoration"></div>
+            </div>
+            <div class="about-text">
+                <h2 id="about">About Us</h2>
+                <p>
+                    We offer convenient periodic check-ups, sparing seniors the hassle of frequent hospital visits. Our
+                    mission is to provide top-notch medical care in the comfort of their homes, ensuring their
+                    well-being with expertise and care.
+                </p>
+                <div class="about-btn-wrapper">
+                    <a href="About.php" class="cta-btn secondary-btn" id="about_btn">Read More...</a>
+                </div>
             </div>
         </div>
     </section>
