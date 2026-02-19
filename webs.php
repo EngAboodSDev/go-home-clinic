@@ -38,4 +38,3 @@ function d_logout()
     setcookie('doctor_id', null, time() - 3600, "/");
     unset($_COOKIE['doctor_id']);
 }
-?>

@@ -4,19 +4,17 @@ require_once 'dbcon.php';
 require_once 'Users.php';
 
 if (isPatientLoggedIn()) {
-  redirect('Index.php');
+    redirect('Index.php');
 }
 if (isset($_POST['p_signup'])) {
-    
-    $isSuccess= p_register($_POST['f_name'],$_POST['l_name'],$_POST['p_email'],$_POST['p_date'],md5($_POST['p_password']), $_POST['p_phone']);
+
+    $isSuccess = p_register($_POST['f_name'], $_POST['l_name'], $_POST['p_email'], $_POST['p_date'], md5($_POST['p_password']), $_POST['p_phone']);
     if ($isSuccess) {
         alertMessage(' Your Sign Up Successfully ^_^ ');
         redirect('Login.php');
-    }
-    else {
+    } else {
         alertMessage('Registeration failed try again!');
     }
-
 }
 
 
@@ -61,31 +59,32 @@ if (isset($_POST['p_signup'])) {
         <div class="re-sub-form">
 
             <form method="post" action="" class="re_form">
-                <br><h2 style="text-align: center;">Sign Up</h2><br>
+                <br>
+                <h2 style="text-align: center;">Sign Up</h2><br>
                 <input type="hidden" name="recipient">
                 <p><label>First Name: <br>
-                        <input required  type="text" size="25" name="f_name" maxlength="50" placeholder="Patient's First Name">
+                        <input required type="text" size="25" name="f_name" maxlength="50" placeholder="Patient's First Name">
 
                     </label></p>
                 <span id="first_name_error" class="error-message"></span>
                 <p>
                     <label>Last Name: <br>
-                        <input required  type="text" name="l_name" size="25" maxlength="50"
+                        <input required type="text" name="l_name" size="25" maxlength="50"
                             placeholder="Patient's Last Name">
                     </label>
                 </p>
                 <span id="last_name_error" class="error-message"></span>
 
                 <p><label>Email: <br>
-                        <input required  type="email" size="30" name="p_email" maxlength="50" placeholder="abc@xyz.com">
+                        <input required type="email" size="30" name="p_email" maxlength="50" placeholder="abc@xyz.com">
                     </label></p>
                 <span id="email_error" class="error-message"></span>
 
                 <p><label>Birth Date: <br>
-                        <input required  type="date" min="1900-09-19" name="p_date" max="2023-10-15">
+                        <input required type="date" min="1900-09-19" name="p_date" max="2023-10-15">
                     </label></p>
                 <p><label>Phone No.:
-                        <input type="number" name="p_phone"  placeholder="Enter phone number" /></label></p>
+                        <input type="number" name="p_phone" placeholder="Enter phone number" /></label></p>
                 <p><label>Password: <br>
                         <input required name="p_password" type="password" id="password" placeholder="*********">
                     </label></p>
@@ -97,7 +96,7 @@ if (isset($_POST['p_signup'])) {
                 <span id="confirm_password_error" class="error-message"></span>
 
                 <div class="btn">
-                    <button type="submit" name="p_signup" >Sign Up</button>
+                    <button type="submit" name="p_signup">Sign Up</button>
                 </div>
             </form>
         </div>
@@ -141,7 +140,7 @@ if (isset($_POST['p_signup'])) {
                 validateConfirmPassword();
             });
 
-            form.addEventListener('submit', function (event) {
+            form.addEventListener('submit', function(event) {
 
                 // Reset error messages
                 firstNameError.textContent = '';
@@ -156,7 +155,7 @@ if (isset($_POST['p_signup'])) {
                 // Validate First Name (at least 3 characters)
                 if (!validateFirstName()) {
                     isValid = false;
-                    
+
                 }
 
                 // Validate Last Name (at least 5 characters)
@@ -181,7 +180,7 @@ if (isset($_POST['p_signup'])) {
 
                 // If all validations not pass, Prevent the form from submitting
                 if (!isValid) {
-                event.preventDefault();
+                    event.preventDefault();
                 }
             });
 

@@ -1,21 +1,20 @@
-
 <?php
 require_once 'webs.php';
 require_once 'dbcon.php';
 require_once 'Users.php';
 
 if (!isPatientLoggedIn()) {
-    redirect('Index.php');
+	redirect('Index.php');
 }
 if (isset($_GET['pId']) && isset($_GET['dId'])) {
-    // $PatientDetails= getPatientProfileInfo($_GET['pId']);
-    if (isset($_POST['rate'])) {
-        $isSuccess=rateExperience($_POST['num_stars'],$_GET['pId'],$_GET['dId']);
-        if ($isSuccess) {
-            alertMessage('Thank You for Rating Our Services ^_^');
-            redirect('MyMedRecord.php');
-        }
-    }
+	// $PatientDetails= getPatientProfileInfo($_GET['pId']);
+	if (isset($_POST['rate'])) {
+		$isSuccess = rateExperience($_POST['num_stars'], $_GET['pId'], $_GET['dId']);
+		if ($isSuccess) {
+			alertMessage('Thank You for Rating Our Services ^_^');
+			redirect('MyMedRecord.php');
+		}
+	}
 }
 ?>
 <!DOCTYPE html>
@@ -33,19 +32,21 @@ if (isset($_GET['pId']) && isset($_GET['dId'])) {
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
     <style>
-        #review{
-            resize: vertical;
-        }
-        .title {
-            font-size: larger;
-            font-weight: 700;
-            text-align: center;
-        }
-        .title::before{
-            content: '';
-            border-radius: 10px;
-            border-color: black;
-        }
+    #review {
+        resize: vertical;
+    }
+
+    .title {
+        font-size: larger;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .title::before {
+        content: '';
+        border-radius: 10px;
+        border-color: black;
+    }
     </style>
 </head>
 
@@ -57,19 +58,20 @@ if (isset($_GET['pId']) && isset($_GET['dId'])) {
     <div class="reg_form edit_form">
         <div class="re-sub-form">
             <form method="post" action="#" class="re_form">
-                <br><h2 style="text-align: center;">Rate Your Experience</h2><br>
+                <br>
+                <h2 style="text-align: center;">Rate Your Experience</h2><br>
                 <input type="hidden" name="recipient">
-                <p class="title"><?php echo isset($_GET['dId'])? getDoctorName($_GET['dId'])['dr_name']: ""?></p>
+                <p class="title"><?php echo isset($_GET['dId']) ? getDoctorName($_GET['dId'])['dr_name'] : "" ?></p>
                 <div class="review_stars">
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                    </div>
-                    <input type="hidden" id="num_stars" name="num_stars" value="5">
-                    <button type="submit" name="rate">Rate</button>
-                    <a href="MyMedRecord.php" class="cancel" >Cancel</a><br><br>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
+                <input type="hidden" id="num_stars" name="num_stars" value="5">
+                <button type="submit" name="rate">Rate</button>
+                <a href="MyMedRecord.php" class="cancel">Cancel</a><br><br>
             </form>
         </div>
     </div>
@@ -96,30 +98,30 @@ if (isset($_GET['pId']) && isset($_GET['dId'])) {
 
 
 
-<script>
-  // Get all star elements
-  const stars = document.querySelectorAll('.review_stars span');
-  const numOfStars = document.getElementById('num_stars');
+    <script>
+    // Get all star elements
+    const stars = document.querySelectorAll('.review_stars span');
+    const numOfStars = document.getElementById('num_stars');
 
-  // Add click event listener to each star
-  stars.forEach((star, index) => {
-    star.addEventListener('click', () => {
-      // Remove "checked" class from all stars
-      stars.forEach((s) => {
-        s.classList.remove('checked');
-      });
+    // Add click event listener to each star
+    stars.forEach((star, index) => {
+        star.addEventListener('click', () => {
+            // Remove "checked" class from all stars
+            stars.forEach((s) => {
+                s.classList.remove('checked');
+            });
 
-      // Add "checked" class to clicked star and previous stars
-      for (let i = 0; i <= index; i++) {
-        stars[i].classList.add('checked');
-      }
+            // Add "checked" class to clicked star and previous stars
+            for (let i = 0; i <= index; i++) {
+                stars[i].classList.add('checked');
+            }
 
-      // Update the number of checked stars
-      numOfStars.value = index + 1;
+            // Update the number of checked stars
+            numOfStars.value = index + 1;
+        });
     });
-  });
-  console.log(numOfStars.value);
-</script>
+    console.log(numOfStars.value);
+    </script>
     <script type="text/javascript" src="mobile.js"></script>
 
 

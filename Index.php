@@ -3,12 +3,12 @@ require_once 'webs.php';
 require_once 'dbcon.php';
 require_once 'Users.php';
 
-if(isset($_GET['pout']) && is_numeric($_GET['pout'])){
+if (isset($_GET['pout']) && is_numeric($_GET['pout'])) {
   p_logout();
   header('Refresh:0');
   redirect('Index.php');
 }
-if(isset($_GET['dout']) && is_numeric($_GET['dout'])){
+if (isset($_GET['dout']) && is_numeric($_GET['dout'])) {
   d_logout();
   header('Refresh:0');
   redirect('Index.php');
@@ -19,130 +19,133 @@ if(isset($_GET['dout']) && is_numeric($_GET['dout'])){
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Go Home Clinic | Home</title>
-  <link rel="stylesheet" href="css/all.min.css" />
-  <link rel="stylesheet" href="css/framework.css">
-  <link rel="stylesheet" href="css/master.css">
-  <link rel="stylesheet" href="css/newstyle.css">
-  <link rel="stylesheet" href="css/navstyles.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Go Home Clinic | Home</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/framework.css">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/newstyle.css">
+    <link rel="stylesheet" href="css/navstyles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 </head>
+
 <body>
-<?php require_once('navbar.php'); ?>
-  <section class=intro id="intro">
-    <div id="intro-info">
-      <div>
-        <h1>Go Home Clinic</h1>
-        <div id="intro-tag-btn">
-          <span>Your Distination for taking care of your beloved ones.</span>
+    <?php require_once('navbar.php'); ?>
+    <section class="intro" id="intro">
+        <div id="intro-info">
+            <div>
+                <h1>Go Home Clinic</h1>
+                <div id="intro-tag-btn">
+                    <span>Your Distination for taking care of your beloved ones.</span>
 
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <div id="Medical-img">
-      <img src="imgs/Medical care-rafiki.png" alt="Medical-img" title=" Medical-img" />
-    </div>
-  </section>
-  <section id="about_us">
-
-    <div class="col-5 nursing-img">
-      <img src="imgs/Nursing home-rafiki.png" alt="nursing_img" title="nursing_img" />
-    </div>
-    <div class="col-7 pp">
-      <h2 id="about">About Us</h2>
-      <p>
-        We offer convenient periodic check-ups, sparing seniors the hassle of frequent hospital visits. Our mission is
-        to provide top-notch medical care in the comfort of their homes, ensuring their well-being with expertise and
-        care.
-      </p>
-      <div class="btn-footer">
-        <a href="About.php" class="brand-btn" id="about_btn">Read More...</a>
-      </div>
-    </div>
-  </section>
-  <section id="stat_section">
-    <div class="middle">
-      <div class="counting-sec">
-        <div class="inner-width">
-          <div class="col">
-            <i class="fa-regular fa-face-grin-hearts fa-2xl"></i>
-            <div class="num">+300</div> Happy Patients
-          </div>
-          <div class="col">
-            <i class="fa-solid fa-user-doctor fa-2xl"></i>
-            <div class="num">+10</div> Medical Team
-          </div>
-          <div class="col">
-            <i class="fa-brands fa-searchengin fa-2xl"></i>
-            <div class="num">+12500</div> Website Visitors
-          </div>
-
+        <div id="Medical-img">
+            <img src="imgs/Medical care-rafiki.png" alt="Medical-img" title=" Medical-img" />
         </div>
-      </div>
+    </section>
+    <section id="about_us">
 
-  </section>
-  <section id="services">
-    <h1>Our Services</h1>
-    <div class="ser_container">
-      <div class="ser_box">
-        <div class="ser_icon">01</div>
-        <div class="content">
-          <h3>Regular Check-ups</h3>
-          <p> we provide scheduled periodic check-ups, which eliminate the need
-            for frequent journeys to hospitals or clinics on the part of seniors.</p>
+        <div class="col-5 nursing-img">
+            <img src="imgs/Nursing home-rafiki.png" alt="nursing_img" title="nursing_img" />
         </div>
-      </div>
-
-      <div class="ser_box">
-        <div class="ser_icon">02</div>
-        <div class="content">
-          <h3>Medication Management</h3>
-          <p>We assist in organizing and managing medications, helping seniors adhere to
-            their prescribed regimens, and reducing the risk of medication-related issues.</p>
+        <div class="col-7 pp">
+            <h2 id="about">About Us</h2>
+            <p>
+                We offer convenient periodic check-ups, sparing seniors the hassle of frequent hospital visits. Our
+                mission is
+                to provide top-notch medical care in the comfort of their homes, ensuring their well-being with
+                expertise and
+                care.
+            </p>
+            <div class="btn-footer">
+                <a href="About.php" class="brand-btn" id="about_btn">Read More...</a>
+            </div>
         </div>
-      </div>
+    </section>
+    <section id="stat_section">
+        <div class="middle">
+            <div class="counting-sec">
+                <div class="inner-width">
+                    <div class="col">
+                        <i class="fa-regular fa-face-grin-hearts fa-2xl"></i>
+                        <div class="num">+300</div> Happy Patients
+                    </div>
+                    <div class="col">
+                        <i class="fa-solid fa-user-doctor fa-2xl"></i>
+                        <div class="num">+10</div> Medical Team
+                    </div>
+                    <div class="col">
+                        <i class="fa-brands fa-searchengin fa-2xl"></i>
+                        <div class="num">+12500</div> Website Visitors
+                    </div>
 
-      <div class="ser_box">
-        <div class="ser_icon">03</div>
-        <div class="content">
-          <h3>Health Education</h3>
-          <p>We give seniors and the people who care for them access to educational materials and advice,
-            enabling them to make decisions about their health and wellbeing that are well-informed.</p>
+                </div>
+            </div>
+
+    </section>
+    <section id="services">
+        <h1>Our Services</h1>
+        <div class="ser_container">
+            <div class="ser_box">
+                <div class="ser_icon">01</div>
+                <div class="content">
+                    <h3>Regular Check-ups</h3>
+                    <p> we provide scheduled periodic check-ups, which eliminate the need
+                        for frequent journeys to hospitals or clinics on the part of seniors.</p>
+                </div>
+            </div>
+
+            <div class="ser_box">
+                <div class="ser_icon">02</div>
+                <div class="content">
+                    <h3>Medication Management</h3>
+                    <p>We assist in organizing and managing medications, helping seniors adhere to
+                        their prescribed regimens, and reducing the risk of medication-related issues.</p>
+                </div>
+            </div>
+
+            <div class="ser_box">
+                <div class="ser_icon">03</div>
+                <div class="content">
+                    <h3>Health Education</h3>
+                    <p>We give seniors and the people who care for them access to educational materials and advice,
+                        enabling them to make decisions about their health and wellbeing that are well-informed.</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <?php require_once('footer.php'); ?>
-  <script type="text/javascript" src="mobile.js"></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js'></script>
-  <script src="./script.js"></script>
+    </section>
+    <?php require_once('footer.php'); ?>
+    <script type="text/javascript" src="mobile.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js'></script>
+    <script src="./script.js"></script>
 
-  <script>
+    <script>
     $(".num").each(function() {
-      var n = $(this).text();
-      n <= 20 ? (z = 99) : (z = 0);
-      $(this)
-        .prop("Counter", z)
-        .animate({
-          Counter: n.replace(/,/g, ".")
-        }, {
-          duration: 3000,
-          easing: "swing",
-          step: function(now) {
-            $(this).text(Math.ceil(now));
-          },
-          complete: function() {
-            $(this).text(n);
-          }
-        });
+        var n = $(this).text();
+        n <= 20 ? (z = 99) : (z = 0);
+        $(this)
+            .prop("Counter", z)
+            .animate({
+                Counter: n.replace(/,/g, ".")
+            }, {
+                duration: 3000,
+                easing: "swing",
+                step: function(now) {
+                    $(this).text(Math.ceil(now));
+                },
+                complete: function() {
+                    $(this).text(n);
+                }
+            });
     });
-  </script>
+    </script>
 
 </body>
 
