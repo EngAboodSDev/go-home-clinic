@@ -8,7 +8,7 @@ header  {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 30px 7%;
+  padding: 10px 7%;
   background-color: transparent;
 }
 
@@ -69,7 +69,7 @@ header  {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 1000;
   left: 0;
   top: 0;
   background-color: white;
@@ -103,7 +103,7 @@ header  {
 }
 .overlay .close {
   position: absolute;
-  top: 20px;
+  top: 0px;
   right: 45px;
   font-size: 60px;
   color: #edf0f1;

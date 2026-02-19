@@ -15,7 +15,6 @@ body .logbody {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
 }
 
 input[type="text"],
@@ -41,7 +40,6 @@ select {
   background-color: #e8eeef;
   color: black;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
-
 }
 
 .sec {
@@ -102,12 +100,10 @@ position: relative;
 }
  */
 
-
 .AdminLogform {
   display: flex;
   justify-content: center;
   /* padding-top:  3rem; */
-
 }
 
 .logform {
@@ -115,7 +111,6 @@ position: relative;
   /* padding-top: 3rem; */
   flex-direction: column;
   align-items: center;
-
 }
 
 .sub_form {
@@ -125,7 +120,8 @@ position: relative;
   width: 60vh;
   height: 70vh;
   border-radius: 12px;
-  box-shadow: rgba(50, 50, 93, 0, 25) 0px 13px 27px -5px,
+  box-shadow:
+    rgba(50, 50, 93, 0, 25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.459) 0px 8px 16px -8px;
   background-color: white;
 }
@@ -148,8 +144,7 @@ position: relative;
   margin-top: 8px;
 
   width: 250px;
-  background-color: #EAEEED;
-
+  background-color: #eaeeed;
 }
 
 .upper_form input:focus {
@@ -161,7 +156,6 @@ position: relative;
   text-decoration: none;
   color: black;
   margin-left: 12px;
-
 }
 
 .logforget:hover {
@@ -180,7 +174,6 @@ position: relative;
   background-color: #405fbb;
   /* font-weight: 600; */
   width: 100%;
-
 }
 
 .log_btn button:hover {
@@ -206,13 +199,10 @@ position: relative;
 
 /*   HERE IS THE SIGNIN     */
 .re_body {
-
   height: 120vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-
 }
 
 .reg_form {
@@ -229,20 +219,18 @@ position: relative;
   width: 60vh;
   /* height: 110vh; */
   border-radius: 12px;
-  box-shadow: rgba(50, 50, 93, 0, 25) 0px 13px 27px -5px,
+  box-shadow:
+    rgba(50, 50, 93, 0, 25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.459) 0px 8px 16px -8px;
   background-color: white;
   font-family: "Montserrat", sans-serif;
   /* font-family:Arial, Helvetica, sans-serif; */
   margin-top: 10px;
-
-
 }
 
 .re-sub-form label {
   color: #000000;
   font-size: 15px;
-
 }
 
 .re-sub-form p {
@@ -250,7 +238,6 @@ position: relative;
   opacity: 0.75;
   margin-top: 10px;
   font-family: "Montserrat", sans-serif;
-
 }
 
 .re_form input {
@@ -261,8 +248,7 @@ position: relative;
   margin-top: 10px;
   padding: 1px px;
   width: 250px;
-  background-color: #EAEEED;
-
+  background-color: #eaeeed;
 }
 
 .re_form input:focus {
@@ -282,7 +268,6 @@ position: relative;
   /* font-weight: 600; */
   width: 100%;
   font-family: "Montserrat", sans-serif;
-
 }
 
 .re_form button:hover {
@@ -310,19 +295,15 @@ position: relative;
 
   box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
   margin-bottom: 10px;
-
 }
 
 .cancel:hover {
   background-color: #6e2929 !important;
-
 }
 
 .error-message {
-
   color: red;
   font-size: 13px;
-
 }
 
 /*  THERE IS THE HOME PAGE    */
@@ -330,70 +311,215 @@ html {
   scroll-behavior: smooth;
 }
 
-
-
+/* Hero Section Redesign */
 #intro {
+  /* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
+  min-height: 85vh;
   display: flex;
-  padding: 20px;
-  text-align: right;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
+  padding: 2rem 5%;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
 }
 
-#intro div {
-  display: inline-block;
+.intro-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  gap: 4rem;
 }
 
-#intro-info {
+.intro-text {
   flex: 1;
   text-align: left;
-  padding: 120px;
-
+  animation: fadeInLeft 1s ease-out;
 }
 
-#intro-info h1 {
+.intro-text h1 {
   font-family: "Montserrat", sans-serif;
-  /* font-family:Arial, Helvetica, sans-serif; */
-  font-size: 55px;
+  font-size: 3.5rem;
   font-weight: 800;
-  margin: 0px 0 10px;
-  color: #405fbb;
-
+  text-align: left;
+  color: #303779;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
 }
 
-#intro-info span {
-  font-family: "Montserrat", sans-serif;
-  /* font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
-  font-weight: 600;
-  padding: 9px;
-  font-size: 25px;
-  display: inline-flex;
-  margin-bottom: 10px;
+.intro-text p {
+  font-size: 1.2rem;
+  color: #555;
+  text-align: left;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+.intro-actions {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.cta-btn {
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background-color: #303779;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(48, 55, 121, 0.3);
+  border: 2px solid #303779;
+}
+
+.primary-btn:hover {
+  background-color: #262b60;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(48, 55, 121, 0.4);
+}
+
+.secondary-btn {
+  background-color: transparent;
+  border: 2px solid #303779;
+  color: #303779;
+}
+
+.secondary-btn:hover {
+  background-color: #303779;
+  color: white;
+  transform: translateY(-3px);
+}
+
+.intro-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  animation: fadeInRight 1s ease-out;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 550px;
+}
+
+.floating-img {
+  width: 100%;
+  height: auto;
+  animation: float 6s ease-in-out infinite;
+  position: relative;
+  z-index: 2;
+}
+
+.circle-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  height: 85%;
+  background: rgba(58, 114, 127, 0.1);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .intro-text h1 {
+    font-size: 2.8rem;
+    text-align: left;
+  }
+
+  .intro-content {
+    text-align: left;
+    gap: 2rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
   #intro {
+    padding: 0.1rem 1.5rem;
+    min-height: auto;
+  }
+
+  .intro-content {
     flex-direction: column;
-    padding: 20px;
-
+    text-align: center;
+    gap: 3rem;
   }
 
-  #Medical-img {
-    padding: 0px !important;
+  .intro-text {
+    align-items: center;
+    text-align: center;
+    width: 100%;
   }
 
-  #intro-info {
-    padding-block: 50px;
-  }
-
-  #intro-info {
-    margin-right: 0;
+  .intro-text h1 {
+    font-size: 2.5rem;
     text-align: center;
   }
 
-  #Medical-img img {
-    margin-top: 20px;
-    /* Add some space between text and image */
+  .intro-text p {
+    margin: 0 auto 2rem auto;
+    text-align: center;
+  }
+
+  .intro-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .intro-image {
+    width: 100%;
+  }
+
+  .floating-img {
+    max-width: 80%;
+    margin: 0 auto;
   }
 }
 
@@ -408,26 +534,14 @@ html {
   font-family: "Montserrat", sans-serif;
   /* font-family:Arial, Helvetica, sans-serif; */
 
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .brand-btn:hover,
 .brand-btn:focus {
   background-color: transparent;
   color: #2c3d8f;
-}
-
-#Medical-img {
-  width: 50%;
-  align-items: center;
-  padding: 30px;
-
-}
-
-#Medical-img img {
-  /* height:450px; */
-  width: 100%;
 }
 
 #about_us {
@@ -462,7 +576,7 @@ html {
   font-weight: 600;
   padding: 10;
   font-size: 18px;
-  margin-bottom: 20PX;
+  margin-bottom: 20px;
 }
 
 .nursing-img {
@@ -548,7 +662,6 @@ p {
   text-align: center;
 }
 
-
 .ser_container {
   display: flex;
   flex-wrap: wrap;
@@ -561,14 +674,14 @@ p {
   width: 350px;
   padding: 50px;
   background-color: #fff;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   border-radius: 80px;
   margin: 30px;
   overflow: hidden;
   text-align: center;
 }
 
-@media (max-width:578px) {
+@media (max-width: 578px) {
   .ser_container .ser_box {
     width: 100%;
     margin: 0px;
@@ -588,26 +701,23 @@ p {
 #about_us {
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
-
 }
 
 p {
   font-size: 12px;
-
 }
 
 .ser_container .ser_box:before {
-  content: '';
+  content: "";
   width: 50%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(255, 255, 255, .2);
+  background: rgba(255, 255, 255, 0.2);
   z-index: 2;
   pointer-events: none;
 }
-
 
 .ser_container .ser_box .ser_icon {
   position: relative;
@@ -624,7 +734,6 @@ p {
   font-size: 40px;
   font-weight: 700px;
   transition: 1s;
-
 }
 
 .ser_container .ser_box:nth-child(1) .ser_icon {
@@ -672,8 +781,6 @@ p {
   margin: 10px 0;
 }
 
-
-
 .ser_container h3 {
   font-family: "Montserrat", sans-serif;
 
@@ -695,9 +802,7 @@ p {
   }
 }
 
-
 #stat_section {
-
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 
@@ -706,12 +811,10 @@ p {
   justify-content: space-between;
   align-items: center;
   padding: 50px;
-
 }
 
 .middle {
   width: 100%;
-
 }
 
 .counting-sec {
@@ -779,7 +882,6 @@ p {
   }
 }
 
-
 /*   HERE IS THE FORM      */
 
 body {
@@ -788,7 +890,6 @@ body {
 }
 
 #body_header {
-
   width: auto;
   margin: 0px auto;
   text-align: center;
@@ -851,7 +952,7 @@ button {
   position: relative;
   cursor: pointer;
   padding: 19px 39px 18px 39px;
-  color: #FFF;
+  color: #fff;
   background-color: #405fbb;
   font-size: 20px;
   /* font-weight: 700; */
@@ -867,13 +968,11 @@ button {
 
 button:hover {
   background-color: #10046d;
-
 }
 
 .redButton {
   background-color: #a53939 !important;
   font-family: "Montserrat", sans-serif;
-
 }
 
 .redButton:hover {
@@ -889,8 +988,6 @@ legend {
   font-size: 1.4em;
   margin-bottom: 10px;
 }
-
-
 
 .number {
   background-color: #10046d;
@@ -910,7 +1007,6 @@ form {
   max-width: 480px;
 }
 
-
 /* radio*/
 .main-container {
   height: 140px;
@@ -918,7 +1014,6 @@ form {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
 }
 
 .main-container h2 {
@@ -951,7 +1046,7 @@ form {
   cursor: pointer;
 }
 
-.radio-btn>i {
+.radio-btn > i {
   color: #ffffff;
   background-color: #10046d;
   font-size: 90px;
@@ -979,11 +1074,10 @@ form {
   display: block;
   width: 100%;
   margin-bottom: 10px;
-
 }
 
 .radio-btn .hobbies-icon i {
-  color: #FFDAE9;
+  color: #ffdae9;
   line-height: 80px;
   font-size: 60px;
 }
@@ -994,14 +1088,13 @@ form {
   font-weight: 800;
 }
 
-.custom-radio input:checked+.radio-btn {
+.custom-radio input:checked + .radio-btn {
   border: 3px solid #10046d;
 }
 
 .start_end {
   margin: 8px;
   display: inline-flex;
-
 }
 
 .price_form p {
@@ -1009,13 +1102,10 @@ form {
   font-size: 60px;
 }
 
-
-
 /*  HERE IS THE OUR DOCTORS       */
 
 .doc_container {
   text-align: center;
-
 }
 
 .doc_header {
@@ -1047,16 +1137,16 @@ form {
   font-family: "Montserrat", sans-serif;
   outline: none;
   transition: background 1s;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow:
+    0 8px 16px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
   position: center;
   width: 100%;
 }
 
 .btn-1:hover {
   background: #10046d;
-
 }
-
 
 .btn-2 {
   display: block;
@@ -1070,21 +1160,19 @@ form {
   outline: none;
   font-family: "Montserrat", sans-serif;
   transition: background 1s;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow:
+    0 8px 16px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
   position: center;
   width: 100%;
 }
 
 .btn-2:hover {
   background-color: #6e2929 !important;
-
 }
-
-
 
 .btn-:hover {
   background: #10046d;
-
 }
 
 .doc_sub_container {
@@ -1113,7 +1201,6 @@ form {
 
 .Doc_teams,
 .Review_teams {
-
   margin: 10px;
   padding: 22px;
   cursor: pointer;
@@ -1160,7 +1247,7 @@ form {
   display: inline-block;
   /* height: 30px;
   width: 2px; */
-  transition: .4s;
+  transition: 0.4s;
   font-size: 27px;
 }
 
@@ -1170,10 +1257,9 @@ form {
 
 .social-links a i {
   color: #10046d;
-
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
   .teams {
     max-width: 1000px;
   }
@@ -1189,7 +1275,6 @@ form {
 }
 
 .faq_div {
-
   text-align: center;
   padding: 10px;
 }
@@ -1200,7 +1285,6 @@ form {
   font-weight: 550;
   padding-top: 0px;
   padding-bottom: 0px;
-
 }
 
 .faq_body h2 {
@@ -1265,7 +1349,7 @@ form {
 }
 
 .projects tbody tr:hover td {
-  background-color: #FAF7F7;
+  background-color: #faf7f7;
 }
 
 .projects table tbody tr td:last-child {
@@ -1320,21 +1404,15 @@ form {
   font-size: 15px;
 }
 
-
-
 /* --------------- */
-
-
 
 .edit_form {
   padding: 0px;
 }
 
-
 #medRecDetails {
   resize: vertical;
 }
-
 
 #reviewerImg {
   width: 100px !important;

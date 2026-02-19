@@ -4,14 +4,14 @@ require_once 'dbcon.php';
 require_once 'Users.php';
 
 if (isset($_GET['pout']) && is_numeric($_GET['pout'])) {
-  p_logout();
-  header('Refresh:0');
-  redirect('Index.php');
+    p_logout();
+    header('Refresh:0');
+    redirect('Index.php');
 }
 if (isset($_GET['dout']) && is_numeric($_GET['dout'])) {
-  d_logout();
-  header('Refresh:0');
-  redirect('Index.php');
+    d_logout();
+    header('Refresh:0');
+    redirect('Index.php');
 }
 ?>
 
@@ -36,18 +36,22 @@ if (isset($_GET['dout']) && is_numeric($_GET['dout'])) {
 <body>
     <?php require_once('navbar.php'); ?>
     <section class="intro" id="intro">
-        <div id="intro-info">
-            <div>
-                <h1>Go Home Clinic</h1>
-                <div id="intro-tag-btn">
-                    <span>Your Distination for taking care of your beloved ones.</span>
-
+        <div class="intro-content">
+            <div class="intro-text">
+                <h1>Welcome to <br> Go Home Clinic</h1>
+                <p>Your trusted destination for compassionate care. We bring medical expertise to your doorstep,
+                    ensuring the well-being of your beloved ones.</p>
+                <div class="intro-actions">
+                    <a href="BookAbo.php" class="cta-btn primary-btn">Book Appointment</a>
+                    <a href="#services" class="cta-btn secondary-btn">Our Services</a>
                 </div>
             </div>
-        </div>
-
-        <div id="Medical-img">
-            <img src="imgs/Medical care-rafiki.png" alt="Medical-img" title=" Medical-img" />
+            <div class="intro-image">
+                <div class="image-wrapper">
+                    <img src="imgs/Medical care-rafiki.png" alt="Medical Care" class="floating-img" />
+                    <div class="circle-bg"></div>
+                </div>
+            </div>
         </div>
     </section>
     <section id="about_us">
