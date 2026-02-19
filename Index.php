@@ -74,26 +74,43 @@ if (isset($_GET['dout']) && is_numeric($_GET['dout'])) {
         </div>
     </section>
     <section id="stat_section">
-        <div class="middle">
-            <div class="counting-sec">
-                <div class="inner-width">
-                    <div class="col">
-                        <i class="fa-regular fa-face-grin-hearts fa-2xl"></i>
-                        <div class="num">+300</div> Happy Patients
+        <div class="stat-container">
+            <div class="stat-header">
+                <h2>Our Achievements</h2>
+                <p>We take pride in our numbers, reflecting our commitment to excellence and care.</p>
+            </div>
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <div class="icon-box">
+                        <i class="fa-regular fa-face-grin-hearts"></i>
                     </div>
-                    <div class="col">
-                        <i class="fa-solid fa-user-doctor fa-2xl"></i>
-                        <div class="num">+10</div> Medical Team
+                    <div class="stat-info">
+                        <div class="num">+300</div>
+                        <span>Happy Patients</span>
                     </div>
-                    <div class="col">
-                        <i class="fa-brands fa-searchengin fa-2xl"></i>
-                        <div class="num">+12500</div> Website Visitors
+                </div>
+                <div class="stat-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-user-doctor"></i>
                     </div>
-
+                    <div class="stat-info">
+                        <div class="num">+10</div>
+                        <span>Medical Team</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="icon-box">
+                        <i class="fa-brands fa-searchengin"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="num">+12500</div>
+                        <span>Website Visitors</span>
+                    </div>
                 </div>
             </div>
-
+        </div>
     </section>
+
     <section id="services">
         <h1>Our Services</h1>
         <div class="ser_container">
@@ -131,24 +148,24 @@ if (isset($_GET['dout']) && is_numeric($_GET['dout'])) {
     <script src="./script.js"></script>
 
     <script>
-    $(".num").each(function() {
-        var n = $(this).text();
-        n <= 20 ? (z = 99) : (z = 0);
-        $(this)
-            .prop("Counter", z)
-            .animate({
-                Counter: n.replace(/,/g, ".")
-            }, {
-                duration: 3000,
-                easing: "swing",
-                step: function(now) {
-                    $(this).text(Math.ceil(now));
-                },
-                complete: function() {
-                    $(this).text(n);
-                }
-            });
-    });
+        $(".num").each(function() {
+            var n = $(this).text();
+            n <= 20 ? (z = 99) : (z = 0);
+            $(this)
+                .prop("Counter", z)
+                .animate({
+                    Counter: n.replace(/,/g, ".")
+                }, {
+                    duration: 3000,
+                    easing: "swing",
+                    step: function(now) {
+                        $(this).text(Math.ceil(now));
+                    },
+                    complete: function() {
+                        $(this).text(n);
+                    }
+                });
+        });
     </script>
 
 </body>

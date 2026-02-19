@@ -820,83 +820,89 @@ p {
   }
 }
 
+/* Stats Section Redesign */
 #stat_section {
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
-
-  /* font-family: "helvetica", sans-serif; */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px;
-}
-
-.middle {
-  width: 100%;
-}
-
-.counting-sec {
-  width: 100%;
-
-  padding: 40px 0;
-}
-
-.inner-width {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-}
-
-.col {
-  flex: 1;
+  background-color: #303779;
+  padding: 6rem 5%;
+  color: #fff;
   text-align: center;
-  color: #2c3d8f;
-  border-right: 2px solid #2c3d8f;
-  font-size: 20px;
-  font-weight: 600;
 }
 
-.col:last-child {
-  border: 0;
+.stat-container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.num {
-  font-size: 30px;
-  font-weight: 400;
-  margin: 20px 0;
+.stat-header {
+  margin-bottom: 4rem;
 }
 
-.fa-users,
-.fa-smile-wink,
-.fa-money-bill {
-  color: #2c3d8f;
-  font-size: 60px;
+.stat-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
 }
 
-@media (max-width: 768px) {
-  .counting-sec {
-    min-width: 200px;
-    padding: 0 40px;
+.stat-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.icon-box {
+  font-size: 3rem;
+  color: #f59e0b;
+  margin-bottom: 1.5rem;
+}
+
+.stat-info .num {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.stat-info span {
+  font-size: 1.2rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 768px) {
+  #stat_section {
+    padding: 4rem 1.5rem;
   }
 
-  .inner-width {
-    display: block;
+  .stat-header h2 {
+    font-size: 2rem;
   }
 
-  .col {
-    padding: 40px 0;
-    border: 0;
-    border-bottom: 2px solid #2c3d8f;
-  }
-
-  .col:last-child {
-    border: 0;
-  }
-
-  .fa-users,
-  .fa-smile-wink,
-  .fa-money-bill {
-    font-size: 90px;
+  .stat-info .num {
+    font-size: 2.5rem;
   }
 }
 
