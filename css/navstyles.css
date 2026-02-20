@@ -4,7 +4,7 @@
   padding: 0;
 }
 
-header  {
+header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -40,7 +40,6 @@ header  {
 
 .nav__links li a:hover {
   color: #405fbb;
-  
 }
 
 .cta {
@@ -94,7 +93,6 @@ header  {
   /* font-size: 30px; */
   display: block;
   transition: all 0.3s ease 0s;
-  
 }
 
 .overlay a:hover,
@@ -133,11 +131,11 @@ header  {
 
 /*       */
 /* Reset some default styles */
-body, ul {
+body,
+ul {
   margin: 0;
   padding: 0;
 }
-
 
 .action {
   position: relative;
@@ -160,84 +158,156 @@ body, ul {
 }
 
 /* Footer Styles */
+/* Footer Styles */
 .go_footer {
-  background-color: #a8b1ce; /* Background color */
-  color: #fff; /* Text color */
-  padding: 30px 20px; /* Adjust the padding as needed */
-  text-align: center; /* Center-align the content */
-  border-radius: 6px;
+  background-color: #303779;
+  color: #fff;
+  padding: 4rem 2rem 0;
+  text-align: left;
+  margin-top: 4rem;
 }
 
-.row {
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Center-align the columns */
+  justify-content: space-between;
+  gap: 2rem;
+  padding-bottom: 2rem;
 }
 
 .fot_column,
 .link_column,
 .cont_column {
   flex: 1;
-  text-align: left; /* Left-align column content */
-  margin: 20px; /* Adjust the margin as needed */
+  min-width: 250px;
+}
+
+.brand-col p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
 }
 
 .fot_column h4,
 .link_column h4,
 .cont_column h4 {
-  color: #fff; /* Header text color */
-  font-size: 18px;
+  color: #f59e0b; /* Orange accent */
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
 
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #f59e0b;
+  transform: translateY(-3px);
+}
+
+/* Links */
 ul {
   list-style: none;
   padding: 0;
-  /* font-size: 20px; */
 }
 
-ul li a {
-  color: #fff; /* Link text color */
+ul.link_cool li {
+  margin-bottom: 0.8rem;
+}
+
+ul.link_cool li a {
+  color: #e0e0e0;
   text-decoration: none;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-ul li a:hover {
-  color: #5a81fa; /* Link text color on hover */
+ul.link_cool li a:hover {
+  color: #f59e0b;
+  padding-left: 5px;
 }
 
-/* Contact Us Styles */
-.content_us {
-  margin-top: 20px; /* Adjust the margin as needed */
+/* Contact Info */
+.con_us li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 1rem;
+  color: #e0e0e0;
 }
 
-.con_us label {
-  color: #fff; /* Label text color */
-}
-
-.con_us p {
-  color: #fff; /* Contact info text color */
+.con_us i {
+  color: #f59e0b;
+  font-size: 1.1rem;
 }
 
 /* Copyright Text */
 .copyright {
   text-align: center;
-  margin-top: 20px; /* Adjust the margin as needed */
+  margin-top: 1rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  
+  opacity: 0.8;
+}
+
+.copyright p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+.developer a {
+  color: #f59e0b;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.developer a:hover {
+  text-decoration: underline;
 }
 
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
-  .row {
+  .footer-row {
     flex-direction: column;
-    align-items: center; /* Center-align columns for mobile */
+    text-align: center;
   }
 
-  .fot_column,
-  .link_column,
-  .cont_column {
-    flex: 1;
-    text-align: center; /* Center-align column content for mobile */
-    margin: 20px 0; /* Adjust the margin for mobile */
+  .social-icons {
+    justify-content: center;
+  }
+
+  ul.link_cool li a {
+    justify-content: center;
+  }
+
+  .con_us li {
+    justify-content: center;
   }
 }
-
-
