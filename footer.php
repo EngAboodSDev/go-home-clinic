@@ -19,6 +19,7 @@
                     <li><a href="Index.php"><i class="fa fa-angle-right"></i> Home</a></li>
                     <li><a href="faq.php"><i class="fa fa-angle-right"></i> FAQ</a></li>
                     <li><a href="About.php"><i class="fa fa-angle-right"></i> About Us</a></li>
+                    <li><a href="Contact.php"><i class="fa fa-angle-right"></i> Contact Us</a></li>
                     <li><a href="BookAbo.php"><i class="fa fa-angle-right"></i> Book Appointment</a></li>
                 </ul>
             </div>

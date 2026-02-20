@@ -22,75 +22,54 @@ require_once 'dbcon.php';
 
 <body>
     <?php require_once('navbar.php'); ?>
-    <section class="sec">
-        <div class="top">
-            <h3> About Us </h3>
-            <p class="section-lead">Welcome to GO HOME CLINIC, your trusted partner in convenient and accessible
-                healthcare.
-                At GO HOME CLINIC, we are on a mission to transform the way you receive medical care. We understand the
-                challenges
-                of accessing quality healthcare, and that's why we've reimagined the healthcare experience for you.
-                Our mobile clinic brings integrated medical care to your doorstep, putting your health and well-being at
-                the
-                forefront.</p>
+    <section id="about-hero">
+        <div class="about-hero-content">
+            <h1>About Go Home Clinic</h1>
+            <p>Your trusted partner in convenient and accessible healthcare. We are on a mission to transform the way
+                you receive medical care, bringing expertise directly to your doorstep.</p>
         </div>
-        <div class="services-grid">
-            <div class="service service1">
-                <i class="ti-bar-chart"></i>
-                <i class="fa-solid fa-rocket"></i>
+    </section>
 
-                <h4>Mission </h4>
-                <p>Our mission is to provide accessible, integrated medical care that empowers individuals to live
-                    healthier,
-                    more comfortable lives. We are committed to delivering top-quality healthcare services with the
-                    utmost
-                    convenience, ensuring that every push of a button leads to improved well-being.
-                    Our goal is to revolutionize healthcare delivery, making it more patient-centric, efficient, and
-                    tailored to
-                    your unique needs..</p>
+    <section id="core-values">
+        <div class="core-values-container">
+            <div class="core-values-header">
+                <h2>Our Foundation</h2>
+                <p>Guided by a commitment to excellence and patient-centric care.</p>
             </div>
+            <div class="core-values-grid">
+                <div class="core-value-card">
+                    <div class="value-icon">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To provide accessible, integrated medical care that empowers individuals to live healthier lives.
+                        We deliver top-quality services with utmost convenience, ensuring every interaction improves
+                        well-being.</p>
+                </div>
 
-            <div class="service service2">
-                <i class="ti-light-bulb"></i>
-                <i class="fa-regular fa-lightbulb fa-2xs" style="color: #4252bb;"></i>
-                <h4>vision </h4>
-                <p>At GO HOME CLINIC,our vision is to redefine the future of healthcare. We envision a world where
-                    accessing
-                    high-quality medical care is not only effortless but also deeply personalized. We strive to be at
-                    the forefront
-                    of innovation in mobile healthcare, continuously expanding our services and reach to make integrated
-                    medical
-                    care universally accessible.
-                    Our vision is to be the trusted partner that enhances the lives of individuals and communities by
-                    delivering
-                    healthcare at the push of a button</p>
-                <!-- </div> -->
-            </div>
+                <div class="core-value-card">
+                    <div class="value-icon">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To redefine the future of healthcare where high-quality medical care is effortless and
+                        personalized. We strive to be the leaders in mobile innovation, making integrated care
+                        universally accessible.</p>
+                </div>
 
-            <div class="service service3">
-                <i class="ti-money"></i>
-                <i class="fa-solid fa-list-check fa-2xs"></i>
-                <h4>Objectives </h4>
-                <p>Broaden Accessibility: Extend our mobile clinic's geographic footprint, ensuring that integrated
-                    medical care
-                    is accessible to underserved regions.
-
-                    Technological Advancement: Continuously upgrade our technological infrastructure, particularly in
-                    telemedicine,
-                    to facilitate secure, efficient healthcare consultations.
-
-                    Exemplary Care: Uphold unwavering standards of healthcare excellence through rigorous quality
-                    control measures
-                    and continuous improvement initiatives.
-
-                    Patient Empowerment: Equip patients with knowledge and resources to actively manage their health,
-                    fostering
-                    informed decision-making.
-
-                    Community Involvement: Actively engage with local communities through comprehensive health education
-                    programs,
-                    outreach efforts, and strategic partnerships to bolster holistic well-being.</p>
-
+                <div class="core-value-card">
+                    <div class="value-icon">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3>Our Objectives</h3>
+                    <ul class="objective-list">
+                        <li><i class="fa-solid fa-check"></i> Broaden Accessibility to underserved regions.</li>
+                        <li><i class="fa-solid fa-check"></i> Technological Advancement in telemedicine.</li>
+                        <li><i class="fa-solid fa-check"></i> Uphold unwavering standards of excellence.</li>
+                        <li><i class="fa-solid fa-check"></i> Empower patients through health resources.</li>
+                        <li><i class="fa-solid fa-check"></i> Deep Community Involvement and education.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>

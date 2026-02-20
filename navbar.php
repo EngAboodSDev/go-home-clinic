@@ -10,6 +10,7 @@ if (!isPatientLoggedIn() && !isDoctorLoggedIn())
             <li><a href="OurDoctors.php">Our Doctors</a></li>
             <li><a href="About.php">About Us</a></li>
             <li><a href="faq.php">FAQ</a></li>
+            <li><a href="Contact.php">Contact Us</a></li>
         </ul>
     </nav>
     <p class="menu cta">Menu</p>
@@ -22,6 +23,7 @@ if (!isPatientLoggedIn() && !isDoctorLoggedIn())
         <a href="OurDoctors.php">Our Doctors</a>
         <a href="About.php">About Us</a>
         <a href="faq.php">FAQ</a>
+        <a href="Contact.php">Contact Us</a>
         <a href="Login.php">Join Us</a>
     </div>
 </div>
@@ -40,6 +42,7 @@ if (isPatientLoggedIn() && !isDoctorLoggedIn())
         <li><a href="MyMedRecord.php">Completed Appointments</a></li>
         <li><a href="About.php">About Us</a></li>
         <li><a href="faq.php">FAQ</a></li>
+        <li><a href="Contact.php">Contact Us</a></li>
         </ul>
     </nav>
     <p class="menu cta">Menu</p>
@@ -72,6 +75,7 @@ if (isPatientLoggedIn() && !isDoctorLoggedIn())
         <a href="MyMedRecord.php">Completed Appointments</a>
     <a href="About.php">About Us</a>
     <a href="faq.php">FAQ</a>
+    <a href="Contact.php">Contact Us</a>
     </div>
 </div>
 ';
@@ -89,6 +93,7 @@ if (!isPatientLoggedIn() && isDoctorLoggedIn())
             <li><a href="MedicalRecords.php">Medical Records</a></li>
             <li><a href="About.php">About Us</a></li>
             <li><a href="faq.php">FAQ</a></li>
+            <li><a href="Contact.php">Contact Us</a></li>
         </ul>
     </nav>
     <p class="menu cta">Menu</p>
@@ -119,6 +124,7 @@ if (!isPatientLoggedIn() && isDoctorLoggedIn())
         <a href="MedicalRecords.php">Medical Records</a>
         <a href="About.php">About Us</a>
         <a href="faq.php">FAQ</a>
+        <a href="Contact.php">Contact Us</a>
     </div>
 </div>
 ';

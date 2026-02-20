@@ -1,0 +1,113 @@
+<?php
+require_once 'webs.php';
+require_once 'dbcon.php';
+require_once 'Users.php';
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Go Home Clinic | Contact Us</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/framework.css">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/newstyle.css">
+    <link rel="stylesheet" href="css/navstyles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+
+<body>
+    <?php require_once('navbar.php'); ?>
+
+    <section id="contact-hero">
+        <div class="contact-hero-content">
+            <h1>Contact Us</h1>
+            <p>We are here to help. Reach out to us for any inquiries or support. Our team is available 24/7 to ensure
+                your well-being.</p>
+        </div>
+    </section>
+
+    <section id="contact-main">
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-header">
+                    <h2>Get In Touch With Us Now!</h2>
+                    <p>Multiple ways to stay connected with Go Home Clinic.</p>
+                </div>
+                <div class="info-grid">
+                    <div class="core-value-card">
+                        <div class="value-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <h3>Our Location</h3>
+                        <p>Riyadh, Saudi Arabia<br> We serve patients throughout the city and surrounding areas.
+                        </p>
+                    </div>
+
+                    <div class="core-value-card">
+                        <div class="value-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <h3>Direct Contact</h3>
+                        <p>Call us at: +966 000 000 000<br>Email: go_home@gmail.com</p>
+                    </div>
+
+                    <div class="core-value-card">
+                        <div class="value-icon">
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </div>
+                        <h3>Connect With Us</h3>
+                        <div class="social-links-grid">
+                            <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="core-value-card">
+                        <div class="value-icon">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <h3>Availability</h3>
+                        <p>Our mobile clinic is available 24 hours a day, 7 days a week, including holidays.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper">
+                <form action="#" class="contact-form">
+                    <h2>Send Us a Message</h2>
+                    <p>Have questions? We'd love to hear from you.</p>
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-btn primary-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <?php require_once('footer.php'); ?>
+    <script type="text/javascript" src="mobile.js"></script>
+</body>
+
+</html>
