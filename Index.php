@@ -73,6 +73,50 @@ if (isset($_GET['dout']) && is_numeric($_GET['dout'])) {
             </div>
         </div>
     </section>
+
+    <section id="services">
+        <div class="services-container">
+            <div class="services-header">
+                <h2>Our Services</h2>
+                <p>Comprehensive care solutions tailored to your needs.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-stethoscope"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Regular Check-ups</h3>
+                        <p>We provide scheduled periodic check-ups, eliminating the need for frequent hospital visits
+                            for seniors.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-pills"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Medication Management</h3>
+                        <p>We assist in organizing and managing medications, helping seniors adhere to prescribed
+                            regimens.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Health Education</h3>
+                        <p>We provide educational materials and advice to empower seniors and caregivers to make
+                            informed health decisions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="stat_section">
         <div class="stat-container">
             <div class="stat-header">
@@ -111,69 +155,32 @@ if (isset($_GET['dout']) && is_numeric($_GET['dout'])) {
         </div>
     </section>
 
-    <section id="services">
-        <div class="services-container">
-            <div class="services-header">
-                <h2>Our Services</h2>
-                <p>Comprehensive care solutions tailored to your needs.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-stethoscope"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Regular Check-ups</h3>
-                        <p>We provide scheduled periodic check-ups, eliminating the need for frequent hospital visits for seniors.</p>
-                    </div>
-                </div>
 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-pills"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Medication Management</h3>
-                        <p>We assist in organizing and managing medications, helping seniors adhere to prescribed regimens.</p>
-                    </div>
-                </div>
 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Health Education</h3>
-                        <p>We provide educational materials and advice to empower seniors and caregivers to make informed health decisions.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <?php require_once('footer.php'); ?>
     <script type="text/javascript" src="mobile.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js'></script>
     <script src="./script.js"></script>
 
     <script>
-        $(".num").each(function() {
-            var n = $(this).text();
-            n <= 20 ? (z = 99) : (z = 0);
-            $(this)
-                .prop("Counter", z)
-                .animate({
-                    Counter: n.replace(/,/g, ".")
-                }, {
-                    duration: 3000,
-                    easing: "swing",
-                    step: function(now) {
-                        $(this).text(Math.ceil(now));
-                    },
-                    complete: function() {
-                        $(this).text(n);
-                    }
-                });
-        });
+    $(".num").each(function() {
+        var n = $(this).text();
+        n <= 20 ? (z = 99) : (z = 0);
+        $(this)
+            .prop("Counter", z)
+            .animate({
+                Counter: n.replace(/,/g, ".")
+            }, {
+                duration: 3000,
+                easing: "swing",
+                step: function(now) {
+                    $(this).text(Math.ceil(now));
+                },
+                complete: function() {
+                    $(this).text(n);
+                }
+            });
+    });
     </script>
 
 </body>
