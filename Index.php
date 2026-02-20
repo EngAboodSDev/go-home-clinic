@@ -120,7 +120,7 @@ if (isset($_GET['dout']) && is_numeric($_GET['dout'])) {
     <section id="why_choose_us">
         <div class="wcu-container">
             <div class="wcu-header">
-                <h2>Why Choose Us?</h2>
+                <h2>Why Choose Us ?</h2>
                 <p>Dedicated to providing the best home healthcare experience.</p>
             </div>
             <div class="wcu-grid">
@@ -155,6 +155,8 @@ if (isset($_GET['dout']) && is_numeric($_GET['dout'])) {
             </div>
         </div>
     </section>
+
+
 
     <section id="stat_section">
         <div class="stat-container">
@@ -194,6 +196,67 @@ if (isset($_GET['dout']) && is_numeric($_GET['dout'])) {
         </div>
     </section>
 
+    <section id="testimonials">
+        <div class="testimonials-container">
+            <div class="testimonials-header">
+                <h2>What Our Patients Say ?</h2>
+                <p>Real stories from those who trusted us with their care.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">"The care my father received was exceptional. The doctors are
+                        professional and really take the time to listen."</p>
+                    <div class="testimonial-author">
+                        <h4>Ahmed Hassan</h4>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">"Convenient and reliable. Having a doctor visit us at home saved us so
+                        much time and stress. Highly recommend!"</p>
+                    <div class="testimonial-author">
+                        <h4>Sara Fadhl</h4>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">"Truly compassionate care. They treat you like family. I felt safe and
+                        well-cared for during my recovery."</p>
+                    <div class="testimonial-author">
+                        <h4>John Smith</h4>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <?php require_once('footer.php'); ?>
