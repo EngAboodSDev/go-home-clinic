@@ -112,32 +112,40 @@ if (isset($_GET['dout']) && is_numeric($_GET['dout'])) {
     </section>
 
     <section id="services">
-        <h1>Our Services</h1>
-        <div class="ser_container">
-            <div class="ser_box">
-                <div class="ser_icon">01</div>
-                <div class="content">
-                    <h3>Regular Check-ups</h3>
-                    <p> we provide scheduled periodic check-ups, which eliminate the need
-                        for frequent journeys to hospitals or clinics on the part of seniors.</p>
-                </div>
+        <div class="services-container">
+            <div class="services-header">
+                <h2>Our Services</h2>
+                <p>Comprehensive care solutions tailored to your needs.</p>
             </div>
-
-            <div class="ser_box">
-                <div class="ser_icon">02</div>
-                <div class="content">
-                    <h3>Medication Management</h3>
-                    <p>We assist in organizing and managing medications, helping seniors adhere to
-                        their prescribed regimens, and reducing the risk of medication-related issues.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-stethoscope"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Regular Check-ups</h3>
+                        <p>We provide scheduled periodic check-ups, eliminating the need for frequent hospital visits for seniors.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="ser_box">
-                <div class="ser_icon">03</div>
-                <div class="content">
-                    <h3>Health Education</h3>
-                    <p>We give seniors and the people who care for them access to educational materials and advice,
-                        enabling them to make decisions about their health and wellbeing that are well-informed.</p>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-pills"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Medication Management</h3>
+                        <p>We assist in organizing and managing medications, helping seniors adhere to prescribed regimens.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Health Education</h3>
+                        <p>We provide educational materials and advice to empower seniors and caregivers to make informed health decisions.</p>
+                    </div>
                 </div>
             </div>
         </div>
