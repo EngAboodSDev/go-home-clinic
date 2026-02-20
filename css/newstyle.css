@@ -313,7 +313,7 @@ html {
 
 /* Hero Section Redesign */
 #intro {
-  /* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
+  background: #eef2ff7d;
   min-height: 85vh;
   display: flex;
   align-items: center;
@@ -590,7 +590,7 @@ html {
   left: -20px;
   width: 100px;
   height: 100px;
-  background-color: #e1e7fa;
+  background-color: #eef2ff;
   border-radius: 50%;
   z-index: 1;
 }
@@ -650,7 +650,7 @@ html {
 }
 
 #services {
-  background-color: #e1e7fa;
+  background-color: #eef2ff7d;
 }
 
 #services h1 {
@@ -727,7 +727,7 @@ p {
 
 /* Services Section Redesign */
 #services {
-  background-color: #f9fafb;
+  background-color: #eef2ff;
   padding: 6rem 5%;
   text-align: center;
 }
@@ -1312,7 +1312,7 @@ form {
   cursor: pointer;
   transition: 0.4s;
   box-sizing: border-box;
-  background: #e1e7fa;
+  background: #eef2ff7d;
   border-radius: 12px;
 }
 

@@ -42,8 +42,8 @@ if (isset($_GET['dout']) && is_numeric($_GET['dout'])) {
                 <p>Your trusted destination for compassionate care. We bring medical expertise to your doorstep,
                     ensuring the well-being of your beloved ones.</p>
                 <div class="intro-actions">
-                    <a href="BookAbo.php" class="cta-btn primary-btn">Book Appointment</a>
-                    <a href="#services" class="cta-btn secondary-btn">Our Services</a>
+                    <a href="BookAbo.php" class="cta-btn primary-btn">Book Appointment Now</a>
+                    <a href="#services" class="cta-btn secondary-btn">Call Us Today</a>
                 </div>
             </div>
             <div class="intro-image">
