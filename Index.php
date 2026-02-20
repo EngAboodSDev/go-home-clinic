@@ -117,6 +117,45 @@ if (isset($_GET['dout']) && is_numeric($_GET['dout'])) {
         </div>
     </section>
 
+    <section id="why_choose_us">
+        <div class="wcu-container">
+            <div class="wcu-header">
+                <h2>Why Choose Us?</h2>
+                <p>Dedicated to providing the best home healthcare experience.</p>
+            </div>
+            <div class="wcu-grid">
+                <div class="wcu-card">
+                    <div class="wcu-icon">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+                    <h3>Expert Doctors</h3>
+                    <p>Highly qualified professionals ready to serve you.</p>
+                </div>
+                <div class="wcu-card">
+                    <div class="wcu-icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Always here for you, anytime, anywhere.</p>
+                </div>
+                <div class="wcu-card">
+                    <div class="wcu-icon">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                    </div>
+                    <h3>Affordable Care</h3>
+                    <p>Premium service at fair and transparent prices.</p>
+                </div>
+                <div class="wcu-card">
+                    <div class="wcu-icon">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <h3>Personalized</h3>
+                    <p>Care plans tailored specifically to your needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="stat_section">
         <div class="stat-container">
             <div class="stat-header">
