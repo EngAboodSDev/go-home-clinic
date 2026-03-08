@@ -4,21 +4,22 @@ require_once 'dbcon.php';
 require_once 'Users.php';
 
 if (isDoctorLoggedIn()) {
-  redirect('Index.php');
+    redirect('Index.php');
 }
 
 
 
 if (isset($_POST['d_login'])) {
-  $isSuccess = d_login($_POST['dr_email'], md5($_POST['dr_password']));
-  if ($isSuccess)
-    redirect('Index.php');
-  else alertMessage('Invalid Email or password');
+    $isSuccess = d_login($_POST['dr_email'], md5($_POST['dr_password']));
+    if ($isSuccess)
+        redirect('Index.php');
+    else alertMessage('Invalid Email or password');
 }
 
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,84 +29,81 @@ if (isset($_POST['d_login'])) {
     <link rel="stylesheet" href="css/newstyle.css">
     <link rel="stylesheet" href="css/navstyles.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
     <style>
-        .error {
-            color: red;
-        }
+    .error {
+        color: red;
+    }
 
-       
-        .loginType {
-            display: flex;
-            gap: 40px;
-            justify-content: flex-start;
-            flex-wrap: nowrap;
-            flex-direction: row;
-        }
+
+    .loginType {
+        display: flex;
+        gap: 40px;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
     </style>
 
-    
+
 </head>
 
 
-<body class="logbody">
-    <header class="navbar">
-        <a class="navlogo" href="Index.php"><img src="imgs/logo-without background .png" alt="logo" width="70"
-                height="70"></a>
-        <nav>
-            <ul class="nav__links">
-                <li><a href="Index.php" >Back To Home Page</a></li>    
-                <li><a href="Login.php" >Login As Patient</a></li>    
-            </ul>
-        </nav>
-        <p class="menu cta">Menu</p>
-    </header>
+<body class="auth-body">
+    <?php require_once('navbar.php'); ?>
 
-    <div id="mobile__menu" class="overlay">
-        <a class="close">&times;</a>
-        <div class="overlay__content">
-          <a href="Index.php">Back To Home Page</a>
-          <a href="Login.php">Login As Patient</a>
-        </div>
-    </div>
-    
-    <div class="logform">
-        <form action="#" class="sub_form" id="loginForm" method="post" >
-            <div class="upper_form">
-                <h2>Welcome back, Doctor! </h2>
-                <label>Email:</label>
-                <br><br>
-                <input type="email" name="dr_email" id="email" placeholder="Type here...">
-                <span id="emailError" class="error"></span><br><br>
-                <label>Password:</label>
-                <br><br>
-                <input type="password" name="dr_password" id="password" placeholder="********">
-                <span id="passwordError" class="error"></span>
-                <div class="log_btn">
-                    <button type="submit" name="d_login" >Login</button>
-                </div>
+    <section class="auth-section">
+        <div class="auth-container">
+            <div class="auth-card">
+                <form action="#" class="auth-form" id="loginForm" method="post">
+                    <div class="auth-header">
+                        <h2>Welcome back, Doctor!</h2>
+                        <p>Please enter your credentials to access your dashboard</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" name="dr_email" id="email" class="auth-input" placeholder="Enter your email"
+                            required>
+                        <span id="emailError" class="error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="dr_password" id="password" class="auth-input"
+                            placeholder="********" required>
+                        <span id="passwordError" class="error"></span>
+                    </div>
+
+                    <button type="submit" name="d_login" class="cta-btn primary-btn auth-submit-btn">Login</button>
+
+                    <div class="auth-footer">
+                        <p class="mt-10"><a href="Login.php" class="auth-link secondary-link">Login as Patient</a></p>
+                    </div>
+                </form>
             </div>
-            
-        </form>
-    </div>
+        </div>
+    </section>
+
+    <?php require_once('footer.php'); ?>
     <script>
-        const emailInput = document.getElementById('email');
-        const emailError = document.getElementById('emailError');
+    const emailInput = document.getElementById('email');
+    const emailError = document.getElementById('emailError');
 
-        emailInput.addEventListener('input', function () {
-            if (!isValidEmail(emailInput.value)) {
-                emailError.textContent = 'Invalid email address';
-            } else {
-                emailError.textContent = '';
-            }
-        });
-
-        function isValidEmail(email) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailRegex.test(email);
+    emailInput.addEventListener('input', function() {
+        if (!isValidEmail(emailInput.value)) {
+            emailError.textContent = 'Invalid email address';
+        } else {
+            emailError.textContent = '';
         }
+    });
 
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
     </script>
     <script type="text/javascript" src="mobile.js"></script>
 
