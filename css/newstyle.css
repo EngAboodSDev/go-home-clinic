@@ -1606,7 +1606,7 @@ form {
 #faq-hero {
   background:
     linear-gradient(rgba(48, 55, 121, 0.8), rgba(48, 55, 121, 0.8)),
-    url("https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974&auto=format&fit=crop")
+    url("../imgs/faq-bg.jpg")
       center/cover;
   padding: 8rem 5%;
   color: #fff;
@@ -1988,5 +1988,166 @@ form {
   }
   .contact-form-wrapper {
     padding: 2.5rem;
+  }
+}
+/* Our Doctors Page Styles */
+#doctors-hero {
+  background:
+    linear-gradient(rgba(48, 55, 121, 0.8), rgba(48, 55, 121, 0.8)),
+    url("../imgs/doctors-bg.jpg")
+      center/cover;
+  padding: 8rem 5%;
+  color: #fff;
+  text-align: center;
+}
+
+.doctors-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.doctors-hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.doctors-hero-content p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+#doctors-main {
+  padding: 6rem 5%;
+}
+
+.doctors-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2.5rem;
+}
+
+.Doc_teams {
+  background: #fff;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #eef2ff;
+  display: flex;
+  flex-direction: column;
+}
+
+.Doc_teams:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(48, 55, 121, 0.1);
+}
+
+.doc-img-container {
+  width: 170px;
+  height: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin: 0.5rem auto 0;
+  overflow: hidden;
+  border: 5px solid #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.Doc_teams img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.doc-card-content {
+  padding: 1rem 1rem 0;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.Doc_teams .doc_name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #303779;
+  margin-bottom: 0.5rem;
+}
+
+.Doc_teams .doc_desig {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f59e0b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+.Doc_teams .review_stars i {
+  color: #e2e8f0;
+  font-size: 1.1rem;
+  margin: 0 2px;
+}
+
+.Doc_teams .review_stars i.checked {
+  color: #f59e0b;
+}
+
+.Doc_teams .doc_about {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #666;
+  flex-grow: 1;
+}
+
+.Doc_teams .btn-doctor {
+  margin-top: auto;
+}
+
+.Doc_teams .btn-1 {
+  width: 100%;
+  background-color: #303779;
+  color: #fff;
+  padding: 1.2rem;
+  border-radius: 12px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.Doc_teams .btn-1:hover {
+  background-color: #1a1f4d;
+  transform: scale(1.02);
+}
+
+@media screen and (max-width: 768px) {
+  #doctors-hero {
+    padding: 6rem 1.5rem;
+  }
+  .doctors-hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .doctors-grid {
+    grid-template-columns: 1fr;
+  }
+  .doc-img-container {
+    width: 150px;
+    height: 150px;
+  }
+  .Doc_teams img {
+    width: 100%;
+    height: 100%;
   }
 }

@@ -16,41 +16,55 @@ $AvailableDoctors = getAllAvailableDoctors();
     <link rel="stylesheet" href="css/newstyle.css">
     <link rel="stylesheet" href="css/navstyles.css">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
     <?php require_once('navbar.php'); ?>
-    <div class="doc_container">
-        <div class="doc_header">
-            <h1>Our Doctors</h1>
-        </div>
-        <div class="doc_sub_container">
-            <?php foreach ($AvailableDoctors as $Doctor) : ?>
-            <div class="Doc_teams">
-                <img src="imgs/user (2).png" alt="">
-                <div class="doc_name"><?php echo $Doctor['f_name'] . ' ' . $Doctor['l_name']; ?></div>
-                <div class="review_stars">
-                    <?php $num_stars = round(getDpctorAvgRating($Doctor['dr_id'])['rating_avg']);
-                        $count = 1;
-                        while ($count <= 5) : ?>
-                    <span class="fa fa-star <?php echo ($count <= $num_stars) ? " checked " : "" ?>"></span>
-                    <?php ++$count;
-                        endwhile; ?>
-                </div>
-                <div class="doc_desig"><?php echo $Doctor['job']; ?></div>
-                <div class="doc_about"> <?php echo $Doctor['job_details']; ?></div>
-                <div class="btn-doctor">
-                    <a href="BookAbo.php?dr=<?php echo $Doctor['dr_id'] ?>" style="text-decoration: none;"><button
-                            class="btn-1">Book an appointment</button></a>
-                </div>
 
-            </div>
-            <?php endforeach; ?>
+    <section id="doctors-hero">
+        <div class="doctors-hero-content">
+            <h1>Our Expert Doctors</h1>
+            <p>Meet our dedicated team of healthcare professionals, providing compassionate and specialized care
+                directly
+                at your home.</p>
         </div>
-    </div>
+    </section>
+
+    <section id="doctors-main">
+        <div class="doctors-container">
+            <div class="doctors-grid">
+                <?php foreach ($AvailableDoctors as $Doctor) : ?>
+                <div class="Doc_teams">
+                    <div class="doc-img-container">
+                        <img src="imgs/user (2).png" alt="Doctor Profile">
+                    </div>
+                    <div class="doc-card-content">
+                        <div class="doc_name"><?php echo $Doctor['f_name'] . ' ' . $Doctor['l_name']; ?></div>
+                        <div class="doc_desig"><?php echo $Doctor['job']; ?></div>
+                        <div class="review_stars">
+                            <?php $num_stars = round(getDpctorAvgRating($Doctor['dr_id'])['rating_avg']);
+                                $count = 1;
+                                while ($count <= 5) : ?>
+                            <span
+                                class="fa-solid fa-star <?php echo ($count <= $num_stars) ? " checked " : "" ?>"></span>
+                            <?php ++$count;
+                                endwhile; ?>
+                        </div>
+                        <div class="doc_about"> <?php echo $Doctor['job_details']; ?></div>
+                        <div class="btn-doctor">
+                            <a href="BookAbo.php?dr=<?php echo $Doctor['dr_id'] ?>" style="text-decoration: none;">
+                                <button class="btn-1">Book an appointment</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
     <?php require_once('footer.php'); ?>
     <script type="text/javascript" src="mobile.js"></script>
 </body>
