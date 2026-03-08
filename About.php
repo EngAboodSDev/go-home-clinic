@@ -24,9 +24,9 @@ require_once 'dbcon.php';
     <?php require_once('navbar.php'); ?>
     <section id="about-hero">
         <div class="about-hero-content">
-            <h1>About Go Home Clinic</h1>
+            <h1>About Go Home Clinic.</h1>
             <p>Your trusted partner in convenient and accessible healthcare. We are on a mission to transform the way
-                you receive medical care, bringing expertise directly to your doorstep.</p>
+                you receive medical care, bringing expertise directly to your doorstep</p>
         </div>
     </section>
 
@@ -34,7 +34,7 @@ require_once 'dbcon.php';
         <div class="core-values-container">
             <div class="core-values-header">
                 <h2>Our Foundation</h2>
-                <p>Guided by a commitment to excellence and patient-centric care.</p>
+                <p>Guided by a commitment to excellence and patient-centric care</p>
             </div>
             <div class="core-values-grid">
                 <div class="core-value-card">

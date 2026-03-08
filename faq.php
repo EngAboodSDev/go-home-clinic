@@ -23,9 +23,9 @@ require_once 'dbcon.php';
 
     <section id="faq-hero">
         <div class="faq-hero-content">
-            <h1>Frequently Asked Questions</h1>
+            <h1>Frequently Asked Questions.</h1>
             <p>Find answers to common questions about our mobile clinic services, appointments, and specialized care for
-                elderly patients.</p>
+                elderly patients</p>
         </div>
     </section>
 

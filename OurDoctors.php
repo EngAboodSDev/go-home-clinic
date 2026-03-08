@@ -26,10 +26,9 @@ $AvailableDoctors = getAllAvailableDoctors();
 
     <section id="doctors-hero">
         <div class="doctors-hero-content">
-            <h1>Our Expert Doctors</h1>
+            <h1>Our Expert Doctors.</h1>
             <p>Meet our dedicated team of healthcare professionals, providing compassionate and specialized care
-                directly
-                at your home.</p>
+                directly at your home</p>
         </div>
     </section>
 

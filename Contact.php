@@ -27,9 +27,9 @@ require_once 'Users.php';
 
     <section id="contact-hero">
         <div class="contact-hero-content">
-            <h1>Contact Us</h1>
+            <h1>Contact Us.</h1>
             <p>We are here to help. Reach out to us for any inquiries or support. Our team is available 24/7 to ensure
-                your well-being.</p>
+                your well-being</p>
         </div>
     </section>
 
@@ -38,7 +38,7 @@ require_once 'Users.php';
             <div class="contact-info">
                 <div class="info-header">
                     <h2>Get In Touch With Us Now!</h2>
-                    <p>Multiple ways to stay connected with Go Home Clinic.</p>
+                    <p>Multiple ways to stay connected with Go Home Clinic</p>
                 </div>
                 <div class="info-grid">
                     <div class="core-value-card">
@@ -84,7 +84,7 @@ require_once 'Users.php';
             <div class="contact-form-wrapper">
                 <form action="#" class="contact-form">
                     <h2>Send Us a Message</h2>
-                    <p>Have questions? We'd love to hear from you.</p>
+                    <p>Have questions? We'd love to hear from you</p>
                     <div class="form-group">
                         <input type="text" placeholder="Your Name" required>
                     </div>

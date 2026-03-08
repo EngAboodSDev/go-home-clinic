@@ -38,9 +38,9 @@ if (isset($_GET['dout']) && is_numeric($_GET['dout'])) {
     <section class="intro" id="intro">
         <div class="intro-content">
             <div class="intro-text">
-                <h1>Welcome to <br> Go Home Clinic</h1>
+                <h1>Welcome to <br> Go Home Clinic.</h1>
                 <p>Your trusted destination for compassionate care. We bring medical expertise to your doorstep,
-                    ensuring the well-being of your beloved ones.</p>
+                    ensuring the well-being of your beloved ones</p>
                 <div class="intro-actions">
                     <a href="BookAbo.php" class="cta-btn primary-btn">Book Appointment Now</a>
                     <a href="#services" class="cta-btn secondary-btn">Call Us Today</a>
@@ -78,7 +78,7 @@ if (isset($_GET['dout']) && is_numeric($_GET['dout'])) {
         <div class="services-container">
             <div class="services-header">
                 <h2>Our Services</h2>
-                <p>Comprehensive care solutions tailored to your needs.</p>
+                <p>Comprehensive care solutions tailored to your needs</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
@@ -88,7 +88,7 @@ if (isset($_GET['dout']) && is_numeric($_GET['dout'])) {
                     <div class="service-content">
                         <h3>Regular Check-ups</h3>
                         <p>We provide scheduled periodic check-ups, eliminating the need for frequent hospital visits
-                            for seniors.</p>
+                            for seniors</p>
                     </div>
                 </div>
 
@@ -99,7 +99,7 @@ if (isset($_GET['dout']) && is_numeric($_GET['dout'])) {
                     <div class="service-content">
                         <h3>Medication Management</h3>
                         <p>We assist in organizing and managing medications, helping seniors adhere to prescribed
-                            regimens.</p>
+                            regimens</p>
                     </div>
                 </div>
 
@@ -110,7 +110,7 @@ if (isset($_GET['dout']) && is_numeric($_GET['dout'])) {
                     <div class="service-content">
                         <h3>Health Education</h3>
                         <p>We provide educational materials and advice to empower seniors and caregivers to make
-                            informed health decisions.</p>
+                            informed health decisions</p>
                     </div>
                 </div>
             </div>
@@ -121,7 +121,7 @@ if (isset($_GET['dout']) && is_numeric($_GET['dout'])) {
         <div class="wcu-container">
             <div class="wcu-header">
                 <h2>Why Choose Us ?</h2>
-                <p>Dedicated to providing the best home healthcare experience.</p>
+                <p>Dedicated to providing the best home healthcare experience</p>
             </div>
             <div class="wcu-grid">
                 <div class="wcu-card">
@@ -129,28 +129,28 @@ if (isset($_GET['dout']) && is_numeric($_GET['dout'])) {
                         <i class="fa-solid fa-user-doctor"></i>
                     </div>
                     <h3>Expert Doctors</h3>
-                    <p>Highly qualified professionals ready to serve you.</p>
+                    <p>Highly qualified professionals ready to serve you</p>
                 </div>
                 <div class="wcu-card">
                     <div class="wcu-icon">
                         <i class="fa-solid fa-headset"></i>
                     </div>
                     <h3>24/7 Support</h3>
-                    <p>Always here for you, anytime, anywhere.</p>
+                    <p>Always here for you, anytime, anywhere</p>
                 </div>
                 <div class="wcu-card">
                     <div class="wcu-icon">
                         <i class="fa-solid fa-hand-holding-dollar"></i>
                     </div>
                     <h3>Affordable Care</h3>
-                    <p>Premium service at fair and transparent prices.</p>
+                    <p>Premium service at fair and transparent prices</p>
                 </div>
                 <div class="wcu-card">
                     <div class="wcu-icon">
                         <i class="fa-solid fa-heart"></i>
                     </div>
                     <h3>Personalized</h3>
-                    <p>Care plans tailored specifically to your needs.</p>
+                    <p>Care plans tailored specifically to your needs</p>
                 </div>
             </div>
         </div>
@@ -162,7 +162,7 @@ if (isset($_GET['dout']) && is_numeric($_GET['dout'])) {
         <div class="stat-container">
             <div class="stat-header">
                 <h2>Our Achievements</h2>
-                <p>We take pride in our numbers, reflecting our commitment to excellence and care.</p>
+                <p>We take pride in our numbers, reflecting our commitment to excellence and care</p>
             </div>
             <div class="stat-grid">
                 <div class="stat-card">
@@ -200,7 +200,7 @@ if (isset($_GET['dout']) && is_numeric($_GET['dout'])) {
         <div class="testimonials-container">
             <div class="testimonials-header">
                 <h2>What Our Patients Say ?</h2>
-                <p>Real stories from those who trusted us with their care.</p>
+                <p>Real stories from those who trusted us with their care</p>
             </div>
             <div class="testimonials-grid">
                 <div class="testimonial-card">

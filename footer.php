@@ -50,7 +50,10 @@
     </div>
     <div class="copyright">
         <p>© 2026 All Rights Reserved to GO HOME CLINIC</p>
-        <p class="developer">Developed By: <a href="mailto:abdulrahmanfadhl@gmail.com">Abdulrahman Fadhl Ameer Saif</a>
-            | EngAboodSDev@</p>
+        <p class="developer">Designed with <i style="color: red;" class="fa fa-heart"></i>
+            by
+            <a href="mailto:abdulrahmanfadhl@gmail.com">Abdulrahman Fadhl</a>
+            | @EngAboodSDev
+        </p>
     </div>
 </footer>
