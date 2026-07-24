@@ -105,6 +105,7 @@ $Appointments = getAppointmentDashboard();
   } */
         }
     </style>
+    <link rel="icon" href="../imgs/logo-without-background.png" type="image/png">
 </head>
 
 <body>
@@ -191,10 +192,10 @@ $Appointments = getAppointmentDashboard();
                 </script>
             </div>
             <!-- End Head -->
-            <img src="../imgs/logo-without background .png" class="imgback" alt="">
+            <img src="../imgs/logo-without-background.png" class="imgback" alt="">
             <!-- Start Project Table -->
             <div class="projects p-20 bg-white rad-10 m-20">
-    <h2 class="mt-0 mb-20"><i class="fa fa-dashboard fa-fw c-blue"></i> Dashboard </h2>
+                <h2 class="mt-0 mb-20"><i class="fa fa-dashboard fa-fw c-blue"></i> Dashboard </h2>
                 <div class="responsive-table">
                     <table class="fs-15 w-full">
                         <thead>
@@ -209,12 +210,12 @@ $Appointments = getAppointmentDashboard();
                         <tbody>
 
                             <tr>
-                            <td><?php echo getNumOfAppoints()['appoints']." Appointments"; ?></td>
-                                <td><?php echo getNumOfDoctors()['doctors']." Doctors"; ?></td>
-                                <td><?php echo getNumOfPatients()['patients']." Patients"; ?></td>
-                                <td><?php echo getNumOfVehicles()['vehicles']." Vehicles"; ?></td>
-                                <td><?php echo getPayments()['payments']." SR"; ?></td>
-                                
+                                <td><?php echo getNumOfAppoints()['appoints'] . " Appointments"; ?></td>
+                                <td><?php echo getNumOfDoctors()['doctors'] . " Doctors"; ?></td>
+                                <td><?php echo getNumOfPatients()['patients'] . " Patients"; ?></td>
+                                <td><?php echo getNumOfVehicles()['vehicles'] . " Vehicles"; ?></td>
+                                <td><?php echo getPayments()['payments'] . " SR"; ?></td>
+
                         </tbody>
                     </table>
                 </div>
@@ -229,13 +230,13 @@ $Appointments = getAppointmentDashboard();
                             </tr>
                         </thead>
                         <tbody>
-                        <?php foreach ($Appointments as $appointment) :?>
-                            <tr>
-                                <td><?php echo $appointment['app_state']. " Appointments"; ?></td>
-                                <td><?php echo $appointment['num_apps'] . " From ".getNumOfAppoints()['appoints']." Appointments";; ?></td>
-                                <td><?php echo round($appointment['app_ratio'], 2) ." %" ?></td>
-                            </tr>
-                                <?php endforeach?>
+                            <?php foreach ($Appointments as $appointment) : ?>
+                                <tr>
+                                    <td><?php echo $appointment['app_state'] . " Appointments"; ?></td>
+                                    <td><?php echo $appointment['num_apps'] . " From " . getNumOfAppoints()['appoints'] . " Appointments";; ?></td>
+                                    <td><?php echo round($appointment['app_ratio'], 2) . " %" ?></td>
+                                </tr>
+                            <?php endforeach ?>
                         </tbody>
                     </table>
                 </div>

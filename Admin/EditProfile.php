@@ -7,12 +7,11 @@ if (!isAdminLoggedIn()) {
     redirect('AdminLogin.php');
 }
 if (isset($_GET['aId'])) {
-    $AdminDetails= getAdminProfileInfo($_GET['aId']);
+    $AdminDetails = getAdminProfileInfo($_GET['aId']);
     if (isset($_POST['saveAdmin'])) {
         UpdateAdminProfile(currentAdminId(), $_POST['f_name'], $_POST['l_name'], $_POST['a_email'], $_POST['a_password']);
         alertMessage('Update your profile successfully !');
         redirect('Dashboard.php');
-
     }
 }
 ?>
@@ -49,6 +48,7 @@ if (isset($_GET['aId'])) {
             color: red;
         }
     </style>
+    <link rel="icon" href="../imgs/logo-without-background.png" type="image/png">
 </head>
 
 <body>
@@ -134,7 +134,7 @@ if (isset($_GET['aId'])) {
                             <label for="">Password:</label>
                             <input class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" type="password" name="a_password" value="<?php echo $AdminDetails["a_password"] ?>">
                             <div class="btns">
-                                <input class="save d-block fs-14 bg-blue c-white b-none w-fit btn-shape" type="submit" name="saveAdmin" value="Save" >
+                                <input class="save d-block fs-14 bg-blue c-white b-none w-fit btn-shape" type="submit" name="saveAdmin" value="Save">
                                 <input class="save d-block fs-14 bg-red c-white b-none w-fit btn-shape" type="button" onclick="window.location='Dashboard.php';" value="Cancel">
                             </div>
                         </form>

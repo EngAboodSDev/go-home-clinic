@@ -6,7 +6,6 @@ if (!isDoctorLoggedIn()) {
     redirect('Index.php');
 }
 $docAppoints = getDoctorAppoints(currentDoctorId());
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,107 +14,60 @@ $docAppoints = getDoctorAppoints(currentDoctorId());
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Go Home Clinic | Upcoming Appointments </title>
+    <title>Upcoming Appointments | Go Home Clinic</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/framework.css">
     <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" href="css/newstyle.css">
     <link rel="stylesheet" href="css/navstyles.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
-    <style>
-    .doc_sub_container {
-        max-width: 70%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        border-radius: 10px;
-        margin-bottom: 50px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        background-color: #fff;
-        padding: 2px;
-    }
-
-    .Doc_teams {
-        min-width: max-content;
-        width: -webkit-fill-available;
-        display: flex;
-        align-items: center;
-        padding: 0px;
-        margin: 2px;
-        align-content: center;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    .Doc_teams img {
-        width: 80px;
-        height: 80px;
-    }
-
-    .doc_about {
-        text-align: start;
-        padding: 0px 5px;
-
-    }
-
-    .btn-doctor {
-        /* width: 500px; */
-        margin: 5px;
-    }
-
-    @media (max-width:578px) {
-
-        .doc_sub_container {
-            max-width: 90%;
-        }
-
-        .Doc_teams {
-            min-width: auto;
-            width: -webkit-fill-available;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            flex-wrap: wrap;
-            align-content: space-between;
-
-        }
-
-        .Doc_teams img {
-            width: 40px;
-            height: 40px;
-        }
-
-    }
-    </style>
+    <link rel="icon" href="imgs/logo-without-background.png" type="image/png">
 </head>
 
 <body>
     <?php require_once('navbar.php'); ?>
-    <div class="doc_container">
-        <div class="doc_header">
-            <h1>Upcoming Appointment </h1>
+
+    <section id="page-hero" style="--hero-bg: url('../imgs/medical-record.jpg');">
+        <div class="page-hero-content">
+            <h1>Upcoming Appointments</h1>
+            <p>Manage your scheduled patient appointments and create medical records</p>
         </div>
-        <div class="doc_sub_container">
+    </section>
+
+    <section id="list-section">
+        <div class="list-container">
             <?php if ($docAppoints) {
-                foreach ($docAppoints as $docAppoint) :   ?>
-            <div class="Doc_teams">
-                <img src="imgs/user (2).png" alt="">
-                <div class="doc_name" id="dd"> <?php echo $docAppoint['f_name'] . ' ' . $docAppoint['l_name']; ?> </div>
-                <div class="doc_about">
-                    <i class="fa fa-calendar"></i> <?php echo date('d F, Y', strtotime($docAppoint['date'])); ?><br>
-                    <i class="fa fa-clock-o"></i> <?php echo $docAppoint["app_time"]; ?><br>
-                    <i class="fa fa-globe"></i> <?php echo $docAppoint["app_location"]; ?><br>
-                </div>
-                <div class="btn-doctor">
-                    <a href="AddMedRec.php?ap=<?php echo $docAppoint['app_id']; ?>"
-                        style="text-decoration: none;"><button class="btn-1">Create MedicalRecord</button></a>
-                </div>
-            </div>
-            <?php endforeach;
+                foreach ($docAppoints as $docAppoint) : ?>
+                    <div class="list-card">
+                        <div class="list-card-avatar">
+                            <img src="imgs/user (2).png" alt="Patient">
+                        </div>
+                        <div class="list-card-info">
+                            <div class="card-name"><?php echo $docAppoint['f_name'] . ' ' . $docAppoint['l_name']; ?></div>
+                            <div class="card-details">
+                                <span><i class="fa-solid fa-calendar-days"></i>
+                                    <?php echo date('d F, Y', strtotime($docAppoint['date'])); ?></span>
+                                <span><i class="fa-solid fa-clock"></i> <?php echo $docAppoint["app_time"]; ?></span>
+                                <span><i class="fa-solid fa-location-dot"></i> <?php echo $docAppoint["app_location"]; ?></span>
+                            </div>
+                        </div>
+                        <div class="list-card-actions">
+                            <a href="AddMedRec.php?ap=<?php echo $docAppoint['app_id']; ?>"
+                                class="btn-action btn-primary-action">
+                                <i class="fa-solid fa-file-medical"></i> Create Record
+                            </a>
+                        </div>
+                    </div>
+                <?php endforeach;
             } else { ?>
-            <center>There are no appointments yet.</center>
+                <div class="list-empty">
+                    <i class="fa-solid fa-calendar-xmark"></i>
+                    <p>There are no upcoming appointments.</p>
+                </div>
             <?php } ?>
         </div>
-    </div>
+    </section>
+
     <?php require_once('footer.php'); ?>
     <script type="text/javascript" src="mobile.js"></script>
 </body>

@@ -1146,7 +1146,7 @@ input[type="checkbox"] {
 
 select {
   padding: 6px;
-  height: 32px;
+  /* height: 32px; */
   border-radius: 2px;
 }
 
@@ -2311,4 +2311,574 @@ form {
   .auth-header h2 {
     font-size: 1.75rem;
   }
+}
+
+/* ================================================
+   PAGE HERO MINI - Inner Pages Header
+   ================================================ */
+#page-hero {
+  /* صورة افتراضية في حال لم نحدد صورة في الصفحة */
+  --hero-bg: url("../imgs/faq-bg.jpg"); 
+  
+  background:
+    linear-gradient(rgba(48, 55, 121, 0.85), rgba(48, 55, 121, 0.85)),
+    var(--hero-bg) center/cover;
+  padding: 7rem 5% 4rem;
+  color: #fff;
+  text-align: center;
+}
+
+.page-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.page-hero-content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.page-hero-content p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+/* ================================================
+   APPOINTMENT / RECORD LIST CARDS
+   ================================================ */
+#list-section {
+  padding: 5rem 5%;
+  background-color: #eef2ff7d;
+}
+
+.list-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.list-empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  color: #888;
+  font-size: 1.1rem;
+}
+
+.list-empty i {
+  font-size: 3rem;
+  color: #d1d5db;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.list-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eef2ff;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.list-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(48, 55, 121, 0.1);
+}
+
+.list-card-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #eef2ff;
+  flex-shrink: 0;
+}
+
+.list-card-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.list-card-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.list-card-info .card-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #303779;
+  margin-bottom: 0.4rem;
+}
+
+.list-card-info .card-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.list-card-info .card-details span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.list-card-info .card-details span i {
+  color: #f59e0b;
+  font-size: 0.85rem;
+}
+
+.list-card-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.list-card-actions .btn-action {
+  padding: 0.7rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: inherit;
+}
+
+.btn-primary-action {
+  background-color: #303779;
+  color: #fff;
+}
+
+.btn-primary-action:hover {
+  background-color: #1a1f4d;
+  transform: scale(1.03);
+}
+
+.btn-secondary-action {
+  background-color: #eef2ff;
+  color: #303779;
+}
+
+.btn-secondary-action:hover {
+  background-color: #dde3ff;
+}
+
+.btn-danger-action {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.btn-danger-action:hover {
+  background-color: #fecaca;
+}
+
+@media screen and (max-width: 768px) {
+  #page-hero {
+    padding: 6rem 1.5rem 3rem;
+  }
+  .page-hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .list-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  .list-card-info .card-details {
+    justify-content: center;
+  }
+  .list-card-actions {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ================================================
+   STEPPER FORM - Booking / Medical Records Forms
+   ================================================ */
+#form-section {
+  padding: 5rem 5%;
+  background-color: #eef2ff7d;
+}
+
+.form-card {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 30px;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 20px 50px rgba(48, 55, 121, 0.1);
+  border: 1px solid #eef2ff;
+}
+
+.form-card-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.form-card-header h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #303779;
+  margin-bottom: 0.5rem;
+}
+
+.form-card-header p {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Stepper indicator */
+.stepper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  gap: 0;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+}
+
+.step-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #eef2ff;
+  color: #303779;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.step-item.active .step-circle {
+  background-color: #303779;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(48, 55, 121, 0.3);
+}
+
+.step-item.completed .step-circle {
+  background-color: #22c55e;
+  color: #fff;
+}
+
+.step-line {
+  width: 60px;
+  height: 3px;
+  background-color: #eef2ff;
+  margin: 0 0.5rem;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.step-line.active {
+  background-color: #303779;
+}
+
+/* Form sections inside stepper form */
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+}
+
+.form-step-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #303779;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #eef2ff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-step-title i {
+  color: #f59e0b;
+}
+
+.form-card .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-card label {
+  display: block;
+  font-weight: 600;
+  color: #303779;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.form-card .auth-input,
+.form-card select,
+.form-card textarea {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #eef2ff;
+  background-color: #eef2ff7d;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  color: #333;
+}
+
+.form-card select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23303779' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1.2rem center;
+  padding-right: 3rem;
+}
+
+.form-card .auth-input:focus,
+.form-card select:focus,
+.form-card textarea:focus {
+  border-color: #303779;
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgba(48, 55, 121, 0.1);
+  outline: none;
+}
+
+.form-card textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.form-card .auth-input[readonly] {
+  background-color: #f1f5f9;
+  color: #888;
+  cursor: not-allowed;
+}
+
+.form-card .price-display {
+  background-color: #eef2ff;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-card .price-display .price-label {
+  font-weight: 600;
+  color: #555;
+}
+
+.form-card .price-display .price-value {
+  font-weight: 800;
+  color: #303779;
+  font-size: 1.1rem;
+}
+
+.form-card .price-display.total {
+  background-color: #303779;
+}
+
+.form-card .price-display.total .price-label,
+.form-card .price-display.total .price-value {
+  color: #fff;
+}
+
+.form-btn-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.form-btn-group .cta-btn {
+  flex: 1;
+  text-align: center;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid #303779;
+  color: #303779;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.btn-outline:hover {
+  background-color: #303779;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .form-card {
+    padding: 2rem 1.5rem;
+  }
+  .form-card-header h2 {
+    font-size: 1.5rem;
+  }
+  .step-line {
+    width: 30px;
+  }
+}
+
+/* ================================================
+   RECORD DETAILS - Detail View
+   ================================================ */
+.detail-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 30px;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 20px 50px rgba(48, 55, 121, 0.1);
+  border: 1px solid #eef2ff;
+}
+
+.detail-section {
+  margin-bottom: 2rem;
+}
+
+.detail-section:last-child {
+  margin-bottom: 0;
+}
+
+.detail-section-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #303779;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #eef2ff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.detail-section-title i {
+  color: #f59e0b;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 2rem;
+}
+
+.detail-item {
+  padding: 0.75rem 0;
+}
+
+.detail-item .detail-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.25rem;
+}
+
+.detail-item .detail-value {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.detail-item.full-width {
+  grid-column: 1 / -1;
+}
+
+.detail-item .detail-value.text-block {
+  background-color: #f8fafc;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  line-height: 1.7;
+  font-weight: 400;
+  color: #555;
+  border: 1px solid #eef2ff;
+}
+
+.detail-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .detail-card {
+    padding: 2rem 1.5rem;
+  }
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================================================
+   RATE EXPERIENCE - Star Rating
+   ================================================ */
+.rate-card {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.rate-doctor-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #303779;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.rate-stars {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.rate-stars .fa-star {
+  font-size: 2.5rem;
+  color: #e2e8f0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.rate-stars .fa-star:hover {
+  transform: scale(1.2);
+}
+
+.rate-stars .fa-star.checked {
+  color: #f59e0b;
+}
+
+.rate-stars .fa-star.hover-active {
+  color: #fbbf24;
 }

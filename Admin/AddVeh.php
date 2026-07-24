@@ -8,12 +8,11 @@ if (!isAdminLoggedIn()) {
     redirect('AdminLogin.php');
 }
 if (isset($_POST['addVehicle'])) {
-    $isSuccess = addVehicle($_POST['v_name'],$_POST['car_plate'],$_POST['location'],);
-    if ($isSuccess){
-     alertMessage('Addition is done Successfully ^_^ ');
-     redirect('adminVeh.php');
+    $isSuccess = addVehicle($_POST['v_name'], $_POST['car_plate'], $_POST['location'],);
+    if ($isSuccess) {
+        alertMessage('Addition is done Successfully ^_^ ');
+        redirect('adminVeh.php');
     }
-
 }
 
 // $cAdminId=currentAdminId();
@@ -47,6 +46,7 @@ if (isset($_POST['addVehicle'])) {
             justify-content: space-around;
         }
     </style>
+    <link rel="icon" href="../imgs/logo-without-background.png" type="image/png">
 </head>
 
 <body>
@@ -132,7 +132,7 @@ if (isset($_POST['addVehicle'])) {
                 </script>
             </div>
             <!-- End Head -->
-            <!-- <img src="../imgs/logo-without background .png" alt=""> -->
+            <!-- <img src="../imgs/logo-without-background.png" alt=""> -->
 
 
 
@@ -150,7 +150,7 @@ if (isset($_POST['addVehicle'])) {
 
                                 <label for="">Car Plate*</label>
                                 <input class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" name="car_plate" required type="text" placeholder="Enter Car Plate">
-                               
+
                                 <label for="">Location*</label>
                                 <input class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" name="location" required type="text" placeholder="Enter Location">
 

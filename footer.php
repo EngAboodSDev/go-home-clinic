@@ -20,7 +20,7 @@
                     <li><a href="faq.php"><i class="fa fa-angle-right"></i> FAQ</a></li>
                     <li><a href="About.php"><i class="fa fa-angle-right"></i> About Us</a></li>
                     <li><a href="Contact.php"><i class="fa fa-angle-right"></i> Contact Us</a></li>
-                    <li><a href="BookAbo.php"><i class="fa fa-angle-right"></i> Book Appointment</a></li>
+                    <li><a href="OurDoctors.php"><i class="fa fa-angle-right"></i> Book Appointment</a></li>
                 </ul>
             </div>
 
@@ -29,7 +29,7 @@
                 <ul class="con_us">
                     <li>
                         <i class="fa-solid fa-envelope"></i>
-                        <span>go_home@gmail.com</span>
+                        <span>info@go-home-clinic.com</span>
                     </li>
                     <li>
                         <i class="fa-solid fa-phone"></i>
@@ -50,7 +50,7 @@
     </div>
     <div class="copyright">
         <p>© 2026 All Rights Reserved to GO HOME CLINIC</p>
-        <p class="developer">Designed with <i style="color: red;" class="fa fa-heart"></i>
+        <p class="developer">Designed with love <i style="color: red;" class="fa fa-heart"></i>
             by
             <a href="mailto:abdulrahmanfadhl@gmail.com">Abdulrahman Fadhl</a>
             | @EngAboodSDev

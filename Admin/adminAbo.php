@@ -22,6 +22,7 @@ $Appointments = getAllAppointments();
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&#038;display=swap" rel="stylesheet" />
+    <link rel="icon" href="../imgs/logo-without-background.png" type="image/png">
 </head>
 <body>
     <!-- الكونتينر الي حاوي الصفحة كلها -->
@@ -106,7 +107,7 @@ $Appointments = getAllAppointments();
                 </script>
             </div>
             <!-- End Head -->
-            <img src="../imgs/logo-without background .png" class="imgback"  alt="">
+            <img src="../imgs/logo-without-background.png" class="imgback"  alt="">
             <!-- Start Project Table -->
             <div class="projects p-20 bg-white rad-10 m-20">
                 <h2 class="mt-0 mb-20"> <i class="fa fa-calendar fa-fw c-blue"></i> Appointments</h2>

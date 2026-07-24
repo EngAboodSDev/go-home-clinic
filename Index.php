@@ -22,15 +22,16 @@ if (isset($_GET['dout']) && is_numeric($_GET['dout'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Go Home Clinic | Home</title>
+    <title>Home | Go Home Clinic</title>
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/framework.css">
     <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" href="css/newstyle.css">
     <link rel="stylesheet" href="css/navstyles.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" /> -->
+    <link rel="icon" href="imgs/logo-without-background.png" type="image/png">
 </head>
 
 <body>
@@ -42,8 +43,8 @@ if (isset($_GET['dout']) && is_numeric($_GET['dout'])) {
                 <p>Your trusted destination for compassionate care. We bring medical expertise to your doorstep,
                     ensuring the well-being of your beloved ones</p>
                 <div class="intro-actions">
-                    <a href="BookAbo.php" class="cta-btn primary-btn">Book Appointment Now</a>
-                    <a href="#services" class="cta-btn secondary-btn">Call Us Today</a>
+                    <a href="OurDoctors.php" class="cta-btn primary-btn">Book Appointment Now</a>
+                    <a href="Contact.php" class="cta-btn secondary-btn">Call Us Today</a>
                 </div>
             </div>
             <div class="intro-image">
@@ -265,24 +266,24 @@ if (isset($_GET['dout']) && is_numeric($_GET['dout'])) {
     <script src="./script.js"></script>
 
     <script>
-    $(".num").each(function() {
-        var n = $(this).text();
-        n <= 20 ? (z = 99) : (z = 0);
-        $(this)
-            .prop("Counter", z)
-            .animate({
-                Counter: n.replace(/,/g, ".")
-            }, {
-                duration: 3000,
-                easing: "swing",
-                step: function(now) {
-                    $(this).text(Math.ceil(now));
-                },
-                complete: function() {
-                    $(this).text(n);
-                }
-            });
-    });
+        $(".num").each(function() {
+            var n = $(this).text();
+            n <= 20 ? (z = 99) : (z = 0);
+            $(this)
+                .prop("Counter", z)
+                .animate({
+                    Counter: n.replace(/,/g, ".")
+                }, {
+                    duration: 3000,
+                    easing: "swing",
+                    step: function(now) {
+                        $(this).text(Math.ceil(now));
+                    },
+                    complete: function() {
+                        $(this).text(n);
+                    }
+                });
+        });
     </script>
 
 </body>

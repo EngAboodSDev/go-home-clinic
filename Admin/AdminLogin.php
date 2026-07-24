@@ -1,23 +1,22 @@
-
 <?php
 require_once 'adminWebs.php';
 require_once '../dbcon.php';
 require_once 'Admin.php';
 
 if (isAdminLoggedIn()) {
-  redirect('Dashboard.php');
+    redirect('Dashboard.php');
 }
 
-if(isset($_GET['out']) && is_numeric($_GET['out'])){
+if (isset($_GET['out']) && is_numeric($_GET['out'])) {
     admin_logout();
     header('Refresh:0');
 }
 
 if (isset($_POST['login'])) {
-  $isSuccess = admin_login($_POST['Email'], $_POST['Password']);
-  if ($isSuccess)
-    redirect('Dashboard.php');
-  else alertMessage('Invalid Email or password');
+    $isSuccess = admin_login($_POST['Email'], $_POST['Password']);
+    if ($isSuccess)
+        redirect('Dashboard.php');
+    else alertMessage('Invalid Email or password');
 }
 
 ?>
@@ -38,10 +37,11 @@ if (isset($_POST['login'])) {
         }
     </style>
 
-   
+
+    <link rel="icon" href="../imgs/logo-without-background.png" type="image/png">
 </head>
 <header class="navbar">
-    <a class="navlogo" href="../Index.php"><img src="../imgs/logo-without background .png" alt="logo" width="70"
+    <a class="navlogo" href="../Index.php"><img src="../imgs/logo-without-background.png" alt="logo" width="70"
             height="70"></a>
 </header>
 
@@ -73,7 +73,7 @@ if (isset($_POST['login'])) {
         const emailError = document.getElementById('emailError');
         // const passwordError = document.getElementById('passwordError');
 
-        emailInput.addEventListener('input', function () {
+        emailInput.addEventListener('input', function() {
             if (!isValidEmail(emailInput.value)) {
                 emailError.textContent = 'Invalid email address';
             } else {

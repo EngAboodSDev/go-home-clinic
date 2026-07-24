@@ -4,24 +4,22 @@ require_once '../dbcon.php';
 require_once 'Admin.php';
 
 
-if (!isAdminLoggedIn() ) {
+if (!isAdminLoggedIn()) {
     redirect('AdminLogin.php');
 }
 
-if (!isset ($_GET['veh_id'])){
+if (!isset($_GET['veh_id'])) {
     redirect('Dashboard.php');
 }
-if (isset ($_GET['veh_id'])){
+if (isset($_GET['veh_id'])) {
     $Vehicle = getVehicleById($_GET['veh_id']);
     if (isset($_POST['editVehicle'])) {
-        $isSuccess = editVehicle($_GET['veh_id'],$_POST['v_name'],$_POST['car_plate'],$_POST['location'],);
-        if ($isSuccess){
-         alertMessage('Modified Successfully ^_^ ');
-         redirect('adminVeh.php');
+        $isSuccess = editVehicle($_GET['veh_id'], $_POST['v_name'], $_POST['car_plate'], $_POST['location'],);
+        if ($isSuccess) {
+            alertMessage('Modified Successfully ^_^ ');
+            redirect('adminVeh.php');
         }
-    
     }
-
 }
 
 
@@ -58,6 +56,7 @@ if (isset ($_GET['veh_id'])){
             justify-content: space-around;
         }
     </style>
+    <link rel="icon" href="../imgs/logo-without-background.png" type="image/png">
 </head>
 
 <body>
@@ -143,7 +142,7 @@ if (isset ($_GET['veh_id'])){
                 </script>
             </div>
             <!-- End Head -->
-            <!-- <img src="../imgs/logo-without background .png" alt=""> -->
+            <!-- <img src="../imgs/logo-without-background.png" alt=""> -->
 
 
 
@@ -152,21 +151,21 @@ if (isset ($_GET['veh_id'])){
                 <div class="wrapper d-grid gap-20">
                     <!-- Start Quick Draft Widgt -->
                     <div class="quick-draft p-20 bg-white rad-10">
-                        <h2 class="mt-0 mt-10"><i class="fa fa-edit c-blue"></i> Edit <?php echo $Vehicle["v_name"];?> Info.</h2>
+                        <h2 class="mt-0 mt-10"><i class="fa fa-edit c-blue"></i> Edit <?php echo $Vehicle["v_name"]; ?> Info.</h2>
                         <p class="mt-0 mb-20 c-grey fs-15"></p>
                         <form action="" class="doc_form" method="post">
                             <fieldset>
                                 <label for="">Vehicle Name*</label>
-                                <input class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" name="v_name"  type="text" value="<?php echo $Vehicle["v_name"];?>">
+                                <input class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" name="v_name" type="text" value="<?php echo $Vehicle["v_name"]; ?>">
 
                                 <label for="">Car Plate*</label>
-                                <input class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" name="car_plate"  type="text" value="<?php echo $Vehicle["car_plate"];?>">
+                                <input class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" name="car_plate" type="text" value="<?php echo $Vehicle["car_plate"]; ?>">
 
                                 <label for="location">Location*</label>
-                                <input class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" name="location" required type="text" value="<?php echo $Vehicle["location"];?>">
-                                    <div class="form-group">
+                                <input class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" name="location" required type="text" value="<?php echo $Vehicle["location"]; ?>">
+                                <div class="form-group">
                                     <input style="cursor: pointer; width: 20%; height: 35px;" class="save d-block fs-14 bg-blue c-white b-none w-fit btn-shape" type="submit" name="editVehicle" value="Save">
-                                    </div>
+                                </div>
                             </fieldset>
 
                         </form>

@@ -10,12 +10,14 @@ require_once 'dbcon.php';
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Go Home Clinic | FAQ </title>
+    <title>FAQ | Go Home Clinic</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/framework.css">
     <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" type="text/css" href="css/newstyle.css">
     <link rel="stylesheet" type="text/css" href="css/navstyles.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
-
+    <link rel="icon" href="imgs/logo-without-background.png" type="image/png">
 </head>
 
 <body class="faq_body">
@@ -102,26 +104,26 @@ require_once 'dbcon.php';
     <?php require_once('footer.php'); ?>
     <script type="text/javascript" src="mobile.js"></script>
     <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const faqQuestions = document.querySelectorAll(".faq-question");
+        document.addEventListener("DOMContentLoaded", function() {
+            const faqQuestions = document.querySelectorAll(".faq-question");
 
-        faqQuestions.forEach((question) => {
-            question.addEventListener("click", () => {
-                const item = question.parentElement;
-                const isActive = item.classList.contains("active");
+            faqQuestions.forEach((question) => {
+                question.addEventListener("click", () => {
+                    const item = question.parentElement;
+                    const isActive = item.classList.contains("active");
 
-                // Close other items
-                document.querySelectorAll(".faq-item").forEach((i) => {
-                    i.classList.remove("active");
+                    // Close other items
+                    document.querySelectorAll(".faq-item").forEach((i) => {
+                        i.classList.remove("active");
+                    });
+
+                    // Toggle current item
+                    if (!isActive) {
+                        item.classList.add("active");
+                    }
                 });
-
-                // Toggle current item
-                if (!isActive) {
-                    item.classList.add("active");
-                }
             });
         });
-    });
     </script>
 </body>
 

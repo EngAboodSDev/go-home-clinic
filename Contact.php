@@ -11,15 +11,14 @@ require_once 'Users.php';
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Go Home Clinic | Contact Us</title>
+    <title>Contact Us | Go Home Clinic</title>
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/framework.css">
     <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" href="css/newstyle.css">
     <link rel="stylesheet" href="css/navstyles.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="icon" href="imgs/logo-without-background.png" type="image/png">
 </head>
 
 <body>
@@ -55,7 +54,7 @@ require_once 'Users.php';
                             <i class="fa-solid fa-phone"></i>
                         </div>
                         <h3>Direct Contact</h3>
-                        <p>Call us at: +966 000 000 000<br>Email: go_home@gmail.com</p>
+                        <p>Call us at: +966 000 000 000<br>Email: info@go-home-clinic.com</p>
                     </div>
 
                     <div class="core-value-card">

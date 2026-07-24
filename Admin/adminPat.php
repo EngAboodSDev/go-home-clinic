@@ -11,6 +11,7 @@ $patients = getAllPatients();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,7 +23,9 @@ $patients = getAllPatients();
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&#038;display=swap" rel="stylesheet" />
+    <link rel="icon" href="../imgs/logo-without-background.png" type="image/png">
 </head>
+
 <body>
     <!-- الكونتينر الي حاوي الصفحة كلها -->
     <div class="page d-flex">
@@ -51,11 +54,11 @@ $patients = getAllPatients();
                 <li>
                     <a class=" d-flex align-center fs-14 c-black rad-6 p-10" href="adminDoc.php">
                         <i class="fa-regular fa-circle-user fa-fw"></i>
-                        <span >Doctors </span>
+                        <span>Doctors </span>
                     </a>
                 </li>
 
-               
+
 
                 <li>
                     <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="AddDoc.php">
@@ -66,7 +69,7 @@ $patients = getAllPatients();
                 <li>
                     <a class="active d-flex align-center fs-14 c-black rad-6 p-10" href="adminPat.php">
                         <i class="fa-regular fa-user fa-fw"></i>
-                        <span>Patients  </span>
+                        <span>Patients </span>
                     </a>
                 </li>
                 <li>
@@ -92,59 +95,59 @@ $patients = getAllPatients();
                     </div>
                     <div class="menu">
                         <ul>
-                            <li><img src="../imgs/edit.png" alt=""><a href="EditProfile.php?aId=<?php echo currentAdminId();?>">Edit Profile</a></li>
-                            <li><img src="../imgs/log-out.png" alt=""><a href="AdminLogin.php?out=<?php echo currentAdminId();?>" class="log">Logout</a></li>
+                            <li><img src="../imgs/edit.png" alt=""><a href="EditProfile.php?aId=<?php echo currentAdminId(); ?>">Edit Profile</a></li>
+                            <li><img src="../imgs/log-out.png" alt=""><a href="AdminLogin.php?out=<?php echo currentAdminId(); ?>" class="log">Logout</a></li>
                         </ul>
                     </div>
                 </div>
 
                 <script>
-                    function menuToggle(){
+                    function menuToggle() {
                         const toggleMenu = document.querySelector('.menu');
                         toggleMenu.classList.toggle('active')
                     }
                 </script>
             </div>
             <!-- End Head -->
-            <img src="../imgs/logo-without background .png" class="imgback"  alt="">
+            <img src="../imgs/logo-without-background.png" class="imgback" alt="">
             <!-- Start Project Table -->
             <div class="projects p-20 bg-white rad-10 m-20">
                 <h2 class="mt-0 mb-20"> <i class="fa-regular fa-user fa-fw c-blue"></i> Patients</h2>
                 <div class="responsive-table">
                     <table class="fs-15 w-full">
-                      <thead>
-                        <tr>
-                            <td>Full Name</td>
-                            <td>Email</td>
-                            <td>Patient Phone</td>
-                            <td>Patients Date</td>
-                            <!-- <td>Actions</td> -->
-                           
-                            
-                        </tr>
-                      </thead>
-                      <tbody>
-                      <?php foreach ($patients as $patient) : ?>
-                        <tr>
-                            <td><?php echo $patient["f_name"]." ".$patient["l_name"]; ?></td>
-                            <td><?php echo $patient["p_email"]; ?></td>
-                            <td><?php echo $patient["p_phoneNo"]; ?></td>
-                            <td><?php echo $patient["p_date"]; ?></td>
-                            <!-- <td><a href="EditDoc.php?d_id=<?php // echo $doctor["dr_id"]; ?>" ><i style="margin-left: 20px; margin-right: 10px;" class="fa fa-edit c-blue" aria-hidden="true">
+                        <thead>
+                            <tr>
+                                <td>Full Name</td>
+                                <td>Email</td>
+                                <td>Patient Phone</td>
+                                <td>Patients Date</td>
+                                <!-- <td>Actions</td> -->
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($patients as $patient) : ?>
+                                <tr>
+                                    <td><?php echo $patient["f_name"] . " " . $patient["l_name"]; ?></td>
+                                    <td><?php echo $patient["p_email"]; ?></td>
+                                    <td><?php echo $patient["p_phoneNo"]; ?></td>
+                                    <td><?php echo $patient["p_date"]; ?></td>
+                                    <!-- <td><a href="EditDoc.php?d_id=<?php // echo $doctor["dr_id"]; 
+                                                                        ?>" ><i style="margin-left: 20px; margin-right: 10px;" class="fa fa-edit c-blue" aria-hidden="true">
                             </i></a> 
-                            <a href="adminDoc.php?del_dr=<?php //echo $doctor["dr_id"]; ?>" ><i class="fa fa-trash c-red " aria-hidden="true"></i></a> 
+                            <a href="adminDoc.php?del_dr=<?php //echo $doctor["dr_id"]; 
+                                                            ?>" ><i class="fa fa-trash c-red " aria-hidden="true"></i></a> 
                             </td> -->
-                        </tr>
-                        <?php endforeach; ?>
+                                </tr>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>
             </div>
             <!-- End Project Table -->
         </div>
-    </div>    
+    </div>
 </body>
+
 </html>
-
-
-

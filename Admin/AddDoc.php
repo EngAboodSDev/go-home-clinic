@@ -21,13 +21,12 @@ if (isset($_POST['addDoctor'])) {
         $_POST['dr_location'],
         $_POST['dr_phoneNo'],
         $_POST['vehicles'],
-        currentAdminId() 
+        currentAdminId()
     );
-    if ($isSuccess){
-     alertMessage('Addition is done Successfully ^_^ ');
-     redirect('adminDoc.php');
+    if ($isSuccess) {
+        alertMessage('Addition is done Successfully ^_^ ');
+        redirect('adminDoc.php');
     }
-
 }
 
 // $cAdminId=currentAdminId();
@@ -61,6 +60,7 @@ if (isset($_POST['addDoctor'])) {
             justify-content: space-around;
         }
     </style>
+    <link rel="icon" href="../imgs/logo-without-background.png" type="image/png">
 </head>
 
 <body>
@@ -146,7 +146,7 @@ if (isset($_POST['addDoctor'])) {
                 </script>
             </div>
             <!-- End Head -->
-            <!-- <img src="../imgs/logo-without background .png" alt=""> -->
+            <!-- <img src="../imgs/logo-without-background.png" alt=""> -->
 
 
 
@@ -174,20 +174,20 @@ if (isset($_POST['addDoctor'])) {
                                 <input class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" name="dr_phoneNo" required type="number" placeholder="Enter Doctor phone">
                                 <label for="">Doctor Location</label>
                                 <input class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" name="dr_location" required type="text" placeholder="Enter Doctor location">
-                                
+
                                 <div class="form-group">
-                                <input style="cursor: pointer; width: 20%; height: 35px;" class="save d-block fs-14 bg-blue c-white b-none w-fit btn-shape next_button" type="button" value="Next">
+                                    <input style="cursor: pointer; width: 20%; height: 35px;" class="save d-block fs-14 bg-blue c-white b-none w-fit btn-shape next_button" type="button" value="Next">
                                 </div>
-                                
+
                             </fieldset>
 
                             <fieldset class="none">
-                            <lable for="IsAvailable">Is Available :</lable>
-                            <select id="IsAvailable" name="IsAvailable" class="d-block mb-20 w-full p-10 b-none bg-eee rad-6">
-                                <option class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" value="1">Available</option>
-                                <option class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" value="0">Not Available</option>
-                            </select>
-                            <lable for="location">Select vehicle :</lable>
+                                <lable for="IsAvailable">Is Available :</lable>
+                                <select id="IsAvailable" name="IsAvailable" class="d-block mb-20 w-full p-10 b-none bg-eee rad-6">
+                                    <option class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" value="1">Available</option>
+                                    <option class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" value="0">Not Available</option>
+                                </select>
+                                <lable for="location">Select vehicle :</lable>
                                 <select id="vehicles" name="vehicles" class="d-block mb-20 w-full p-10 b-none bg-eee rad-6">
                                     <option class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" value="0">None</option>
 
@@ -219,9 +219,6 @@ if (isset($_POST['addDoctor'])) {
             form.children[1].classList.add('none');
             form.lastElementChild.classList.remove('none');
         })
-
-      
-
     </script>
 
 </body>

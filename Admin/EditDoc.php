@@ -4,15 +4,15 @@ require_once '../dbcon.php';
 require_once 'Admin.php';
 
 
-if (!isAdminLoggedIn() ) {
+if (!isAdminLoggedIn()) {
     redirect('AdminLogin.php');
 }
 $vehicles = getAllVehicles();
 
-if (!isset ($_GET['d_id'])){
+if (!isset($_GET['d_id'])) {
     redirect('Dashboard.php');
 }
-if (isset ($_GET['d_id'])){
+if (isset($_GET['d_id'])) {
     $Doctor = getDoctorInfo($_GET['d_id']);
     if (isset($_POST['editDoctor'])) {
         $isSuccess = editDoctor(
@@ -27,15 +27,13 @@ if (isset ($_GET['d_id'])){
             $_POST['dr_location'],
             $_POST['dr_phoneNo'],
             $_POST['vehicles'],
-            currentAdminId() 
+            currentAdminId()
         );
-        if ($isSuccess){
-         alertMessage('Modified Successfully ^_^ ');
-         redirect('adminDoc.php');
+        if ($isSuccess) {
+            alertMessage('Modified Successfully ^_^ ');
+            redirect('adminDoc.php');
         }
-    
     }
-
 }
 
 
@@ -72,6 +70,7 @@ if (isset ($_GET['d_id'])){
             justify-content: space-around;
         }
     </style>
+    <link rel="icon" href="../imgs/logo-without-background.png" type="image/png">
 </head>
 
 <body>
@@ -157,7 +156,7 @@ if (isset ($_GET['d_id'])){
                 </script>
             </div>
             <!-- End Head -->
-            <!-- <img src="../imgs/logo-without background .png" alt=""> -->
+            <!-- <img src="../imgs/logo-without-background.png" alt=""> -->
 
 
 
@@ -166,49 +165,49 @@ if (isset ($_GET['d_id'])){
                 <div class="wrapper d-grid gap-20">
                     <!-- Start Quick Draft Widgt -->
                     <div class="quick-draft p-20 bg-white rad-10">
-                        <h2 class="mt-0 mt-10"><i class="fa fa-edit c-blue"></i> Edit <?php echo $Doctor["f_name"];?> Info.</h2>
+                        <h2 class="mt-0 mt-10"><i class="fa fa-edit c-blue"></i> Edit <?php echo $Doctor["f_name"]; ?> Info.</h2>
                         <p class="mt-0 mb-20 c-grey fs-15"></p>
                         <form action="" class="doc_form" method="post">
                             <fieldset>
                                 <label for=""> First Name*</label>
-                                <input class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" name="f_name"  type="text" value="<?php echo $Doctor["f_name"];?>">
+                                <input class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" name="f_name" type="text" value="<?php echo $Doctor["f_name"]; ?>">
 
                                 <label for="">Last Name</label>
-                                <input class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" name="l_name"  type="text" value="<?php echo $Doctor["l_name"];?>">
+                                <input class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" name="l_name" type="text" value="<?php echo $Doctor["l_name"]; ?>">
 
                                 <label for="">Email*</label>
-                                <input class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" name="dr_email" required type="email" value="<?php echo $Doctor["dr_email"];?>">
+                                <input class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" name="dr_email" required type="email" value="<?php echo $Doctor["dr_email"]; ?>">
 
                                 <label for="">Password*</label>
-                                <input class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" name="dr_password" required type="password" value="<?php echo $Doctor["dr_password"];?>">
+                                <input class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" name="dr_password" required type="password" value="<?php echo $Doctor["dr_password"]; ?>">
                                 <label for="">Doctor PhoneNo*</label>
-                                <input class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" name="dr_phoneNo" required type="number" value="<?php echo $Doctor["dr_phoneNo"];?>">
+                                <input class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" name="dr_phoneNo" required type="number" value="<?php echo $Doctor["dr_phoneNo"]; ?>">
                                 <label for="">Doctor Location</label>
-                                <input class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" name="dr_location" required type="text" value="<?php echo $Doctor["dr_location"];?>">
-                                
+                                <input class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" name="dr_location" required type="text" value="<?php echo $Doctor["dr_location"]; ?>">
+
                                 <div class="form-group">
-                                <input style="cursor: pointer; width: 20%; height: 35px;" class="save d-block fs-14 bg-blue c-white b-none w-fit btn-shape next_button" type="button" value="Next">
+                                    <input style="cursor: pointer; width: 20%; height: 35px;" class="save d-block fs-14 bg-blue c-white b-none w-fit btn-shape next_button" type="button" value="Next">
                                 </div>
-                                
+
                             </fieldset>
 
                             <fieldset class="none">
-                            <lable for="IsAvailable">Is Available :</lable>
-                            <select id="IsAvailable" name="IsAvailable" class="d-block mb-20 w-full p-10 b-none bg-eee rad-6">
-                                <option class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" value="1"<?php echo ($Doctor['IsAvailable']=="1")? "selected" : ""?>>Available</option>
-                                <option class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" value="0"<?php echo ($Doctor['IsAvailable']=="0")? "selected" : ""?>>Not Available</option>
-                            </select>
-                            <lable for="location">Select vehicle :</lable>
-                            <select id="vehicles" name="vehicles" class="d-block mb-20 w-full p-10 b-none bg-eee rad-6">
-                                <option class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" value="0">None</option>
-                                <?php foreach ($vehicles as $vehicle) : ?>
-                                        <option class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" value="<?php echo $vehicle["v_id"]; ?>"<?php echo ($vehicle["v_id"]==$Doctor["v_id"])? "selected": "" ?>><?php echo $vehicle["v_name"] . '    |    ' . $vehicle["location"]; ?></option>
+                                <lable for="IsAvailable">Is Available :</lable>
+                                <select id="IsAvailable" name="IsAvailable" class="d-block mb-20 w-full p-10 b-none bg-eee rad-6">
+                                    <option class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" value="1" <?php echo ($Doctor['IsAvailable'] == "1") ? "selected" : "" ?>>Available</option>
+                                    <option class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" value="0" <?php echo ($Doctor['IsAvailable'] == "0") ? "selected" : "" ?>>Not Available</option>
+                                </select>
+                                <lable for="location">Select vehicle :</lable>
+                                <select id="vehicles" name="vehicles" class="d-block mb-20 w-full p-10 b-none bg-eee rad-6">
+                                    <option class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" value="0">None</option>
+                                    <?php foreach ($vehicles as $vehicle) : ?>
+                                        <option class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" value="<?php echo $vehicle["v_id"]; ?>" <?php echo ($vehicle["v_id"] == $Doctor["v_id"]) ? "selected" : "" ?>><?php echo $vehicle["v_name"] . '    |    ' . $vehicle["location"]; ?></option>
                                     <?php endforeach; ?>
                                 </select>
                                 <label for="">Doctor Job*</label>
-                                <input class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" name="job" required type="text" value="<?php echo $Doctor["job"];?>">
+                                <input class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" name="job" required type="text" value="<?php echo $Doctor["job"]; ?>">
                                 <label for="">Job Details*</label>
-                                <textarea class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" name="job_details" cols="3" rows="3" required ><?php echo $Doctor["job_details"];?></textarea>
+                                <textarea class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" name="job_details" cols="3" rows="3" required><?php echo $Doctor["job_details"]; ?></textarea>
 
                                 <div class="form-group">
                                     <input style="cursor: pointer; width: 20%; height: 35px;" class="save d-block fs-14 bg-blue c-white b-none w-fit btn-shape" type="submit" name="editDoctor" value="Save">
@@ -229,9 +228,6 @@ if (isset ($_GET['d_id'])){
             form.children[1].classList.add('none');
             form.lastElementChild.classList.remove('none');
         })
-
-      
-
     </script>
 
 </body>

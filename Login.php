@@ -22,28 +22,27 @@ if (isset($_POST['p_login'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Go Home Clinic | Patient Sign In</title>
+    <title>Patient Sign In | Go Home Clinic</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/framework.css">
     <link rel="stylesheet" href="css/newstyle.css">
     <link rel="stylesheet" href="css/navstyles.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-
     <style>
-    .error {
-        color: red;
-    }
+        .error {
+            color: red;
+        }
 
 
-    .loginType {
-        display: flex;
-        gap: 40px;
-        justify-content: flex-start;
-        flex-wrap: nowrap;
-        flex-direction: row;
-    }
+        .loginType {
+            display: flex;
+            gap: 40px;
+            justify-content: flex-start;
+            flex-wrap: nowrap;
+            flex-direction: row;
+        }
     </style>
+    <link rel="icon" href="imgs/logo-without-background.png" type="image/png">
 </head>
 
 <body class="auth-body">
@@ -85,21 +84,21 @@ if (isset($_POST['p_login'])) {
 
     <?php require_once('footer.php'); ?>
     <script>
-    const emailInput = document.getElementById('email');
-    const emailError = document.getElementById('emailError');
+        const emailInput = document.getElementById('email');
+        const emailError = document.getElementById('emailError');
 
-    emailInput.addEventListener('input', function() {
-        if (!isValidEmail(emailInput.value)) {
-            emailError.textContent = 'Invalid email address';
-        } else {
-            emailError.textContent = '';
+        emailInput.addEventListener('input', function() {
+            if (!isValidEmail(emailInput.value)) {
+                emailError.textContent = 'Invalid email address';
+            } else {
+                emailError.textContent = '';
+            }
+        });
+
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
         }
-    });
-
-    function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
     </script>
     <script type="text/javascript" src="mobile.js"></script>
 </body>

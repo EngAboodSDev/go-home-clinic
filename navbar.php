@@ -3,7 +3,7 @@
 if (!isPatientLoggedIn() && !isDoctorLoggedIn())
     echo '
 <header class="navbar">
-    <a class="navlogo" href="Index.php"><img src="imgs/logo-without background .png" alt="logo" width="70" height="70"></a>
+    <a class="navlogo" href="Index.php"><img src="imgs/logo-without-background.png" alt="logo" width="70" height="70"></a>
     <nav>
         <ul class="nav__links">
             <li><a href="Index.php">Home</a></li>
@@ -33,7 +33,7 @@ if (!isPatientLoggedIn() && !isDoctorLoggedIn())
 if (isPatientLoggedIn() && !isDoctorLoggedIn())
     echo '
 <header class="navbar">
-    <a class="navlogo" href="Index.php"><img src="imgs/logo-without background .png" alt="logo" width="70" height="70"></a>
+    <a class="navlogo" href="Index.php"><img src="imgs/logo-without-background.png" alt="logo" width="70" height="70"></a>
     <nav>
         <ul class="nav__links">
         <li><a href="Index.php">Home</a></li>
@@ -85,7 +85,7 @@ if (isPatientLoggedIn() && !isDoctorLoggedIn())
 if (!isPatientLoggedIn() && isDoctorLoggedIn())
     echo '
 <header class="navbar">
-    <a class="navlogo" href="Index.php"><img src="imgs/logo-without background .png" alt="logo" width="70" height="70"></a>
+    <a class="navlogo" href="Index.php"><img src="imgs/logo-without-background.png" alt="logo" width="70" height="70"></a>
     <nav>
         <ul class="nav__links">
             <li><a href="Index.php">Home</a></li>
