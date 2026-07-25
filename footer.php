@@ -8,7 +8,7 @@
                 <div class="social-icons">
                     <a href="https://www.facebook.com/go-home-clinic"><i
                             class="fa-brands fa-facebook-f fa-float"></i></a>
-                    <a href="https://x.com/go-home-clinic"><i class="fa-brands fa-x-twitter fa-float"></i></a>
+                    <a href="https://x.com/go-home-clinic"><i class="fa-brands fa-twitter fa-float"></i></a>
                     <a href="https://www.instagram.com/go-home-clinic"><i
                             class="fa-brands fa-instagram fa-float"></i></a>
                     <a href="https://www.linkedin.com/in/go-home-clinic"><i
