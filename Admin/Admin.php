@@ -16,12 +16,14 @@
 function admin_login($email, $password)
 {
     $db = connectDB();
-    $sql = "SELECT `a_id` FROM admin WHERE `a_email` = '" . $email . "' AND `a_password` = '" . $password . "'";
+    $sql = "SELECT `a_id`,`f_name` FROM admin WHERE `a_email` = '" . $email . "' AND `a_password` = '" . $password . "'";
     $result = mysqli_query($db, $sql);
     $row = mysqli_fetch_array($result);
+    print_r($row);
     if (isset($row['a_id'])) {
         unset($_COOKIE);
         setcookie('admin_id', $row['a_id'], time() + (86400 * 30), "/");
+        setcookie('admin_fname', $row['f_name'], time() + (86400 * 30), "/");
         return true;
     }
     return false;
@@ -47,6 +49,7 @@ function UpdateAdminProfile($admin_id,$f_name,$l_name,$a_email,$a_password)
     $db = connectDB();
     $sql = "UPDATE `admin` SET `f_name`='$f_name',`l_name`='$l_name',`a_email`='$a_email',`a_password`='$a_password' WHERE `a_id`=$admin_id";
     mysqli_query($db, $sql);
+    
 }
 
 

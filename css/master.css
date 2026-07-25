@@ -54,44 +54,71 @@ ul{
 
 /* Start Sidebar */
 .sidebar {
-    width: 250px;
+    width: 58px; /* Default is collapsed */
     box-shadow: 0 0 10px #DDD;
     background-color: var(--blue-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 1000;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none; /* Firefox */
+    transition: width 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
-.sidebar > h3 {
-    margin-bottom: 50px;
-    color: white;
+.sidebar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
 }
 
-.sidebar > h3::before,
-.sidebar > h3::after{
-    content: "";
-    background-color: white;
-    transform: translateX(-50%);
-    position: absolute;
-    left: 50%;
+.sidebar .toggle-btn {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
 }
 
-.sidebar > h3::before{
-    width: 80px;
-    height: 2px;
-    bottom: -20px;
+.sidebar .sidebar-title {
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: var(--orange-color);
+    text-align: center;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.sidebar > h3::after{
-    bottom: -29px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    border: 4px solid white;
-
+.sidebar .sidebar-title span {
+    display: none;
 }
 
-.sidebar ul li a{
+.sidebar ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.sidebar ul li a {
     transition: 0.3s;
-    margin-bottom: 5px;
     color: white;
+    white-space: nowrap;
+    justify-content: center;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a i {
+    font-size: 20px;
+    margin: 0;
 }
 
 .sidebar ul li a:hover,
@@ -100,43 +127,57 @@ ul{
     color: black;
 }
 
-
 .sidebar ul li a span{
-    font-size: 14px;
-    margin-left: 10px;
+    display: none;
 }
 
+/* Toggled State (Expanded as Overlay) */
+.sidebar.toggled {
+    width: 250px;
+}
+.sidebar.toggled .toggle-btn {
+    text-align: right;
+    padding-right: 20px;
+}
 .form-cont {
     margin-top: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
-
-@media (max-width: 767px){
-    .sidebar {
-        width: 58px;
-        padding: 10px;
-    }
-
-    
-    .sidebar > h3{
-        font-size: 13px;
-        margin-bottom: 15px;
-    }
-
-    
-    .sidebar > h3::before,
-    .sidebar > h3::after{
-        display: none;
-    }
-
-    .sidebar ul li a span{
-        display: none;
-    }
-
+.sidebar.toggled .sidebar-title {
+    font-size: 20px;
+    margin-bottom: 40px;
+    justify-content: flex-start;
+    padding-left: 20px;
 }
+.sidebar.toggled .sidebar-title span {
+    display: inline;
+    margin-left: 10px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.sidebar.toggled ul li a {
+    justify-content: flex-start;
+    padding: 15px 20px;
+}
+.sidebar.toggled ul li a i {
+    margin-right: 15px;
+}
+.sidebar.toggled ul li a span {
+    display: inline;
+    font-size: 16px;
+    transition: opacity 0.3s;
+}
+
+/* Adjust Content to not hide behind the fixed sidebar */
+.content {
+    margin-left: 58px;
+    width: calc(100% - 58px);
+    overflow: hidden;
+}
+
 /* End Sidebar */
 
 /* Start Content Head */
@@ -784,7 +825,7 @@ ul{
 }
 
 .content img{
-    width: 200px;
+    width: 150px;
     margin-left: 41%;
 }
 
@@ -1090,4 +1131,181 @@ ul{
 .Blood{
     color: red;
     font-weight: bold;
+}
+
+/* =======================================
+   ADMIN DASHBOARD MODERNIZATION OVERRIDES
+   ======================================= */
+
+/* 1. Sidebar Styles (Dark Blue with White Text) */
+.page .sidebar {
+    background-color: var(--blue-color) !important;
+}
+.page .sidebar.bg-white {
+    background-color: var(--blue-color) !important;
+}
+.page .sidebar > h3 {
+    color: #ffffff !important;
+}
+.page .sidebar ul li a {
+    color: rgba(255, 255, 255, 0.8) !important;
+    transition: 0.3s;
+}
+.page .sidebar ul li a.c-black {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+.page .sidebar ul li a i {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+.page .sidebar ul li a:hover,
+.page .sidebar ul li a.active {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+    border-radius: 8px;
+}
+.page .sidebar ul li a:hover i,
+.page .sidebar ul li a.active i {
+    color: var(--orange-color) !important;
+}
+
+/* 2. Responsive Table Enhancements */
+.projects.p-20.bg-white {
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid #eaeaea;
+}
+.projects table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+}
+.projects thead td {
+    background-color: #f8fafc !important;
+    color: #64748b !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #e2e8f0;
+    padding: 18px 15px !important;
+}
+.projects tbody tr {
+    transition: background-color 0.2s;
+}
+.projects tbody tr:hover {
+    background-color: #f8fafc;
+}
+.projects tbody td {
+    padding: 16px 15px !important;
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+    font-size: 14px;
+}
+.projects tbody tr:last-child td {
+    border-bottom: none;
+}
+.projects table td i.c-blue {
+    color: var(--blue-color) !important;
+}
+.projects table td i.c-red {
+    color: var(--red-color) !important;
+}
+
+/* 3. Form Cleanups (Add/Edit Docs/Vehicles) */
+.form-cont .quick-draft {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+    padding: 30px !important;
+}
+.form-cont input.bg-eee,
+.form-cont select.bg-eee {
+    background-color: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    padding: 12px 15px !important;
+    border-radius: 8px !important;
+    font-size: 14px;
+    color: #334155;
+    transition: all 0.3s ease;
+}
+.form-cont input.bg-eee:focus,
+.form-cont select.bg-eee:focus {
+    border-color: var(--blue-color) !important;
+    box-shadow: 0 0 0 3px rgba(48, 55, 121, 0.1) !important;
+}
+.form-cont input.save {
+    background-color: var(--blue-color) !important;
+    padding: 10px 20px !important;
+    border-radius: 8px !important;
+    font-weight: 600;
+    height: auto !important;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.form-cont input.save:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+.form-cont .btns input.bg-red {
+    background-color: var(--red-color) !important;
+}
+
+/* 4. Fix Admin Login (Make it clean but separate from frontend) */
+.AdminLogform {
+    background: #ffffff;
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-top: 5px solid var(--blue-color);
+}
+.AdminLogform .upper_form h2 {
+    color: var(--blue-color);
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 0;
+    font-size: 24px;
+}
+.AdminLogform label {
+    font-weight: 600;
+    color: #334155;
+    font-size: 14px;
+}
+.AdminLogform input[type="email"],
+.AdminLogform input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background-color: #f8fafc;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+.AdminLogform input[type="email"]:focus,
+.AdminLogform input[type="password"]:focus {
+    border-color: var(--blue-color);
+    box-shadow: 0 0 0 3px rgba(48, 55, 121, 0.1);
+}
+.AdminLogform .log_btn button {
+    width: 100%;
+    background-color: var(--blue-color);
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.AdminLogform .log_btn button:hover {
+    background-color: #23295c;
+}
+.logbody {
+    background-color: #f1f5f9;
 }

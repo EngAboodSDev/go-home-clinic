@@ -19,10 +19,15 @@ function currentAdminId()
 {
     return $_COOKIE['admin_id'];
 }
+function currentAdminFname()
+{
+    return $_COOKIE['admin_fname'];
+}
 
 function admin_logout()
 {
     setcookie('admin_id', null, time() - 3600, "/");
-    unset($_COOKIE['admin_id']);
+    setcookie('admin_fname', null, time() - 3600, "/");
+    unset($_COOKIE['admin_id'],$_COOKIE['admin_fname']);
 }
 ?>

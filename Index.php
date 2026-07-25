@@ -168,7 +168,7 @@ if (isset($_GET['dout']) && is_numeric($_GET['dout'])) {
             <div class="stat-grid">
                 <div class="stat-card">
                     <div class="icon-box">
-                        <i class="fa-regular fa-face-grin-hearts"></i>
+                        <i class="fa-solid fa-face-grin-hearts"></i>
                     </div>
                     <div class="stat-info">
                         <div class="num">+300</div>

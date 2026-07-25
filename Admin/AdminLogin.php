@@ -13,7 +13,7 @@ if (isset($_GET['out']) && is_numeric($_GET['out'])) {
 }
 
 if (isset($_POST['login'])) {
-    $isSuccess = admin_login($_POST['Email'], $_POST['Password']);
+    $isSuccess = admin_login($_POST['Email'], md5($_POST['Password']));
     if ($isSuccess)
         redirect('Dashboard.php');
     else alertMessage('Invalid Email or password');
@@ -28,13 +28,13 @@ if (isset($_POST['login'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login</title>
-    <link rel="stylesheet" href="../css/newstyle.css">
-    <link rel="stylesheet" href="../css/navstyles.css">
+    <link rel="stylesheet" href="../css/framework.css">
+    <link rel="stylesheet" href="../css/master.css">
 
     <style>
-        .error {
-            color: red;
-        }
+    .error {
+        color: red;
+    }
     </style>
 
 
@@ -68,39 +68,39 @@ if (isset($_POST['login'])) {
     </div>
 
     <script>
-        const emailInput = document.getElementById('email');
-        // const passwordInput = document.getElementById('password');
-        const emailError = document.getElementById('emailError');
-        // const passwordError = document.getElementById('passwordError');
+    const emailInput = document.getElementById('email');
+    // const passwordInput = document.getElementById('password');
+    const emailError = document.getElementById('emailError');
+    // const passwordError = document.getElementById('passwordError');
 
-        emailInput.addEventListener('input', function() {
-            if (!isValidEmail(emailInput.value)) {
-                emailError.textContent = 'Invalid email address';
-            } else {
-                emailError.textContent = '';
-            }
-        });
-
-        // passwordInput.addEventListener('input', function () {
-        //     // You should replace this with an actual check against your database
-        //     // This is a simple example for demonstration purposes
-        //     if (passwordInput.value !== 'correctpassword') {
-        //         passwordError.textContent = 'Invalid password';
-        //     } else {
-        //         passwordError.textContent = '';
-        //     }
-        // });
-
-        function isValidEmail(email) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailRegex.test(email);
+    emailInput.addEventListener('input', function() {
+        if (!isValidEmail(emailInput.value)) {
+            emailError.textContent = 'Invalid email address';
+        } else {
+            emailError.textContent = '';
         }
+    });
 
-        // document.getElementById('loginForm').addEventListener('submit', function (e) {
-        //     if (!isValidEmail(emailInput.value) || passwordInput.value !== 'correctpassword') {
-        //         e.preventDefault(); // Prevent form submission if there are errors
-        //     }
-        // });
+    // passwordInput.addEventListener('input', function () {
+    //     // You should replace this with an actual check against your database
+    //     // This is a simple example for demonstration purposes
+    //     if (passwordInput.value !== 'correctpassword') {
+    //         passwordError.textContent = 'Invalid password';
+    //     } else {
+    //         passwordError.textContent = '';
+    //     }
+    // });
+
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
+    // document.getElementById('loginForm').addEventListener('submit', function (e) {
+    //     if (!isValidEmail(emailInput.value) || passwordInput.value !== 'correctpassword') {
+    //         e.preventDefault(); // Prevent form submission if there are errors
+    //     }
+    // });
     </script>
 </body>
 

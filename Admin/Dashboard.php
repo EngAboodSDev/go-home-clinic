@@ -23,87 +23,87 @@ $Appointments = getAppointmentDashboard();
     <link rel="stylesheet" href="../css/master.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&#038;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
     <style>
-        .heading {
-            font-size: 25px;
-            margin-right: 25px;
-        }
+    .heading {
+        font-size: 25px;
+        margin-right: 25px;
+    }
 
 
 
-        .checked {
-            color: orange !important;
-        }
+    .checked {
+        color: orange !important;
+    }
 
-        .row {
-            display: flex;
-            justify-content: space-between;
-        }
+    .row {
+        display: flex;
+        justify-content: space-between;
+    }
 
-        /* Three column layout */
-        .side {
-            float: left;
-            width: fit-content;
-            margin-top: 10px;
-            margin-right: 20px;
-        }
+    /* Three column layout */
+    .side {
+        float: left;
+        width: fit-content;
+        margin-top: 10px;
+        margin-right: 20px;
+    }
 
-        .middle {
-            margin-top: 10px;
-            float: left;
-            width: 70%;
-        }
+    .middle {
+        margin-top: 10px;
+        float: left;
+        width: 70%;
+    }
 
-        /* Place text to the right */
-        .right {
-            text-align: right;
-        }
+    /* Place text to the right */
+    .right {
+        text-align: right;
+    }
 
-        /* Clear floats after the columns */
-        /* .row:after {
+    /* Clear floats after the columns */
+    /* .row:after {
         content: "";
         display: table;
         clear: both;
     } */
 
-        /* The bar container */
-        .bar-container {
+    /* The bar container */
+    .bar-container {
+        width: 100%;
+        background-color: #f1f1f1;
+        text-align: center;
+        color: white;
+    }
+
+    .small {
+        font-size: medium;
+        color: #f1f1f1;
+    }
+
+    /* Individual bars */
+    .bar-s {
+        height: 18px;
+        background-color: #303779;
+        border-radius: 5px;
+    }
+
+
+    /* Responsive layout - make the columns stack on top of each other instead of next to each other */
+    @media (max-width: 400px) {
+
+        .side,
+        .middle {
             width: 100%;
-            background-color: #f1f1f1;
-            text-align: center;
-            color: white;
         }
 
-        .small {
-            font-size: medium;
-            color: #f1f1f1;
+        .row {
+            flex-direction: column;
         }
 
-        /* Individual bars */
-        .bar-s {
-            height: 18px;
-            background-color: #303779;
-            border-radius: 5px;
-        }
-
-
-        /* Responsive layout - make the columns stack on top of each other instead of next to each other */
-        @media (max-width: 400px) {
-
-            .side,
-            .middle {
-                width: 100%;
-            }
-
-            .row {
-                flex-direction: column;
-            }
-
-            /* .right {
+        /* .right {
     display: none;
   } */
-        }
+    }
     </style>
     <link rel="icon" href="../imgs/logo-without-background.png" type="image/png">
 </head>
@@ -111,99 +111,107 @@ $Appointments = getAppointmentDashboard();
 <body>
     <!-- الكونتينر الي حاوي الصفحة كلها -->
     <div class="page d-flex">
-        <div class="sidebar bg-white p-20 p-relative">
-            <h3 class="p-relative txt-c mt-0">Admin</h3>
+        <div class="sidebar bg-white p-10 pt-20 pb-20 p-relative">
+            <div class="toggle-btn" onclick="document.querySelector('.sidebar').classList.toggle('toggled')"
+                style="cursor: pointer; text-align: right; color: white; margin-bottom: 20px; font-size: 20px;">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="sidebar-title p-relative txt-c mt-0">
+                <i class="fa-solid fa-hospital"></i>
+                <span>Admin Panel</span>
+            </div>
             <ul>
                 <li>
                     <a class="active d-flex align-center fs-14 c-black rad-6 p-10" href="Dashboard.php">
-                        <i class="fa fa-dashboard fa-fw"></i>
+                        <i class="fa-solid fa-house-chimney fa-fw"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
 
                 <li>
                     <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="adminAbo.php">
-                        <i class="fa fa-calendar fa-fw"></i>
+                        <i class="fa-solid fa-calendar-days fa-fw"></i>
                         <span>Appointments</span>
                     </a>
                 </li>
                 <li>
                     <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="adminMed.php">
-                        <i class="fa fa-hand-holding-medical"></i>
+                        <i class="fa-solid fa-book-medical fa-fw"></i>
                         <span>Medical Records</span>
                     </a>
                 </li>
 
                 <li>
-                    <a class=" d-flex align-center fs-14 c-black rad-6 p-10" href="adminDoc.php">
-                        <i class="fa-regular fa-circle-user fa-fw"></i>
-                        <span>Doctors </span>
-                    </a>
-                </li>
-
-
-
-                <li>
-                    <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="AddDoc.php">
-                        <i class="fa-solid fa-square-plus"></i>
-                        <span>Add Doctor</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="">
-                        <i class="fa-regular fa-user fa-fw"></i>
+                    <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="adminPat.php">
+                        <i class="fa-solid fa-hospital-user fa-fw"></i>
                         <span>Patients </span>
                     </a>
                 </li>
                 <li>
+                    <a class=" d-flex align-center fs-14 c-black rad-6 p-10" href="adminDoc.php">
+                        <i class="fa-solid fa-user-doctor fa-fw"></i>
+                        <span>Doctors </span>
+                    </a>
+                </li>
+
+                <li>
                     <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="adminVeh.php">
-                        <i class="fa fa-car-side"></i>
+                        <i class="fa-solid fa-truck-medical fa-fw"></i>
                         <span>Vehicles</span>
                     </a>
                 </li>
-                <li>
-                    <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="AddVeh.php">
-                        <i class="fa-solid fa-square-plus"></i>
-                        <span>Add Vehicle</span>
-                    </a>
-                </li>
+
             </ul>
         </div>
         <div class="content w-full">
             <!-- Start Head -->
-            <div class="head  p-15 between-flex">
-                <div class="action">
-                    <div class="profile" onclick="menuToggle();">
-                        <img src="../imgs/user.png" alt="">
+            <div class="head p-15 bg-white between-flex"
+                style="height: auto; border-radius: 10px;justify-content: flex-start; margin: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); align-items: center; flex-wrap: wrap; gap: 15px;">
+                <img src="../imgs/logo-without-background.png" style="width: 80px; margin: 0px;" class="imgback m-0"
+                    alt="">
+                <div class="welcome-text">
+
+                    <h3 class="m-0 c-black" style="font-size: 1.2rem;">Welcome Back,
+                        <?php echo currentAdminFname(); ?> !
+                        <span class="wave" style="display: inline-block;">👋</span>
+                    </h3>
+                    <p class="m-0 mt-5 c-grey fs-14">Here's what's happening today in Go Home Clinic.</p>
+                </div>
+                <div class="action d-flex align-center">
+                    <div class="profile" onclick="menuToggle();" style="cursor: pointer; margin: 1.2rem;">
+                        <img src=" ../imgs/user.png" alt="">
                     </div>
                     <div class="menu">
                         <ul>
-                            <li><img src="../imgs/edit.png" alt=""><a href="EditProfile.php?aId=<?php echo currentAdminId(); ?>">Edit Profile</a></li>
-                            <li><img src="../imgs/log-out.png" alt=""><a href="AdminLogin.php?out=<?php echo currentAdminId(); ?>" class="log">Logout</a></li>
+                            <li><a href="EditProfile.php?aId=<?php echo currentAdminId(); ?>"
+                                    style="display: flex; align-items: center;"><i class="fa-regular fa-user fa-fw"
+                                        style="margin-right: 10px;"></i>Edit Profile</a></li>
+                            <li><a href="AdminLogin.php?out=<?php echo currentAdminId(); ?>" class="log"
+                                    style="display: flex; align-items: center;"><i
+                                        class="fa-solid fa-arrow-right-from-bracket fa-fw"
+                                        style="margin-right: 10px;"></i>Logout</a></li>
                         </ul>
                     </div>
                 </div>
-
                 <script>
-                    function menuToggle() {
-                        const toggleMenu = document.querySelector('.menu');
-                        toggleMenu.classList.toggle('active')
-                    }
+                function menuToggle() {
+                    const toggleMenu = document.querySelector('.menu');
+                    toggleMenu.classList.toggle('active')
+                }
                 </script>
             </div>
             <!-- End Head -->
-            <img src="../imgs/logo-without-background.png" class="imgback" alt="">
             <!-- Start Project Table -->
             <div class="projects p-20 bg-white rad-10 m-20">
-                <h2 class="mt-0 mb-20"><i class="fa fa-dashboard fa-fw c-blue"></i> Dashboard </h2>
+                <h2 class="mt-0 mb-20"><i class="fa-solid fa-chart-column fa-fw c-blue"></i> Dashboard </h2>
                 <div class="responsive-table">
                     <table class="fs-15 w-full">
                         <thead>
                             <tr>
-                                <td><i class="fa fa-calendar fa-fw"></i>TOTAL APPOINTMENTS</td>
-                                <td><i class="fa-regular fa-circle-user fa-fw"></i> DOCTORS</td>
-                                <td><i class="fa-regular fa-user fa-fw"></i> PATIENTS</td>
-                                <td><i class="fa fa-car-side"></i> VEHICLES</td>
+                                <td><i class="fa-solid fa-calendar-days fa-fw"></i> TOTAL APPOINTMENTS</td>
+                                <td><i class="fa-solid fa-circle-user fa-fw"></i> DOCTORS</td>
+                                <td><i class="fa-solid fa-user fa-fw"></i> PATIENTS</td>
+                                <td><i class="fa-solid fa-truck-medical"></i> VEHICLES</td>
                                 <td><i class="fa fa-solid fa-sack-dollar"></i> PAYMENTS</td>
                             </tr>
                         </thead>
@@ -224,18 +232,19 @@ $Appointments = getAppointmentDashboard();
                     <table class="fs-15 w-full">
                         <thead>
                             <tr>
-                                <td> <i class="fa fa-calendar fa-fw"></i> APPOINTMENTS STATE</td>
-                                <td> <i class="fa-solid fa-calculator"></i> SUM OF APPOINTMENTS</td>
-                                <td> <i class="fa-solid fa-percent"></i> PERCENTAGE</td>
+                                <td> <i class="fa-solid fa-calendar-days fa-fw"></i> APPOINTMENTS STATE</td>
+                                <td> <i class="fa-solid fa-calculator fa-fw"></i> SUM OF APPOINTMENTS</td>
+                                <td> <i class="fa-solid fa-percent fa-fw"></i> PERCENTAGE</td>
                             </tr>
                         </thead>
                         <tbody>
                             <?php foreach ($Appointments as $appointment) : ?>
-                                <tr>
-                                    <td><?php echo $appointment['app_state'] . " Appointments"; ?></td>
-                                    <td><?php echo $appointment['num_apps'] . " From " . getNumOfAppoints()['appoints'] . " Appointments";; ?></td>
-                                    <td><?php echo round($appointment['app_ratio'], 2) . " %" ?></td>
-                                </tr>
+                            <tr>
+                                <td><?php echo $appointment['app_state'] . " Appointments"; ?></td>
+                                <td><?php echo $appointment['num_apps'] . " From " . getNumOfAppoints()['appoints'] . " Appointments";; ?>
+                                </td>
+                                <td><?php echo round($appointment['app_ratio'], 2) . " %" ?></td>
+                            </tr>
                             <?php endforeach ?>
                         </tbody>
                     </table>
@@ -252,7 +261,7 @@ $Appointments = getAppointmentDashboard();
                 }
                 $total_average = round(($num_reviews_of_stars / $total_rate), 1);
                 ?>
-                <h2 class="mt-0 mb-20"><i class="fa fa-ranking-star fa-fw c-blue"></i> Reviews </h2>
+                <h2 class="mt-0 mb-20"><i class="fa-solid fa-ranking-star fa-fw c-blue"></i> Reviews </h2>
                 <p><?php echo $total_average; ?> average based on <?php echo $total_rate; ?> reviews.</p>
                 <hr style="border:3px solid #f1f1f1">
 
@@ -261,30 +270,29 @@ $Appointments = getAppointmentDashboard();
                     $num_reviews_of_star = $review['num_reviews'];
                     $percentage = round($review['percentage'], 2);
                 ?>
-                    <!-- 5- stars -->
-                    <div class="row">
+                <!-- 5- stars -->
+                <div class="row">
 
-                        <div class="side">
-                            <div>
-                                <?php for ($chk = 0; $chk < $num_stars; $chk++) { ?>
-                                    <span class="fa fa-star checked small">
-                                    <?php } ?>
-                                    <?php for ($nchk = 5; $nchk > $num_stars; $nchk--) { ?>
-                                        <span class="fa fa-star small">
-                                        <?php } ?>
-
-                            </div>
+                    <div class="side">
+                        <div class="d-flex" style="gap: 2px;">
+                            <?php for ($chk = 0; $chk < $num_stars; $chk++) { ?>
+                            <i class="fa-solid fa-star checked small"></i>
+                            <?php } ?>
+                            <?php for ($nchk = 5; $nchk > $num_stars; $nchk--) { ?>
+                            <i class="fa-solid fa-star small"></i>
+                            <?php } ?>
                         </div>
-                        <div class="middle">
-                            <div class="bar-container">
-                                <div class="bar-s" style="width:<?php echo $percentage; ?>%"></div>
-                            </div>
-                        </div>
-                        <div class="side right">
-                            <div><?php echo $num_reviews_of_star; ?></div>
-                        </div>
-                        <!--  end 5- stars -->
                     </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-s" style="width:<?php echo $percentage; ?>%"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div><?php echo $num_reviews_of_star; ?></div>
+                    </div>
+                    <!--  end 5- stars -->
+                </div>
                 <?php endforeach; ?>
 
 
