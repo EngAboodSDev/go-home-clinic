@@ -228,11 +228,25 @@ function getNumOfVehicles(){
     $result = mysqli_query($db, "SELECT count(*) as 'vehicles' FROM `vehicle`");
     return mysqli_fetch_assoc($result);
 }
+function getNumOfContacts(){
+    $db = connectDB();
+    $result = mysqli_query($db, "SELECT count(*) as 'contacts' FROM `contacts`");
+    return mysqli_fetch_assoc($result);
+}
 function getPayments(){
     $db = connectDB();
     $result = mysqli_query($db, "SELECT SUM(`cost`) as payments FROM appointment WHERE `app_state`='Complete';");
     return mysqli_fetch_assoc($result);
 }
 
+function getAllContacts(){
+    $db = connectDB();
+    $result = mysqli_query($db, "SELECT * FROM `contacts` ORDER BY `sent_at` DESC");
+    $contacts = array();
+    while ($row = mysqli_fetch_array($result)) {
+        $contacts[] = $row;
+    }
+    return $contacts;
+}
 
 ?>

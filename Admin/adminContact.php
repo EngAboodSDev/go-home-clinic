@@ -5,8 +5,7 @@ require_once 'Admin.php';
 if (!isAdminLoggedIn()) {
     redirect('AdminLogin.php');
 }
-$Appointments = getAllAppointments();
-
+$contacts = getAllContacts();
 
 ?>
 <!DOCTYPE html>
@@ -16,7 +15,7 @@ $Appointments = getAllAppointments();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>List Appointments</title>
+    <title>Contact Requests</title>
     <link rel="stylesheet" href="../css/all.min.css" />
     <link rel="stylesheet" href="../css/framework.css">
     <link rel="stylesheet" href="../css/master.css">
@@ -46,7 +45,7 @@ $Appointments = getAllAppointments();
                     </a>
                 </li>
                 <li>
-                    <a class="active d-flex align-center fs-14 c-black rad-6 p-10" href="adminAbo.php">
+                    <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="adminAbo.php">
                         <i class="fa-solid fa-calendar-days fa-fw"></i>
                         <span>Appointments</span>
                     </a>
@@ -57,9 +56,8 @@ $Appointments = getAllAppointments();
                         <span>Medical Records</span>
                     </a>
                 </li>
-
                 <li>
-                    <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="adminPat.php">
+                    <a class=" d-flex align-center fs-14 c-black rad-6 p-10" href="adminPat.php">
                         <i class="fa-solid fa-hospital-user fa-fw"></i>
                         <span>Patients </span>
                     </a>
@@ -70,7 +68,6 @@ $Appointments = getAllAppointments();
                         <span>Doctors </span>
                     </a>
                 </li>
-
                 <li>
                     <a class=" d-flex align-center fs-14 c-black rad-6 p-10" href="adminVeh.php">
                         <i class="fa-solid fa-truck-medical"></i>
@@ -78,7 +75,7 @@ $Appointments = getAllAppointments();
                     </a>
                 </li>
                 <li>
-                    <a class=" d-flex align-center fs-14 c-black rad-6 p-10" href="adminContact.php">
+                    <a class="active d-flex align-center fs-14 c-black rad-6 p-10" href="adminContact.php">
                         <i class="fa-solid fa-address-book fa-fw"></i>
                         <span>Contacts Requests</span>
                     </a>
@@ -117,53 +114,39 @@ $Appointments = getAllAppointments();
                     </div>
                 </div>
                 <script>
-                    function menuToggle() {
-                        const toggleMenu = document.querySelector('.menu');
-                        toggleMenu.classList.toggle('active')
-                    }
+                function menuToggle() {
+                    const toggleMenu = document.querySelector('.menu');
+                    toggleMenu.classList.toggle('active')
+                }
                 </script>
             </div>
             <!-- End Head -->
             <!-- Start Project Table -->
             <div class="projects p-20 bg-white rad-10 m-20">
-                <h2 class="mt-0 mb-20"> <i class="fa fa-calendar-days fa-fw c-blue"></i> Appointments</h2>
+                <h2 class="mt-0 mb-20"> <i class="fa-solid fa-address-book fa-fw c-blue"></i> Contacts Requests</h2>
                 <div class="responsive-table">
                     <table class="fs-15 w-full">
                         <thead>
                             <tr>
-                                <td>Patient Name</td>
+                                <td>Name</td>
+                                <td>Phone</td>
                                 <td>Email</td>
-                                <td>Patient Phone</td>
-                                <td>Date</td>
-                                <td>Time</td>
-                                <td>Location</td>
-                                <td>Pays</td>
-                                <td>Doctor Name</td>
-                                <td>Status</td>
-                                <!-- <td>Actions</td> -->
-
-
+                                <td>Subject</td>
+                                <td>Message</td>
+                                <td>Sent At</td>
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($Appointments as $Appointment) : ?>
-                                <tr>
-                                    <td><?php echo $Appointment["patient_name"]; ?></td>
-                                    <td><?php echo $Appointment["p_email"]; ?></td>
-                                    <td><?php echo $Appointment["p_phoneNo"]; ?></td>
-                                    <td><?php echo date('d F, Y', strtotime($Appointment["date"])); ?></td>
-                                    <td><?php echo $Appointment["app_time"]; ?></td>
-                                    <td><?php echo $Appointment["app_location"]; ?></td>
-                                    <td><?php echo $Appointment["cost"] . " SR"; ?></td>
-                                    <td><?php echo $Appointment["doctor_name"]; ?></td>
-                                    <td><?php echo $Appointment["app_state"]; ?></td>
-                                    <!-- <td><a href="EditDoc.php?d_id=<?php // echo $doctor["dr_id"]; 
-                                                                        ?>" ><i style="margin-left: 20px; margin-right: 10px;" class="fa fa-edit c-blue" aria-hidden="true">
-                            </i></a> 
-                            <a href="adminDoc.php?del_dr=<?php //echo $doctor["dr_id"]; 
-                                                            ?>" ><i class="fa fa-trash c-red " aria-hidden="true"></i></a> 
-                            </td> -->
-                                </tr>
+                            <?php foreach ($contacts as $contact) : ?>
+                            <tr>
+                                <td><?php echo htmlspecialchars($contact["name"]); ?></td>
+                                <td><?php echo htmlspecialchars($contact["phone"]); ?></td>
+                                <td><?php echo htmlspecialchars($contact["email"]); ?></td>
+                                <td><?php echo htmlspecialchars($contact["subject"]); ?></td>
+                                <td><?php echo htmlspecialchars($contact["message"]); ?></td>
+                                <td><?php echo date('d F, Y  \a\t h:i A', strtotime($contact["sent_at"])); ?>
+                                </td>
+                            </tr>
                             <?php endforeach; ?>
                         </tbody>
                     </table>

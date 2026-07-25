@@ -33,22 +33,22 @@ if (isset($_GET['aId'])) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
     <style>
-    .btns {
-        align-items: flex-end;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
+        .btns {
+            align-items: flex-end;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
 
-    .btns input {
-        cursor: pointer;
-        width: 20%;
-        height: 35px;
-    }
+        .btns input {
+            cursor: pointer;
+            width: 20%;
+            height: 35px;
+        }
 
-    .error {
-        color: red;
-    }
+        .error {
+            color: red;
+        }
     </style>
     <link rel="icon" href="../imgs/logo-without-background.png" type="image/png">
 </head>
@@ -68,13 +68,13 @@ if (isset($_GET['aId'])) {
             <ul>
                 <li>
                     <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="Dashboard.php">
-                        <i class="fa fa-dashboard fa-fw"></i>
+                        <i class="fa-solid fa-house-chimney fa-fw"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
                 <li>
                     <a class=" d-flex align-center fs-14 c-black rad-6 p-10" href="adminAbo.php">
-                        <i class="fa fa-calendar-days fa-fw"></i>
+                        <i class="fa-solid fa-calendar-days fa-fw"></i>
                         <span>Appointments</span>
                     </a>
                 </li>
@@ -97,14 +97,16 @@ if (isset($_GET['aId'])) {
                     </a>
                 </li>
 
-
-
-
-
                 <li>
                     <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="adminVeh.php">
                         <i class="fa-solid fa-truck-medical"></i>
                         <span>Vehicles</span>
+                    </a>
+                </li>
+                <li>
+                    <a class=" d-flex align-center fs-14 c-black rad-6 p-10" href="adminContact.php">
+                        <i class="fa-solid fa-address-book fa-fw"></i>
+                        <span>Contacts Requests</span>
                     </a>
                 </li>
 
@@ -141,10 +143,10 @@ if (isset($_GET['aId'])) {
                     </div>
                 </div>
                 <script>
-                function menuToggle() {
-                    const toggleMenu = document.querySelector('.menu');
-                    toggleMenu.classList.toggle('active')
-                }
+                    function menuToggle() {
+                        const toggleMenu = document.querySelector('.menu');
+                        toggleMenu.classList.toggle('active')
+                    }
                 </script>
             </div>
             <!-- End Head -->
@@ -183,21 +185,21 @@ if (isset($_GET['aId'])) {
     </div>
 
     <script>
-    const emailInput = document.getElementById('email');
-    const emailError = document.getElementById('emailError');
+        const emailInput = document.getElementById('email');
+        const emailError = document.getElementById('emailError');
 
-    emailInput.addEventListener('input', function() {
-        if (!isValidEmail(emailInput.value)) {
-            emailError.textContent = 'Invalid email address';
-        } else {
-            emailError.textContent = '';
+        emailInput.addEventListener('input', function() {
+            if (!isValidEmail(emailInput.value)) {
+                emailError.textContent = 'Invalid email address';
+            } else {
+                emailError.textContent = '';
+            }
+        });
+
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
         }
-    });
-
-    function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
     </script>
 </body>
 

@@ -2,8 +2,22 @@
 require_once 'webs.php';
 require_once 'dbcon.php';
 require_once 'Users.php';
-?>
 
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['sendContact'])) {
+    $isSuccess = saveContact(
+        $_POST['name'],
+        $_POST['phone'],
+        $_POST['email'],
+        $_POST['subject'],
+        $_POST['message']
+    );
+    if ($isSuccess) {
+        alertMessage('Your message has been sent successfully!');
+    } else {
+        alertMessage('An error occurred. Please try again.');
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -81,25 +95,25 @@ require_once 'Users.php';
             </div>
 
             <div class="contact-form-wrapper">
-                <form action="#" class="contact-form">
+                <form action="" method="POST" class="contact-form">
                     <h2>Send Us a Message</h2>
                     <p>Have questions? We'd love to hear from you</p>
                     <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
+                        <input type="text" name="name" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="Your Phone Number" required>
+                        <input type="text" name="phone" placeholder="Your Phone Number" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="Subject" required>
+                        <input type="text" name="subject" placeholder="Subject" required>
                     </div>
                     <div class="form-group">
-                        <textarea placeholder="Your Message" rows="6" required></textarea>
+                        <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
                     </div>
-                    <button type="submit" class="cta-btn primary-btn">Send Message</button>
+                    <button type="submit" name="sendContact" class="cta-btn primary-btn">Send Message</button>
                 </form>
             </div>
         </div>

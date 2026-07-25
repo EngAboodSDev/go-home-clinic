@@ -48,13 +48,13 @@ if (isset($_GET['del_veh'])) {
             <ul>
                 <li>
                     <a class=" d-flex align-center fs-14 c-black rad-6 p-10" href="Dashboard.php">
-                        <i class="fa fa-dashboard fa-fw"></i>
+                        <i class="fa-solid fa-house-chimney fa-fw"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
                 <li>
                     <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="adminAbo.php">
-                        <i class="fa fa-calendar-days fa-fw"></i>
+                        <i class="fa-solid fa-calendar-days fa-fw"></i>
                         <span>Appointments</span>
                     </a>
                 </li>
@@ -78,14 +78,16 @@ if (isset($_GET['del_veh'])) {
                     </a>
                 </li>
 
-
-
-
-
                 <li>
                     <a class="active d-flex align-center fs-14 c-black rad-6 p-10" href="adminVeh.php">
                         <i class="fa-solid fa-truck-medical"></i>
                         <span>Vehicles</span>
+                    </a>
+                </li>
+                <li>
+                    <a class=" d-flex align-center fs-14 c-black rad-6 p-10" href="adminContact.php">
+                        <i class="fa-solid fa-address-book fa-fw"></i>
+                        <span>Contacts Requests</span>
                     </a>
                 </li>
 
@@ -122,10 +124,10 @@ if (isset($_GET['del_veh'])) {
                     </div>
                 </div>
                 <script>
-                function menuToggle() {
-                    const toggleMenu = document.querySelector('.menu');
-                    toggleMenu.classList.toggle('active')
-                }
+                    function menuToggle() {
+                        const toggleMenu = document.querySelector('.menu');
+                        toggleMenu.classList.toggle('active')
+                    }
                 </script>
             </div>
             <!-- End Head -->
@@ -154,19 +156,19 @@ if (isset($_GET['del_veh'])) {
                         </thead>
                         <tbody>
                             <?php foreach ($vehicles as $vehicle) : ?>
-                            <tr>
-                                <td><?php echo $vehicle["v_id"]; ?></td>
-                                <td><?php echo $vehicle["v_name"]; ?></td>
-                                <td><?php echo $vehicle["car_plate"]; ?></td>
-                                <td><?php echo $vehicle["location"]; ?></td>
-                                <td><a href="EditVeh.php?veh_id=<?php echo $vehicle["v_id"]; ?>"><i
-                                            style="margin-left: 20px; margin-right: 10px;" class="fa fa-edit c-blue"
-                                            aria-hidden="true">
-                                        </i></a>
-                                    <a href="adminVeh.php?del_veh=<?php echo $vehicle["v_id"]; ?>"><i
-                                            class="fa fa-trash c-red " aria-hidden="true"></i></a>
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td><?php echo $vehicle["v_id"]; ?></td>
+                                    <td><?php echo $vehicle["v_name"]; ?></td>
+                                    <td><?php echo $vehicle["car_plate"]; ?></td>
+                                    <td><?php echo $vehicle["location"]; ?></td>
+                                    <td><a href="EditVeh.php?veh_id=<?php echo $vehicle["v_id"]; ?>"><i
+                                                style="margin-left: 20px; margin-right: 10px;" class="fa fa-edit c-blue"
+                                                aria-hidden="true">
+                                            </i></a>
+                                        <a href="adminVeh.php?del_veh=<?php echo $vehicle["v_id"]; ?>"><i
+                                                class="fa fa-trash c-red " aria-hidden="true"></i></a>
+                                    </td>
+                                </tr>
                             <?php endforeach; ?>
                         </tbody>
                     </table>

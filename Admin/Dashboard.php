@@ -160,6 +160,12 @@ $Appointments = getAppointmentDashboard();
                         <span>Vehicles</span>
                     </a>
                 </li>
+                <li>
+                    <a class=" d-flex align-center fs-14 c-black rad-6 p-10" href="adminContact.php">
+                        <i class="fa-solid fa-address-book fa-fw"></i>
+                        <span>Contacts Requests</span>
+                    </a>
+                </li>
 
             </ul>
         </div>
@@ -209,21 +215,23 @@ $Appointments = getAppointmentDashboard();
                         <thead>
                             <tr>
                                 <td><i class="fa-solid fa-calendar-days fa-fw"></i> TOTAL APPOINTMENTS</td>
-                                <td><i class="fa-solid fa-circle-user fa-fw"></i> DOCTORS</td>
-                                <td><i class="fa-solid fa-user fa-fw"></i> PATIENTS</td>
-                                <td><i class="fa-solid fa-truck-medical"></i> VEHICLES</td>
-                                <td><i class="fa fa-solid fa-sack-dollar"></i> PAYMENTS</td>
+                                <td><i class="fa-solid fa-hospital-user fa-fw"></i> PATIENTS</td>
+                                <td><i class="fa-solid fa-user-doctor fa-fw"></i> DOCTORS</td>
+                                <td><i class="fa-solid fa-truck-medical fa-fw"></i> VEHICLES</td>
+                                <td><i class="fa-solid fa-address-book fa-fw"></i> CONTACT REQUESTS</td>
+                                <td><i class="fa-solid fa-sack-dollar fa-fw"></i> PAYMENTS</td>
                             </tr>
                         </thead>
                         <tbody>
 
                             <tr>
                                 <td><?php echo getNumOfAppoints()['appoints'] . " Appointments"; ?></td>
-                                <td><?php echo getNumOfDoctors()['doctors'] . " Doctors"; ?></td>
                                 <td><?php echo getNumOfPatients()['patients'] . " Patients"; ?></td>
+                                <td><?php echo getNumOfDoctors()['doctors'] . " Doctors"; ?></td>
                                 <td><?php echo getNumOfVehicles()['vehicles'] . " Vehicles"; ?></td>
-                                <td><?php echo getPayments()['payments'] . " SR"; ?></td>
-
+                                <td><?php echo getNumOfContacts()['contacts'] . " Requests"; ?></td>
+                                <td><?php echo number_format(getPayments()['payments'], 1) . " SAR"; ?></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>

@@ -230,3 +230,10 @@ function getDpctorAvgRating($dr_id)
     $result = mysqli_query($db, "SELECT AVG(num_stars) as rating_avg FROM `review` WHERE dr_id=$dr_id");
     return mysqli_fetch_assoc($result);
 }
+
+function saveContact($name, $phone, $email, $subject, $message)
+{
+    $db = connectDB();
+    $sql = "INSERT INTO `contacts`(`name`, `phone`, `email`, `subject`, `message`, `sent_at`) VALUES ('$name','$phone','$email','$subject','$message', NOW())";
+    return mysqli_query($db, $sql);
+}

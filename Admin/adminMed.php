@@ -41,13 +41,13 @@ $AppointmentsRecord = getAppointRecord();
             <ul>
                 <li>
                     <a class=" d-flex align-center fs-14 c-black rad-6 p-10" href="Dashboard.php">
-                        <i class="fa fa-dashboard fa-fw"></i>
+                        <i class="fa-solid fa-house-chimney fa-fw"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
                 <li>
                     <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="adminAbo.php">
-                        <i class="fa fa-calendar-days fa-fw"></i>
+                        <i class="fa-solid fa-calendar-days fa-fw"></i>
                         <span>Appointments</span>
                     </a>
                 </li>
@@ -71,17 +71,18 @@ $AppointmentsRecord = getAppointRecord();
                     </a>
                 </li>
 
-
-
-
-
                 <li>
                     <a class=" d-flex align-center fs-14 c-black rad-6 p-10" href="adminVeh.php">
                         <i class="fa-solid fa-truck-medical"></i>
                         <span>Vehicles</span>
                     </a>
                 </li>
-
+                <li>
+                    <a class=" d-flex align-center fs-14 c-black rad-6 p-10" href="adminContact.php">
+                        <i class="fa-solid fa-address-book fa-fw"></i>
+                        <span>Contacts Requests</span>
+                    </a>
+                </li>
 
             </ul>
         </div>
@@ -116,10 +117,10 @@ $AppointmentsRecord = getAppointRecord();
                     </div>
                 </div>
                 <script>
-                function menuToggle() {
-                    const toggleMenu = document.querySelector('.menu');
-                    toggleMenu.classList.toggle('active')
-                }
+                    function menuToggle() {
+                        const toggleMenu = document.querySelector('.menu');
+                        toggleMenu.classList.toggle('active')
+                    }
                 </script>
             </div>
             <!-- End Head -->
@@ -143,20 +144,20 @@ $AppointmentsRecord = getAppointRecord();
                         </thead>
                         <tbody>
                             <?php foreach ($AppointmentsRecord as $Appointment) : ?>
-                            <tr>
-                                <td><?php echo $Appointment["patient_name"]; ?></td>
-                                <td><?php echo date('d F, Y', strtotime($Appointment["date"])) ?></td>
-                                <td><?php echo $Appointment["app_location"]; ?></td>
-                                <td><?php echo $Appointment["doctor_name"]; ?></td>
-                                <td><?php echo date('d F, Y', strtotime($Appointment["treat_date"])) ?></td>
-                                <td><?php echo $Appointment["med_rec_details"]; ?></td>
-                                <!-- <td><a href="EditDoc.php?d_id=<?php // echo $doctor["dr_id"]; 
+                                <tr>
+                                    <td><?php echo $Appointment["patient_name"]; ?></td>
+                                    <td><?php echo date('d F, Y', strtotime($Appointment["date"])) ?></td>
+                                    <td><?php echo $Appointment["app_location"]; ?></td>
+                                    <td><?php echo $Appointment["doctor_name"]; ?></td>
+                                    <td><?php echo date('d F, Y', strtotime($Appointment["treat_date"])) ?></td>
+                                    <td><?php echo $Appointment["med_rec_details"]; ?></td>
+                                    <!-- <td><a href="EditDoc.php?d_id=<?php // echo $doctor["dr_id"]; 
                                                                         ?>" ><i style="margin-left: 20px; margin-right: 10px;" class="fa fa-edit c-blue" aria-hidden="true">
                             </i></a> 
                             <a href="adminDoc.php?del_dr=<?php //echo $doctor["dr_id"]; 
                                                             ?>" ><i class="fa fa-trash c-red " aria-hidden="true"></i></a> 
                             </td> -->
-                            </tr>
+                                </tr>
                             <?php endforeach; ?>
                         </tbody>
                     </table>

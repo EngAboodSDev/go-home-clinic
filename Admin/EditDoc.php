@@ -56,19 +56,19 @@ if (isset($_GET['d_id'])) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
     <style>
-    .none {
-        display: none;
-    }
+        .none {
+            display: none;
+        }
 
-    fieldset {
-        border: none;
+        fieldset {
+            border: none;
 
-    }
+        }
 
-    .form-group {
-        display: flex;
-        justify-content: space-around;
-    }
+        .form-group {
+            display: flex;
+            justify-content: space-around;
+        }
     </style>
     <link rel="icon" href="../imgs/logo-without-background.png" type="image/png">
 </head>
@@ -88,13 +88,13 @@ if (isset($_GET['d_id'])) {
             <ul>
                 <li>
                     <a class=" d-flex align-center fs-14 c-black rad-6 p-10" href="Dashboard.php">
-                        <i class="fa fa-dashboard fa-fw"></i>
+                        <i class="fa-solid fa-house-chimney fa-fw"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
                 <li>
                     <a class=" d-flex align-center fs-14 c-black rad-6 p-10" href="adminAbo.php">
-                        <i class="fa fa-calendar-days fa-fw"></i>
+                        <i class="fa-solid fa-calendar-days fa-fw"></i>
                         <span>Appointments</span>
                     </a>
                 </li>
@@ -117,14 +117,16 @@ if (isset($_GET['d_id'])) {
                     </a>
                 </li>
 
-
-
-
-
                 <li>
                     <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="adminVeh.php">
                         <i class="fa-solid fa-truck-medical"></i>
                         <span>Vehicles</span>
+                    </a>
+                </li>
+                <li>
+                    <a class=" d-flex align-center fs-14 c-black rad-6 p-10" href="adminContact.php">
+                        <i class="fa-solid fa-address-book fa-fw"></i>
+                        <span>Contacts Requests</span>
                     </a>
                 </li>
 
@@ -161,10 +163,10 @@ if (isset($_GET['d_id'])) {
                     </div>
                 </div>
                 <script>
-                function menuToggle() {
-                    const toggleMenu = document.querySelector('.menu');
-                    toggleMenu.classList.toggle('active')
-                }
+                    function menuToggle() {
+                        const toggleMenu = document.querySelector('.menu');
+                        toggleMenu.classList.toggle('active')
+                    }
                 </script>
             </div>
             <!-- End Head -->
@@ -224,10 +226,10 @@ if (isset($_GET['d_id'])) {
                                     <option class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" value="0">None
                                     </option>
                                     <?php foreach ($vehicles as $vehicle) : ?>
-                                    <option class="d-block mb-20 w-full p-10 b-none bg-eee rad-6"
-                                        value="<?php echo $vehicle["v_id"]; ?>"
-                                        <?php echo ($vehicle["v_id"] == $Doctor["v_id"]) ? "selected" : "" ?>>
-                                        <?php echo $vehicle["v_name"] . '    |    ' . $vehicle["location"]; ?></option>
+                                        <option class="d-block mb-20 w-full p-10 b-none bg-eee rad-6"
+                                            value="<?php echo $vehicle["v_id"]; ?>"
+                                            <?php echo ($vehicle["v_id"] == $Doctor["v_id"]) ? "selected" : "" ?>>
+                                            <?php echo $vehicle["v_name"] . '    |    ' . $vehicle["location"]; ?></option>
                                     <?php endforeach; ?>
                                 </select>
                                 <label for="">Doctor Job*</label>
@@ -251,13 +253,13 @@ if (isset($_GET['d_id'])) {
         </div>
     </div>
     <script>
-    const nextButton = document.querySelector('.next_button');
-    const form = document.querySelector('.doc_form');
-    nextButton.addEventListener('click', e => {
-        form.firstElementChild.classList.add('none');
-        form.children[1].classList.add('none');
-        form.lastElementChild.classList.remove('none');
-    })
+        const nextButton = document.querySelector('.next_button');
+        const form = document.querySelector('.doc_form');
+        nextButton.addEventListener('click', e => {
+            form.firstElementChild.classList.add('none');
+            form.children[1].classList.add('none');
+            form.lastElementChild.classList.remove('none');
+        })
     </script>
 
 </body>
