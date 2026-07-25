@@ -71,8 +71,8 @@ if (isset($_POST['login'])) {
     <link rel="icon" href="../imgs/logo-without-background.png" type="image/png">
 </head>
 <header class="navbar">
-    <a class="navlogo" href="../Index.php"><img src="../imgs/logo-without-background.png" alt="logo" width="70"
-            height="70"></a>
+    <a class="navlogo" href="../Index.php"><img src="../imgs/logo-without-background.png" alt="logo" width="120"
+            height="120"></a>
 </header>
 
 <body class="logbody">
@@ -95,6 +95,14 @@ if (isset($_POST['login'])) {
                 </div>
             </div>
         </form>
+    </div>
+    <div class="admin-copyright" style="border-top: none; margin-top: 2rem;">
+        <p>© 2026 All Rights Reserved to GO HOME CLINIC</p>
+        <p class="developer">Designed with love <i style="color: red;" class="fa fa-heart"></i>
+            by
+            <a href="mailto:abdulrahmanfadhl@gmail.com">Abdulrahman Fadhl</a>
+            | @EngAboodSDev
+        </p>
     </div>
 
     <script>

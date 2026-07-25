@@ -1383,7 +1383,8 @@ ul{
 .AdminLogform {
     background: #ffffff;
     max-width: 400px;
-    margin: 80px auto;
+    width: stretch;
+    margin: 30px 10px;
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
@@ -1444,8 +1445,31 @@ ul{
     background-color: #23295c;
 }
 .logbody {
+    height: 100vh;
     background-color: #f1f5f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
+.admin-copyright {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid #ddd;
+  color: #777;
+}
+.admin-copyright p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+.admin-copyright .developer a {
+  color: var(--blue-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
 
 /*!
  * Go Home Clinic Website and Dashboard - v1.0.0

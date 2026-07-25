@@ -275,6 +275,14 @@ if (isset($_POST['addDoctor'])) {
                     </div>
                 </div>
             </div>
+            <div class="admin-copyright">
+                <p>© 2026 All Rights Reserved to GO HOME CLINIC</p>
+                <p class="developer">Designed with love <i style="color: red;" class="fa fa-heart"></i>
+                    by
+                    <a href="mailto:abdulrahmanfadhl@gmail.com">Abdulrahman Fadhl</a>
+                    | @EngAboodSDev
+                </p>
+            </div>
         </div>
     </div>
     <script>
