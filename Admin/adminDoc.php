@@ -1,4 +1,34 @@
+<!--
+    * Go Home Clinic Website and Dashboard - v1.0.0
+    * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+    * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+    * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+    * All rights reserved.
+    * License - This project is licensed under the MIT License - see the LICENSE file for details.
+-->
 <?php
+
+/**
+ * Go Home Clinic Website and Dashboard - v1.0.0
+ *
+ * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+ *
+ * Go Home Clinic is a comprehensive web-based healthcare platform designed to 
+ * facilitate medical home visits. Built with PHP and MySQL, the system seamlessly 
+ * connects patients with qualified healthcare professionals. Patients can browse 
+ * available healthcare professionals, view their ratings, and book appointments 
+ * for home visits, while doctors can manage their schedules and patient requests.
+ * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+ *
+ * @package    go-home-clinic
+ * @author     Abdulrahman Fadhl Ameer Saif <abdulrahmanfadhl@gmail.com> @EngAboodSDev
+ * @copyright  2026 Go Home Clinic (Website and Dashboard)
+ * @license    https://opensource.org  MIT License
+ * @version    1.0.0
+ * @link       https://github.com/EngAboodSDev/go-home-clinic
+ */
+
+
 require_once 'adminWebs.php';
 require_once '../dbcon.php';
 require_once 'Admin.php';
@@ -34,6 +64,14 @@ if (isset($_GET['del_dr'])) {
 </head>
 
 <body>
+    <!--
+        * Go Home Clinic Website and Dashboard - v1.0.0
+        * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+        * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+        * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+        * All rights reserved.
+        * License - This project is licensed under the MIT License - see the LICENSE file for details.
+    -->
     <!-- الكونتينر الي حاوي الصفحة كلها -->
     <div class="page d-flex">
         <div class="sidebar bg-white p-10 pt-20 pb-20  p-relative">
@@ -124,10 +162,10 @@ if (isset($_GET['del_dr'])) {
                     </div>
                 </div>
                 <script>
-                    function menuToggle() {
-                        const toggleMenu = document.querySelector('.menu');
-                        toggleMenu.classList.toggle('active')
-                    }
+                function menuToggle() {
+                    const toggleMenu = document.querySelector('.menu');
+                    toggleMenu.classList.toggle('active')
+                }
                 </script>
             </div>
             <!-- End Head -->
@@ -158,22 +196,22 @@ if (isset($_GET['del_dr'])) {
                         </thead>
                         <tbody>
                             <?php foreach ($doctors as $doctor) : ?>
-                                <tr>
-                                    <td><?php echo $doctor["f_name"] . " " . $doctor["l_name"]; ?></td>
-                                    <td><?php echo $doctor["dr_email"]; ?></td>
-                                    <td><?php echo $doctor["job"]; ?></td>
-                                    <td><?php echo $doctor["dr_location"]; ?></td>
-                                    <td><?php echo $doctor["dr_phoneNo"]; ?></td>
-                                    <td><?php echo ($doctor["IsAvailable"] == "1") ? "Yes" : "No" ?></td>
-                                    <td><?php echo $doctor["v_name"]; ?></td>
-                                    <td><a href="EditDoc.php?d_id=<?php echo $doctor["dr_id"]; ?>"><i
-                                                style="margin-left: 20px; margin-right: 10px;" class="fa fa-edit c-blue"
-                                                aria-hidden="true">
-                                            </i></a>
-                                        <a href="adminDoc.php?del_dr=<?php echo $doctor["dr_id"]; ?>"><i
-                                                class="fa fa-trash c-red " aria-hidden="true"></i></a>
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td><?php echo $doctor["f_name"] . " " . $doctor["l_name"]; ?></td>
+                                <td><?php echo $doctor["dr_email"]; ?></td>
+                                <td><?php echo $doctor["job"]; ?></td>
+                                <td><?php echo $doctor["dr_location"]; ?></td>
+                                <td><?php echo $doctor["dr_phoneNo"]; ?></td>
+                                <td><?php echo ($doctor["IsAvailable"] == "1") ? "Yes" : "No" ?></td>
+                                <td><?php echo $doctor["v_name"]; ?></td>
+                                <td><a href="EditDoc.php?d_id=<?php echo $doctor["dr_id"]; ?>"><i
+                                            style="margin-left: 20px; margin-right: 10px;" class="fa fa-edit c-blue"
+                                            aria-hidden="true">
+                                        </i></a>
+                                    <a href="adminDoc.php?del_dr=<?php echo $doctor["dr_id"]; ?>"><i
+                                            class="fa fa-trash c-red " aria-hidden="true"></i></a>
+                                </td>
+                            </tr>
                             <?php endforeach; ?>
                         </tbody>
                     </table>
@@ -182,6 +220,22 @@ if (isset($_GET['del_dr'])) {
             <!-- End Project Table -->
         </div>
     </div>
+    <!--
+        * Go Home Clinic Website and Dashboard - v1.0.0
+        * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+        * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+        * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+        * All rights reserved.
+        * License - This project is licensed under the MIT License - see the LICENSE file for details.
+    -->
 </body>
 
 </html>
+<!--
+    * Go Home Clinic Website and Dashboard - v1.0.0
+    * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+    * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+    * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+    * All rights reserved.
+    * License - This project is licensed under the MIT License - see the LICENSE file for details.
+-->

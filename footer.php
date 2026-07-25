@@ -1,3 +1,11 @@
+<!--
+    * Go Home Clinic Website and Dashboard - v1.0.0
+    * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+    * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+    * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+    * All rights reserved.
+    * License - This project is licensed under the MIT License - see the LICENSE file for details.
+-->
 <footer class="go_footer">
     <div class="footer-container">
         <div class="footer-row">
@@ -60,3 +68,11 @@
         </p>
     </div>
 </footer>
+<!--
+    * Go Home Clinic Website and Dashboard - v1.0.0
+    * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+    * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+    * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+    * All rights reserved.
+    * License - This project is licensed under the MIT License - see the LICENSE file for details.
+-->

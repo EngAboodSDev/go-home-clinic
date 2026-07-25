@@ -1,4 +1,33 @@
+<!--
+    * Go Home Clinic Website and Dashboard - v1.0.0
+    * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+    * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+    * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+    * All rights reserved.
+    * License - This project is licensed under the MIT License - see the LICENSE file for details.
+-->
 <?php
+
+/**
+ * Go Home Clinic Website and Dashboard - v1.0.0
+ *
+ * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+ *
+ * Go Home Clinic is a comprehensive web-based healthcare platform designed to 
+ * facilitate medical home visits. Built with PHP and MySQL, the system seamlessly 
+ * connects patients with qualified healthcare professionals. Patients can browse 
+ * available healthcare professionals, view their ratings, and book appointments 
+ * for home visits, while doctors can manage their schedules and patient requests.
+ * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+ *
+ * @package    go-home-clinic
+ * @author     Abdulrahman Fadhl Ameer Saif <abdulrahmanfadhl@gmail.com> @EngAboodSDev
+ * @copyright  2026 Go Home Clinic (Website and Dashboard)
+ * @license    https://opensource.org  MIT License
+ * @version    1.0.0
+ * @link       https://github.com/EngAboodSDev/go-home-clinic
+ */
+
 require_once 'adminWebs.php';
 require_once '../dbcon.php';
 require_once 'Admin.php';
@@ -46,24 +75,32 @@ if (isset($_POST['addDoctor'])) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
     <style>
-        .none {
-            display: none;
-        }
+    .none {
+        display: none;
+    }
 
-        fieldset {
-            border: none;
+    fieldset {
+        border: none;
 
-        }
+    }
 
-        .form-group {
-            display: flex;
-            justify-content: space-around;
-        }
+    .form-group {
+        display: flex;
+        justify-content: space-around;
+    }
     </style>
     <link rel="icon" href="../imgs/logo-without-background.png" type="image/png">
 </head>
 
 <body>
+    <!--
+        * Go Home Clinic Website and Dashboard - v1.0.0
+        * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+        * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+        * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+        * All rights reserved.
+        * License - This project is licensed under the MIT License - see the LICENSE file for details.
+    -->
     <!-- الكونتينر الي حاوي الصفحة كلها -->
     <div class="page d-flex">
         <div class="sidebar bg-white p-10 pt-20 pb-20  p-relative">
@@ -154,10 +191,10 @@ if (isset($_POST['addDoctor'])) {
                     </div>
                 </div>
                 <script>
-                    function menuToggle() {
-                        const toggleMenu = document.querySelector('.menu');
-                        toggleMenu.classList.toggle('active')
-                    }
+                function menuToggle() {
+                    const toggleMenu = document.querySelector('.menu');
+                    toggleMenu.classList.toggle('active')
+                }
                 </script>
             </div>
             <!-- End Head -->
@@ -215,9 +252,9 @@ if (isset($_POST['addDoctor'])) {
                                     </option>
 
                                     <?php foreach ($vehicles as $vehicle) : ?>
-                                        <option class="d-block mb-20 w-full p-10 b-none bg-eee rad-6"
-                                            value="<?php echo $vehicle["v_id"]; ?>">
-                                            <?php echo $vehicle["v_name"] . '    |    ' . $vehicle["location"]; ?></option>
+                                    <option class="d-block mb-20 w-full p-10 b-none bg-eee rad-6"
+                                        value="<?php echo $vehicle["v_id"]; ?>">
+                                        <?php echo $vehicle["v_name"] . '    |    ' . $vehicle["location"]; ?></option>
                                     <?php endforeach; ?>
                                 </select>
                                 <label for="">Doctor Job*</label>
@@ -241,15 +278,30 @@ if (isset($_POST['addDoctor'])) {
         </div>
     </div>
     <script>
-        const nextButton = document.querySelector('.next_button');
-        const form = document.querySelector('.doc_form');
-        nextButton.addEventListener('click', e => {
-            form.firstElementChild.classList.add('none');
-            form.children[1].classList.add('none');
-            form.lastElementChild.classList.remove('none');
-        })
+    const nextButton = document.querySelector('.next_button');
+    const form = document.querySelector('.doc_form');
+    nextButton.addEventListener('click', e => {
+        form.firstElementChild.classList.add('none');
+        form.children[1].classList.add('none');
+        form.lastElementChild.classList.remove('none');
+    })
     </script>
-
+    <!--
+        * Go Home Clinic Website and Dashboard - v1.0.0
+        * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+        * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+        * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+        * All rights reserved.
+        * License - This project is licensed under the MIT License - see the LICENSE file for details.
+    -->
 </body>
 
 </html>
+<!--
+    * Go Home Clinic Website and Dashboard - v1.0.0
+    * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+    * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+    * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+    * All rights reserved.
+    * License - This project is licensed under the MIT License - see the LICENSE file for details.
+-->

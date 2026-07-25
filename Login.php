@@ -1,4 +1,34 @@
+<!--
+    * Go Home Clinic Website and Dashboard - v1.0.0
+    * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+    * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+    * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+    * All rights reserved.
+    * License - This project is licensed under the MIT License - see the LICENSE file for details.
+-->
 <?php
+
+/**
+ * Go Home Clinic Website and Dashboard - v1.0.0
+ *
+ * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+ *
+ * Go Home Clinic is a comprehensive web-based healthcare platform designed to 
+ * facilitate medical home visits. Built with PHP and MySQL, the system seamlessly 
+ * connects patients with qualified healthcare professionals. Patients can browse 
+ * available healthcare professionals, view their ratings, and book appointments 
+ * for home visits, while doctors can manage their schedules and patient requests.
+ * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+ *
+ * @package    go-home-clinic
+ * @author     Abdulrahman Fadhl Ameer Saif <abdulrahmanfadhl@gmail.com> @EngAboodSDev
+ * @copyright  2026 Go Home Clinic (Website and Dashboard)
+ * @license    https://opensource.org  MIT License
+ * @version    1.0.0
+ * @link       https://github.com/EngAboodSDev/go-home-clinic
+ */
+
+
 require_once 'webs.php';
 require_once 'dbcon.php';
 require_once 'Users.php';
@@ -29,23 +59,31 @@ if (isset($_POST['p_login'])) {
     <link rel="stylesheet" href="css/navstyles.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
     <style>
-        .error {
-            color: red;
-        }
+    .error {
+        color: red;
+    }
 
 
-        .loginType {
-            display: flex;
-            gap: 40px;
-            justify-content: flex-start;
-            flex-wrap: nowrap;
-            flex-direction: row;
-        }
+    .loginType {
+        display: flex;
+        gap: 40px;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
     </style>
     <link rel="icon" href="imgs/logo-without-background.png" type="image/png">
 </head>
 
 <body class="auth-body">
+    <!--
+        * Go Home Clinic Website and Dashboard - v1.0.0
+        * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+        * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+        * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+        * All rights reserved.
+        * License - This project is licensed under the MIT License - see the LICENSE file for details.
+    -->
     <?php require_once('navbar.php'); ?>
 
     <section class="auth-section">
@@ -84,23 +122,39 @@ if (isset($_POST['p_login'])) {
 
     <?php require_once('footer.php'); ?>
     <script>
-        const emailInput = document.getElementById('email');
-        const emailError = document.getElementById('emailError');
+    const emailInput = document.getElementById('email');
+    const emailError = document.getElementById('emailError');
 
-        emailInput.addEventListener('input', function() {
-            if (!isValidEmail(emailInput.value)) {
-                emailError.textContent = 'Invalid email address';
-            } else {
-                emailError.textContent = '';
-            }
-        });
-
-        function isValidEmail(email) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailRegex.test(email);
+    emailInput.addEventListener('input', function() {
+        if (!isValidEmail(emailInput.value)) {
+            emailError.textContent = 'Invalid email address';
+        } else {
+            emailError.textContent = '';
         }
+    });
+
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
     </script>
     <script type="text/javascript" src="mobile.js"></script>
+    <!--
+        * Go Home Clinic Website and Dashboard - v1.0.0
+        * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+        * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+        * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+        * All rights reserved.
+        * License - This project is licensed under the MIT License - see the LICENSE file for details.
+    -->
 </body>
 
 </html>
+<!--
+    * Go Home Clinic Website and Dashboard - v1.0.0
+    * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+    * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+    * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+    * All rights reserved.
+    * License - This project is licensed under the MIT License - see the LICENSE file for details.
+-->

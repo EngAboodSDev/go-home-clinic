@@ -1,4 +1,34 @@
+<!--
+    * Go Home Clinic Website and Dashboard - v1.0.0
+    * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+    * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+    * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+    * All rights reserved.
+    * License - This project is licensed under the MIT License - see the LICENSE file for details.
+-->
 <?php
+
+/**
+ * Go Home Clinic Website and Dashboard - v1.0.0
+ *
+ * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+ *
+ * Go Home Clinic is a comprehensive web-based healthcare platform designed to 
+ * facilitate medical home visits. Built with PHP and MySQL, the system seamlessly 
+ * connects patients with qualified healthcare professionals. Patients can browse 
+ * available healthcare professionals, view their ratings, and book appointments 
+ * for home visits, while doctors can manage their schedules and patient requests.
+ * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+ *
+ * @package    go-home-clinic
+ * @author     Abdulrahman Fadhl Ameer Saif <abdulrahmanfadhl@gmail.com> @EngAboodSDev
+ * @copyright  2026 Go Home Clinic (Website and Dashboard)
+ * @license    https://opensource.org  MIT License
+ * @version    1.0.0
+ * @link       https://github.com/EngAboodSDev/go-home-clinic
+ */
+
+
 require_once 'webs.php';
 require_once 'dbcon.php';
 require_once 'Users.php';
@@ -35,6 +65,14 @@ if (isset($_GET['pId'])) {
 </head>
 
 <body class="auth-body">
+    <!--
+        * Go Home Clinic Website and Dashboard - v1.0.0
+        * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+        * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+        * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+        * All rights reserved.
+        * License - This project is licensed under the MIT License - see the LICENSE file for details.
+    -->
     <?php require_once('navbar.php'); ?>
 
     <section class="auth-section">
@@ -114,124 +152,140 @@ if (isset($_GET['pId'])) {
     <?php require_once('footer.php'); ?>
 
     <script>
-        window.addEventListener('DOMContentLoaded', (event) => {
-            const form = document.querySelector('#editProfileForm');
-            const firstNameInput = document.querySelector('input[name="f_name"]');
-            const lastNameInput = document.querySelector('input[name="l_name"]');
-            const emailInput = document.querySelector('input[name="p_email"]');
-            const passwordInput = document.querySelector('input[name="p_password"]');
-            const confirmPasswordInput = document.querySelector('#confirm_password');
+    window.addEventListener('DOMContentLoaded', (event) => {
+        const form = document.querySelector('#editProfileForm');
+        const firstNameInput = document.querySelector('input[name="f_name"]');
+        const lastNameInput = document.querySelector('input[name="l_name"]');
+        const emailInput = document.querySelector('input[name="p_email"]');
+        const passwordInput = document.querySelector('input[name="p_password"]');
+        const confirmPasswordInput = document.querySelector('#confirm_password');
 
-            const firstNameError = document.querySelector('#first_name_error');
-            const lastNameError = document.querySelector('#last_name_error');
-            const emailError = document.querySelector('#email_error');
-            const passwordError = document.querySelector('#password_error');
-            const confirmPasswordError = document.querySelector('#confirm_password_error');
+        const firstNameError = document.querySelector('#first_name_error');
+        const lastNameError = document.querySelector('#last_name_error');
+        const emailError = document.querySelector('#email_error');
+        const passwordError = document.querySelector('#password_error');
+        const confirmPasswordError = document.querySelector('#confirm_password_error');
 
-            firstNameInput.addEventListener('input', () => {
-                validateFirstName();
-            });
-            lastNameInput.addEventListener('input', () => {
-                validateLastName();
-            });
-            emailInput.addEventListener('input', () => {
-                validateEmail();
-            });
-            passwordInput.addEventListener('input', () => {
-                validatePassword();
-            });
-            confirmPasswordInput.addEventListener('input', () => {
-                validateConfirmPassword();
-            });
+        firstNameInput.addEventListener('input', () => {
+            validateFirstName();
+        });
+        lastNameInput.addEventListener('input', () => {
+            validateLastName();
+        });
+        emailInput.addEventListener('input', () => {
+            validateEmail();
+        });
+        passwordInput.addEventListener('input', () => {
+            validatePassword();
+        });
+        confirmPasswordInput.addEventListener('input', () => {
+            validateConfirmPassword();
+        });
 
-            form.addEventListener('submit', function(event) {
-                firstNameError.textContent = '';
-                lastNameError.textContent = '';
-                emailError.textContent = '';
-                passwordError.textContent = '';
-                confirmPasswordError.textContent = '';
+        form.addEventListener('submit', function(event) {
+            firstNameError.textContent = '';
+            lastNameError.textContent = '';
+            emailError.textContent = '';
+            passwordError.textContent = '';
+            confirmPasswordError.textContent = '';
 
-                let isValid = true;
-                if (!validateFirstName()) isValid = false;
-                if (!validateLastName()) isValid = false;
-                if (!validateEmail()) isValid = false;
-                if (!validatePassword()) isValid = false;
-                if (!validateConfirmPassword()) isValid = false;
+            let isValid = true;
+            if (!validateFirstName()) isValid = false;
+            if (!validateLastName()) isValid = false;
+            if (!validateEmail()) isValid = false;
+            if (!validatePassword()) isValid = false;
+            if (!validateConfirmPassword()) isValid = false;
 
-                if (!isValid) {
-                    event.preventDefault();
-                }
-            });
-
-            function validateFirstName() {
-                const val = firstNameInput.value.trim();
-                if (val.length < 3) {
-                    firstNameError.textContent = 'First Name should have at least 3 characters';
-                    return false;
-                }
-                firstNameError.textContent = '';
-                return true;
-            }
-
-            function validateLastName() {
-                const val = lastNameInput.value.trim();
-                if (val.length < 5) {
-                    lastNameError.textContent = 'Last Name should have at least 5 characters';
-                    return false;
-                }
-                lastNameError.textContent = '';
-                return true;
-            }
-
-            function validateEmail() {
-                const val = emailInput.value.trim();
-                const pattern =
-                    /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-                if (!pattern.test(val)) {
-                    emailError.textContent = 'Please Enter Valid Email Address';
-                    return false;
-                }
-                emailError.textContent = '';
-                return true;
-            }
-
-            function validatePassword() {
-                const val = passwordInput.value;
-                if (val === '') {
-                    passwordError.textContent = '';
-                    return true;
-                }
-                if (val.length < 6) {
-                    passwordError.textContent = 'Password must be at least 6 characters long';
-                    return false;
-                }
-                if (!/[A-Z]/.test(val)) {
-                    passwordError.textContent = 'Password must contain at least one uppercase letter';
-                    return false;
-                }
-                if (!/[a-z]/.test(val)) {
-                    passwordError.textContent = 'Password must contain at least one lowercase letter';
-                    return false;
-                }
-                passwordError.textContent = '';
-                return true;
-            }
-
-            function validateConfirmPassword() {
-                if (passwordInput.value === '' && confirmPasswordInput.value === '') {
-                    confirmPasswordError.textContent = '';
-                    return true;
-                }
-                if (passwordInput.value !== confirmPasswordInput.value) {
-                    confirmPasswordError.textContent = 'Passwords do not match';
-                    return false;
-                }
-                confirmPasswordError.textContent = '';
-                return true;
+            if (!isValid) {
+                event.preventDefault();
             }
         });
+
+        function validateFirstName() {
+            const val = firstNameInput.value.trim();
+            if (val.length < 3) {
+                firstNameError.textContent = 'First Name should have at least 3 characters';
+                return false;
+            }
+            firstNameError.textContent = '';
+            return true;
+        }
+
+        function validateLastName() {
+            const val = lastNameInput.value.trim();
+            if (val.length < 5) {
+                lastNameError.textContent = 'Last Name should have at least 5 characters';
+                return false;
+            }
+            lastNameError.textContent = '';
+            return true;
+        }
+
+        function validateEmail() {
+            const val = emailInput.value.trim();
+            const pattern =
+                /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+            if (!pattern.test(val)) {
+                emailError.textContent = 'Please Enter Valid Email Address';
+                return false;
+            }
+            emailError.textContent = '';
+            return true;
+        }
+
+        function validatePassword() {
+            const val = passwordInput.value;
+            if (val === '') {
+                passwordError.textContent = '';
+                return true;
+            }
+            if (val.length < 6) {
+                passwordError.textContent = 'Password must be at least 6 characters long';
+                return false;
+            }
+            if (!/[A-Z]/.test(val)) {
+                passwordError.textContent = 'Password must contain at least one uppercase letter';
+                return false;
+            }
+            if (!/[a-z]/.test(val)) {
+                passwordError.textContent = 'Password must contain at least one lowercase letter';
+                return false;
+            }
+            passwordError.textContent = '';
+            return true;
+        }
+
+        function validateConfirmPassword() {
+            if (passwordInput.value === '' && confirmPasswordInput.value === '') {
+                confirmPasswordError.textContent = '';
+                return true;
+            }
+            if (passwordInput.value !== confirmPasswordInput.value) {
+                confirmPasswordError.textContent = 'Passwords do not match';
+                return false;
+            }
+            confirmPasswordError.textContent = '';
+            return true;
+        }
+    });
     </script>
     <script type="text/javascript" src="mobile.js"></script>
+    <!--
+        * Go Home Clinic Website and Dashboard - v1.0.0
+        * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+        * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+        * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+        * All rights reserved.
+        * License - This project is licensed under the MIT License - see the LICENSE file for details.
+    -->
 </body>
 
 </html>
+<!--
+    * Go Home Clinic Website and Dashboard - v1.0.0
+    * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+    * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+    * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+    * All rights reserved.
+    * License - This project is licensed under the MIT License - see the LICENSE file for details.
+-->

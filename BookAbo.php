@@ -1,4 +1,34 @@
+<!--
+    * Go Home Clinic Website and Dashboard - v1.0.0
+    * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+    * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+    * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+    * All rights reserved.
+    * License - This project is licensed under the MIT License - see the LICENSE file for details.
+-->
 <?php
+
+/**
+ * Go Home Clinic Website and Dashboard - v1.0.0
+ *
+ * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+ *
+ * Go Home Clinic is a comprehensive web-based healthcare platform designed to 
+ * facilitate medical home visits. Built with PHP and MySQL, the system seamlessly 
+ * connects patients with qualified healthcare professionals. Patients can browse 
+ * available healthcare professionals, view their ratings, and book appointments 
+ * for home visits, while doctors can manage their schedules and patient requests.
+ * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+ *
+ * @package    go-home-clinic
+ * @author     Abdulrahman Fadhl Ameer Saif <abdulrahmanfadhl@gmail.com> @EngAboodSDev
+ * @copyright  2026 Go Home Clinic (Website and Dashboard)
+ * @license    https://opensource.org  MIT License
+ * @version    1.0.0
+ * @link       https://github.com/EngAboodSDev/go-home-clinic
+ */
+
+
 require_once 'webs.php';
 require_once 'dbcon.php';
 require_once 'Users.php';
@@ -57,6 +87,14 @@ if (isset($_GET['dr'])) {
 </head>
 
 <body>
+    <!--
+        * Go Home Clinic Website and Dashboard - v1.0.0
+        * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+        * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+        * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+        * All rights reserved.
+        * License - This project is licensed under the MIT License - see the LICENSE file for details.
+    -->
     <?php require_once('navbar.php'); ?>
 
     <section id="page-hero" style="--hero-bg: url('../imgs/book-an-appointment.jpg');">
@@ -128,9 +166,9 @@ if (isset($_GET['dr'])) {
                     <select id="time" name="app_time" required>
                         <option value="" selected disabled>Select Appointment Time</option>
                         <?php foreach ($allTimes as $time) { ?>
-                            <option value="<?php echo $time; ?>"
-                                <?php echo in_array($time, $UnAvaliableTimesArray) ? "disabled" : "" ?>><?php echo $time; ?>
-                            </option>
+                        <option value="<?php echo $time; ?>"
+                            <?php echo in_array($time, $UnAvaliableTimesArray) ? "disabled" : "" ?>><?php echo $time; ?>
+                        </option>
                         <?php } ?>
                     </select>
                 </div>
@@ -145,12 +183,14 @@ if (isset($_GET['dr'])) {
                     <span class="price-label">Price per hour</span>
                     <span class="price-value">100 SR</span>
                 </div>
-                <button type="button" class="cta-btn primary-btn auth-submit-btn" id="nextToPayment" style="width: 100%;">
+                <button type="button" class="cta-btn primary-btn auth-submit-btn" id="nextToPayment"
+                    style="width: 100%;">
                     Next <i class="fa-solid fa-arrow-right"></i>
                 </button>
-                
+
                 <div class="auth-footer" style="margin-top: 1.5rem; text-align: center;">
-                    <p><a href="javascript:void(0)" onclick="goToStep(1)" class="auth-link secondary-link"><i class="fa-solid fa-arrow-left"></i> Back to Step 1</a></p>
+                    <p><a href="javascript:void(0)" onclick="goToStep(1)" class="auth-link secondary-link"><i
+                                class="fa-solid fa-arrow-left"></i> Back to Step 1</a></p>
                 </div>
             </div>
 
@@ -183,9 +223,10 @@ if (isset($_GET['dr'])) {
                 <button type="submit" class="cta-btn primary-btn auth-submit-btn" name="bookApp" style="width: 100%;">
                     <i class="fa-solid fa-check"></i> Confirm Booking
                 </button>
-                
+
                 <div class="auth-footer" style="margin-top: 1.5rem; text-align: center;">
-                    <p><a href="javascript:void(0)" onclick="goToStep(2)" class="auth-link secondary-link"><i class="fa-solid fa-arrow-left"></i> Back to Step 2</a></p>
+                    <p><a href="javascript:void(0)" onclick="goToStep(2)" class="auth-link secondary-link"><i
+                                class="fa-solid fa-arrow-left"></i> Back to Step 2</a></p>
                 </div>
             </div>
         </form>
@@ -194,47 +235,63 @@ if (isset($_GET['dr'])) {
     <?php require_once('footer.php'); ?>
 
     <script>
-        // Date change handler
-        const app_date = document.getElementById("date");
-        app_date.addEventListener("change", function() {
-            var selectedDate = app_date.value;
-            window.location.href = "BookAbo.php?dr=<?php echo $_GET['dr']; ?>&date=" + selectedDate;
-        });
+    // Date change handler
+    const app_date = document.getElementById("date");
+    app_date.addEventListener("change", function() {
+        var selectedDate = app_date.value;
+        window.location.href = "BookAbo.php?dr=<?php echo $_GET['dr']; ?>&date=" + selectedDate;
+    });
 
-        const selectedTime = document.getElementById("time");
+    const selectedTime = document.getElementById("time");
 
-        // Stepper Navigation
-        function goToStep(stepNum) {
-            // Hide all steps
-            document.querySelectorAll('.form-step').forEach(s => s.classList.remove('active'));
-            // Show target step
-            document.getElementById('step' + stepNum).classList.add('active');
+    // Stepper Navigation
+    function goToStep(stepNum) {
+        // Hide all steps
+        document.querySelectorAll('.form-step').forEach(s => s.classList.remove('active'));
+        // Show target step
+        document.getElementById('step' + stepNum).classList.add('active');
 
-            // Update stepper indicators
-            for (let i = 1; i <= 3; i++) {
-                const indicator = document.getElementById('stepIndicator' + i);
-                indicator.classList.remove('active', 'completed');
-                if (i < stepNum) indicator.classList.add('completed');
-                if (i === stepNum) indicator.classList.add('active');
-            }
-            // Update step lines
-            for (let i = 1; i <= 2; i++) {
-                const line = document.getElementById('stepLine' + i);
-                line.classList.toggle('active', i < stepNum);
-            }
+        // Update stepper indicators
+        for (let i = 1; i <= 3; i++) {
+            const indicator = document.getElementById('stepIndicator' + i);
+            indicator.classList.remove('active', 'completed');
+            if (i < stepNum) indicator.classList.add('completed');
+            if (i === stepNum) indicator.classList.add('active');
         }
+        // Update step lines
+        for (let i = 1; i <= 2; i++) {
+            const line = document.getElementById('stepLine' + i);
+            line.classList.toggle('active', i < stepNum);
+        }
+    }
 
-        // Next to payment - validate step 2
-        document.getElementById('nextToPayment').addEventListener('click', function() {
-            const date = document.getElementById('date');
-            if (date.value !== "" && selectedTime.value !== "") {
-                goToStep(3);
-            } else {
-                alert('Please select a date and time for your appointment.');
-            }
-        });
+    // Next to payment - validate step 2
+    document.getElementById('nextToPayment').addEventListener('click', function() {
+        const date = document.getElementById('date');
+        if (date.value !== "" && selectedTime.value !== "") {
+            goToStep(3);
+        } else {
+            alert('Please select a date and time for your appointment.');
+        }
+    });
     </script>
     <script type="text/javascript" src="mobile.js"></script>
+    <!--
+        * Go Home Clinic Website and Dashboard - v1.0.0
+        * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+        * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+        * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+        * All rights reserved.
+        * License - This project is licensed under the MIT License - see the LICENSE file for details.
+    -->
 </body>
 
 </html>
+<!--
+    * Go Home Clinic Website and Dashboard - v1.0.0
+    * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+    * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+    * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+    * All rights reserved.
+    * License - This project is licensed under the MIT License - see the LICENSE file for details.
+-->

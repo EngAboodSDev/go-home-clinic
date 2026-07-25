@@ -1,3 +1,12 @@
+/*!
+ * Go Home Clinic Website and Dashboard - v1.0.0
+ * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+ * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+ * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+ * All rights reserved.
+ * License - This project is licensed under the MIT License - see the LICENSE file for details.
+*/
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -88,6 +97,15 @@ header {
   align-items: center;
   justify-content: center;
 }
+
+/*!
+ * Go Home Clinic Website and Dashboard - v1.0.0
+ * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+ * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+ * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+ * All rights reserved.
+ * License - This project is licensed under the MIT License - see the LICENSE file for details.
+*/
 
 .overlay a {
   padding: 15px;
@@ -180,6 +198,15 @@ ul {
   gap: 2rem;
   padding-bottom: 2rem;
 }
+
+/*!
+ * Go Home Clinic Website and Dashboard - v1.0.0
+ * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+ * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+ * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+ * All rights reserved.
+ * License - This project is licensed under the MIT License - see the LICENSE file for details.
+*/
 
 .fot_column,
 .link_column,
@@ -278,6 +305,15 @@ ul.link_cool li a:hover {
   opacity: 0.8;
 }
 
+/*!
+ * Go Home Clinic Website and Dashboard - v1.0.0
+ * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+ * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+ * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+ * All rights reserved.
+ * License - This project is licensed under the MIT License - see the LICENSE file for details.
+*/
+
 .copyright p {
   margin: 5px 0;
   font-size: 0.9rem;
@@ -312,3 +348,13 @@ ul.link_cool li a:hover {
     justify-content: center;
   }
 }
+
+
+/*!
+ * Go Home Clinic Website and Dashboard - v1.0.0
+ * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+ * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+ * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+ * All rights reserved.
+ * License - This project is licensed under the MIT License - see the LICENSE file for details.
+*/

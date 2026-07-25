@@ -1,3 +1,12 @@
+/*!
+ * Go Home Clinic Website and Dashboard - v1.0.0
+ * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+ * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+ * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+ * All rights reserved.
+ * License - This project is licensed under the MIT License - see the LICENSE file for details.
+*/
+
 :root {
     --blue-color: #303779;
     --blue-alt-color: #3a727f;
@@ -92,6 +101,15 @@ ul{
     justify-content: center;
 }
 
+/*!
+ * Go Home Clinic Website and Dashboard - v1.0.0
+ * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+ * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+ * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+ * All rights reserved.
+ * License - This project is licensed under the MIT License - see the LICENSE file for details.
+*/
+
 .sidebar .sidebar-title span {
     display: none;
 }
@@ -180,6 +198,15 @@ ul{
 
 /* End Sidebar */
 
+/*!
+ * Go Home Clinic Website and Dashboard - v1.0.0
+ * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+ * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+ * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+ * All rights reserved.
+ * License - This project is licensed under the MIT License - see the LICENSE file for details.
+*/
+
 /* Start Content Head */
 .content{
     overflow: hidden;
@@ -266,12 +293,19 @@ ul{
 }
 /* End Content Head */
 
-
-
 /* Start Project Table */
 .projects .responsive-table{
     overflow-x: auto;
 }
+
+/*!
+ * Go Home Clinic Website and Dashboard - v1.0.0
+ * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+ * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+ * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+ * All rights reserved.
+ * License - This project is licensed under the MIT License - see the LICENSE file for details.
+*/
 
 .projects table{
     width: max-content;
@@ -370,6 +404,15 @@ ul{
     transition: 0.3s;
 }
 
+/*!
+ * Go Home Clinic Website and Dashboard - v1.0.0
+ * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+ * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+ * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+ * All rights reserved.
+ * License - This project is licensed under the MIT License - see the LICENSE file for details.
+*/
+
 .settings-page .social-boxes input{
     height: 40px;
     background-color: #F6F6F6;
@@ -458,6 +501,15 @@ ul{
     appearance: none;
     display: none;
 }
+
+/*!
+ * Go Home Clinic Website and Dashboard - v1.0.0
+ * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+ * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+ * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+ * All rights reserved.
+ * License - This project is licensed under the MIT License - see the LICENSE file for details.
+*/
 
 .toggle-switch{
     background-color: #CCC;
@@ -549,6 +601,16 @@ ul{
   opacity: 0;
   pointer-events: none;
 }
+
+/*!
+ * Go Home Clinic Website and Dashboard - v1.0.0
+ * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+ * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+ * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+ * All rights reserved.
+ * License - This project is licensed under the MIT License - see the LICENSE file for details.
+*/
+
 
 .light-back{
   position: fixed;
@@ -651,6 +713,17 @@ ul{
   pointer-events: auto;
   transform: translateY(0);
 }
+
+/*!
+ * Go Home Clinic Website and Dashboard - v1.0.0
+ * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+ * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+ * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+ * All rights reserved.
+ * License - This project is licensed under the MIT License - see the LICENSE file for details.
+*/
+
+
 .section-dropdown:before {
   position: absolute;
   top: -20px;
@@ -741,6 +814,16 @@ ul{
     -ms-flex-pack: distribute;
     cursor: pointer;
 }
+
+/*!
+ * Go Home Clinic Website and Dashboard - v1.0.0
+ * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+ * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+ * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+ * All rights reserved.
+ * License - This project is licensed under the MIT License - see the LICENSE file for details.
+*/
+
 .dropdown-sub:checked + label .uil,
 .dropdown-sub:not(:checked) + label .uil{
   font-size: 22px;
@@ -811,6 +894,15 @@ ul{
 .dark-light:checked ~ .logo img{
   filter: brightness(10%);
 }
+
+/*!
+ * Go Home Clinic Website and Dashboard - v1.0.0
+ * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+ * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+ * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+ * All rights reserved.
+ * License - This project is licensed under the MIT License - see the LICENSE file for details.
+*/
 
 @media screen and (max-width: 991px) {
 .logo {
@@ -906,6 +998,14 @@ ul{
     transition: 0.5s;
 }
 
+/*!
+ * Go Home Clinic Website and Dashboard - v1.0.0
+ * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+ * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+ * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+ * All rights reserved.
+ * License - This project is licensed under the MIT License - see the LICENSE file for details.
+*/
 
 .action .menu ul li:hover a{
     color: #3a727f;
@@ -1010,6 +1110,14 @@ ul{
         transform-origin: center center;
        }
        
+       /*!
+            * Go Home Clinic Website and Dashboard - v1.0.0
+            * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+            * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+            * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+            * All rights reserved.
+            * License - This project is licensed under the MIT License - see the LICENSE file for details.
+        */
        .check:checked {
         animation: a .3s ease-in forwards;
         background-color: #3a727f;
@@ -1087,6 +1195,15 @@ ul{
     transition: fill 0.2s ease ,transform 0.2s ease;
    }
    
+   /*!
+        * Go Home Clinic Website and Dashboard - v1.0.0
+        * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+        * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+        * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+        * All rights reserved.
+        * License - This project is licensed under the MIT License - see the LICENSE file for details.
+    */
+
    /*Text*/
    .card-title {
     color: #fff;
@@ -1181,6 +1298,16 @@ ul{
     overflow: hidden;
     width: 100%;
 }
+
+/*!
+ * Go Home Clinic Website and Dashboard - v1.0.0
+ * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+ * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+ * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+ * All rights reserved.
+ * License - This project is licensed under the MIT License - see the LICENSE file for details.
+*/
+
 .projects thead td {
     background-color: #f8fafc !important;
     color: #64748b !important;
@@ -1269,6 +1396,16 @@ ul{
     margin-top: 0;
     font-size: 24px;
 }
+
+/*!
+ * Go Home Clinic Website and Dashboard - v1.0.0
+ * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+ * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+ * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+ * All rights reserved.
+ * License - This project is licensed under the MIT License - see the LICENSE file for details.
+*/
+
 .AdminLogform label {
     font-weight: 600;
     color: #334155;
@@ -1309,3 +1446,12 @@ ul{
 .logbody {
     background-color: #f1f5f9;
 }
+
+/*!
+ * Go Home Clinic Website and Dashboard - v1.0.0
+ * Designed and Developed by Abdulrahman Fadhl Ameer Saif
+ * @EngAboodSDev <abdulrahmanfadhl@gmail.com>
+ * Copyright © 2026 Go Home Clinic (Website and Dashboard)
+ * All rights reserved.
+ * License - This project is licensed under the MIT License - see the LICENSE file for details.
+*/
