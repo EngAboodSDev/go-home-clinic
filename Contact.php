@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['sendContact'])) {
                 <div class="info-grid">
                     <div class="core-value-card">
                         <div class="value-icon">
-                            <i class="fa-solid fa-location-dot"></i>
+                            <i class="fa-solid fa-location-dot fa-beat-fade"></i>
                         </div>
                         <h3>Our Location</h3>
                         <p>Riyadh, Saudi Arabia<br> We serve patients throughout the city and surrounding areas.
@@ -65,28 +65,32 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['sendContact'])) {
 
                     <div class="core-value-card">
                         <div class="value-icon">
-                            <i class="fa-solid fa-phone"></i>
+                            <i class="fa-solid fa-phone fa-beat-fade"></i>
                         </div>
                         <h3>Direct Contact</h3>
-                        <p>Call us at: +966 000 000 000<br>Email: info@go-home-clinic.com</p>
+                        <p>Call us at: +966 560 000 000<br>Email: info@go-home-clinic.com</p>
                     </div>
 
                     <div class="core-value-card">
                         <div class="value-icon">
-                            <i class="fa-solid fa-share-nodes"></i>
+                            <i class="fa-solid fa-share-nodes fa-beat-fade"></i>
                         </div>
                         <h3>Connect With Us</h3>
                         <div class="social-links-grid">
-                            <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
-                            <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="#" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://www.facebook.com/go-home-clinic" class="social-link"><i
+                                    class="fa-brands fa-facebook-f fa-float"></i></a>
+                            <a href="https://x.com/go-home-clinic" class="social-link"><i
+                                    class="fa-brands fa-x-twitter fa-float"></i></a>
+                            <a href="https://www.instagram.com/go-home-clinic" class="social-link"><i
+                                    class="fa-brands fa-instagram fa-float"></i></a>
+                            <a href="https://www.linkedin.com/in/go-home-clinic" class="social-link"><i
+                                    class="fa-brands fa-linkedin-in fa-float"></i></a>
                         </div>
                     </div>
 
                     <div class="core-value-card">
                         <div class="value-icon">
-                            <i class="fa-solid fa-clock"></i>
+                            <i class="fa-solid fa-clock fa-beat-fade"></i>
                         </div>
                         <h3>Availability</h3>
                         <p>Our mobile clinic is available 24 hours a day, 7 days a week, including holidays.</p>

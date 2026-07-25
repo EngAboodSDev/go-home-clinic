@@ -6,10 +6,13 @@
                 <p>A clinic that provides essential primary healthcare for elderly people, bringing medical expertise
                     directly to their doorstep.</p>
                 <div class="social-icons">
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.facebook.com/go-home-clinic"><i
+                            class="fa-brands fa-facebook-f fa-float"></i></a>
+                    <a href="https://x.com/go-home-clinic"><i class="fa-brands fa-x-twitter fa-float"></i></a>
+                    <a href="https://www.instagram.com/go-home-clinic"><i
+                            class="fa-brands fa-instagram fa-float"></i></a>
+                    <a href="https://www.linkedin.com/in/go-home-clinic"><i
+                            class="fa-brands fa-linkedin-in fa-float"></i></a>
                 </div>
             </div>
 
@@ -28,20 +31,20 @@
                 <h4>Contact Us</h4>
                 <ul class="con_us">
                     <li>
-                        <i class="fa-solid fa-envelope"></i>
+                        <i class="fa-solid fa-envelope fa-jello"></i>
                         <span>info@go-home-clinic.com</span>
                     </li>
                     <li>
-                        <i class="fa-solid fa-phone"></i>
-                        <span>+966 000 000 000</span>
+                        <i class="fa-solid fa-phone fa-jello"></i>
+                        <span>+966 560 000 000</span>
                     </li>
                     <li>
-                        <i class="fa-solid fa-location-dot"></i>
+                        <i class="fa-solid fa-location-dot fa-jello"></i>
                         <span>Riyadh, Saudi Arabia</span>
                     </li>
                     <li>
                         <!-- <i class="fa-solid fa-clock"></i> -->
-                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        <i class="fa-solid fa-clock-rotate-left fa-jello"></i>
                         <span>Available 24/7</span>
                     </li>
                 </ul>
