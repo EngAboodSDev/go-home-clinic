@@ -1,7 +1,7 @@
 # 🏥 Go Home Clinic - On-Demand Home Healthcare  Platform | عيادة جو هووم - منصة الرعاية الطبية المنزلية المتنقلة
 ![logo](/docs/screenshots/go-home-clinic-main.png)
 
-A comprehensive web-based healthcare platform designed to facilitate medical home visits. It seamlessly connects patients with qualified healthcare professionals, allowing patients to book home-visit appointments, and provides dedicated portals for doctors and administrators to manage medical records and operations.
+Go Home Clinic is a comprehensive web-based on-demand home healthcare platform designed to facilitate medical home visits. Built with PHP and MySQL. It seamlessly connects patients with qualified healthcare professionals and doctors. Patients can browse available healthcare professionals, see their ratings, and book appointments for home visits, and provides dedicated portals for doctors and administrators to manage medical records and operations.
 
 ---
 
