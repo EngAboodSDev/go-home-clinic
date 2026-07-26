@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3308
--- Generation Time: Feb 15, 2026 at 12:03 AM
+-- Generation Time: Nov 21, 2023 at 01:45 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -42,7 +42,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`a_id`, `f_name`, `l_name`, `a_email`, `a_password`) VALUES
-(1, 'admin', 'admin', 'admin@admin.com', 'admin123');
+(1, 'admin', 'admin', 'admin@go-home-clinic.com', 'e64b78fc3bc91bcbc7dc232ba8ec59e0');
 
 -- --------------------------------------------------------
 
@@ -81,7 +81,36 @@ INSERT INTO `appointment` (`app_id`, `date`, `app_location`, `app_time`, `cost`,
 (13, '2023-11-23', 'Al Mubarraz', '12:00 PM - 01:00 PM', 110, 0, 'dhssteh kwejrnjng nf gdd', '2023-11-20 22:50:42', 36, 1, 'Canceled'),
 (14, '2023-11-24', 'Al Hofuf', '03:00 PM - 04:00 PM', 110, 0, 'dasd', '2023-11-21 00:33:01', 36, 1, 'Complete'),
 (15, '2023-11-25', 'Al Mubarraz', '12:00 PM - 01:00 PM', 110, 0, 'dsaddqwre', '2023-11-21 00:33:21', 36, 4, 'Complete'),
-(16, '2024-05-24', 'Al Mubarraz', '01:30 PM - 02:30 PM', 110, 215561223225, 'dasd', '2024-05-22 00:46:08', 39, 2, 'Canceled');
+(16, '2024-05-24', 'Al Mubarraz', '01:30 PM - 02:30 PM', 110, 215561223225, 'dasd', '2024-05-22 00:46:08', 39, 2, 'Canceled'),
+(17, '2026-07-29', 'Al Hofuf', '10:30 AM - 11:00 AM', 110, 56568653656565656, 'test', '2026-07-24 01:30:02', 41, 2, 'Complete'),
+(18, '2026-07-30', 'Al Mubarraz', '03:00 PM - 04:00 PM', 110, 2131545945645645645, 'test', '2026-07-24 01:40:28', 41, 1, 'Active'),
+(19, '2026-07-26', 'Al Mubarraz', '12:00 PM - 01:00 PM', 110, 5985656895659652, 'test', '2026-07-24 01:41:08', 41, 2, 'Canceled'),
+(20, '2026-07-25', 'Al Hofuf', '04:30 PM - 05:30 PM', 110, 75427896453127865, '7845120', '2026-07-24 04:37:43', 41, 2, 'Active'),
+(21, '2026-07-28', 'Al Hofuf', '01:30 PM - 02:30 PM', 110, 598789549856185856, 'test', '2026-07-26 01:32:17', 41, 1, 'Active');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contacts`
+--
+
+CREATE TABLE `contacts` (
+  `id` bigint(20) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `phone` varchar(20) DEFAULT NULL,
+  `email` varchar(500) NOT NULL,
+  `subject` varchar(500) DEFAULT NULL,
+  `message` text NOT NULL,
+  `sent_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `contacts`
+--
+
+INSERT INTO `contacts` (`id`, `name`, `phone`, `email`, `subject`, `message`, `sent_at`) VALUES
+(1, 'Abdulrahman Fadhl Ameer Saif', '0777413231', 'abdulrahmanfadhl@gmail.com', 'Test Sbuject here', 'Hello Eng. Abood. This is a test message  ', '2026-07-25 00:50:26'),
+(2, 'Abdulrahman Fadhl Ameer Saif', '0777413231', 'abdulrahmanfadhl@gmail.com', 'Test Sbuject2', 'ddddddddddddddddddddd', '2026-07-25 01:22:14');
 
 -- --------------------------------------------------------
 
@@ -109,8 +138,8 @@ CREATE TABLE `doctor` (
 --
 
 INSERT INTO `doctor` (`dr_id`, `f_name`, `l_name`, `dr_email`, `dr_password`, `IsAvailable`, `job`, `job_details`, `dr_location`, `dr_phoneNo`, `v_id`, `a_id`) VALUES
-(1, 'Dr.Ali', 'Mohammed', 'Ali123@gmail.com', '5e1789c7eb33bfc807ee194f25c32882', 1, 'General Pysician', 'A general practitioner treats a commoon medical phd conditions and perform routine exams, got an ABIM, AOBFP, and ACP.', 'Al Mubarraz', 364987561, 1, 1),
-(2, 'Dr.Sara', 'Ali', 'SaraAli@gmail.com', '11', 1, 'General Pysician', 'A general practitioner treats a commoon medical phd conditions and perform routine exams, got an ABIM, AOBFP, and ACP.', 'fdsasdas', 85755255, 2, 1),
+(1, 'Dr.Ali', 'Mohammed', 'Ali123@gmail.com', 'd41d8cd98f00b204e9800998ecf8427e', 1, 'General Pysician', 'A general practitioner treats a commoon medical phd conditions and perform routine exams, got an ABIM, AOBFP, and ACP.', 'Al Mubarraz', 364987561, 1, 1),
+(2, 'Dr.Sara', 'Ali', 'SaraAli@gmail.com', 'c9340144509f31a9575771719781a0e0', 1, 'General Pysician', 'A general practitioner treats a commoon medical phd conditions and perform routine exams, got an ABIM, AOBFP, and ACP.', 'fdsasdas', 85755255, 2, 1),
 (3, 'Dr.Khalid', 'Salah', 'wqw7das84@gmail.com', '8ee1e30a502f929dcef1a27b1d65e401', 0, 'asddas', 'adasdas', 'sdasdas', 211111111, 2, 1),
 (4, 'Dr.Asma', 'Ahmed', 'wqw78554@gmail.com', '82b711e417890e07bf2a5bdda262d52a', 1, 'erte', 'A general practitioner treats a commoon medical phd conditions and perform routine exams, got an ABIM, AOBFP, and ACP.', '345345', 3453, 1, 1);
 
@@ -140,7 +169,8 @@ INSERT INTO `medical_record` (`med_id`, `app_id`, `p_id`, `dr_id`, `med_rec_deta
 (5, 10, 36, 2, 'vfdfdfdfdf', '2023-11-05 23:27:36'),
 (6, 14, 36, 1, 'jgvgvgucvijkgv', '2023-11-21 00:35:25'),
 (7, 15, 36, 4, 'fzhxcbzcxv', '2023-11-21 00:36:03'),
-(8, 11, 36, 2, 'sdfrwgaw', '2023-11-21 03:40:57');
+(8, 11, 36, 2, 'sdfrwgaw', '2023-11-21 03:40:57'),
+(9, 17, 41, 2, 'Sit blanditiis sed ', '2026-07-24 01:41:28');
 
 -- --------------------------------------------------------
 
@@ -174,7 +204,9 @@ INSERT INTO `patient` (`p_id`, `f_name`, `l_name`, `p_email`, `p_date`, `p_passw
 (36, 'qrerqr', 'rqerqerqe', 'wqw784@gmail.com', '2010-10-12', '8ee1e30a502f929dcef1a27b1d65e401', 575785875),
 (37, 'jhjhu', 'jihjjklkl', 'lak5874@gmail.com', '2023-10-11', '8b95433b3549985e9a08456a60eb3b0c', 6546565),
 (38, 'jhjhkj', 'ghgjhg', 'wqw789564@gmail.com', '2023-10-12', '8b95433b3549985e9a08456a60eb3b0c', 65455),
-(39, 'fgff', 'ffrrd', 'wqwderr@gmail.com', '2023-09-06', 'Aaa123', 241564542);
+(39, 'fgff', 'ffrrd', 'wqwderr@gmail.com', '2023-09-06', 'Aaa123', 241564542),
+(40, 'mm22', 'gg', 'abd@gmail.com', '2001-02-21', 'e20c02824c0e9635f8a135333e78526b', 777413231),
+(41, 'test', 'patient', 'testpatient@gohomeclinic.com', '2007-01-30', '68eacb97d86f0c4621fa2b0e17cabd8c', 777777777);
 
 -- --------------------------------------------------------
 
@@ -205,7 +237,11 @@ INSERT INTO `review` (`r_id`, `num_stars`, `p_id`, `dr_id`) VALUES
 (9, 2, 36, 4),
 (10, 5, 36, 2),
 (11, 5, 37, 2),
-(12, 1, 37, 2);
+(12, 1, 37, 2),
+(13, 3, 41, 2),
+(14, 3, 41, 2),
+(15, 5, 41, 2),
+(16, 2, 41, 2);
 
 -- --------------------------------------------------------
 
@@ -249,6 +285,12 @@ ALTER TABLE `appointment`
   ADD PRIMARY KEY (`app_id`),
   ADD KEY `p_id` (`p_id`),
   ADD KEY `dr_id` (`dr_id`);
+
+--
+-- Indexes for table `contacts`
+--
+ALTER TABLE `contacts`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `doctor`
@@ -304,7 +346,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `appointment`
 --
 ALTER TABLE `appointment`
-  MODIFY `app_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `app_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+--
+-- AUTO_INCREMENT for table `contacts`
+--
+ALTER TABLE `contacts`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `doctor`
@@ -316,19 +364,19 @@ ALTER TABLE `doctor`
 -- AUTO_INCREMENT for table `medical_record`
 --
 ALTER TABLE `medical_record`
-  MODIFY `med_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `med_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `patient`
 --
 ALTER TABLE `patient`
-  MODIFY `p_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `p_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `review`
 --
 ALTER TABLE `review`
-  MODIFY `r_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `r_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `vehicle`
